@@ -107,6 +107,18 @@ body {
   margin-bottom: 20px;
 }
 
+.demo-note {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.45);
+  margin-top: 4px;
+}
+.demo-note a {
+  color: #4fd1c5;
+  text-decoration: none;
+  font-weight: 500;
+}
+.demo-note a:hover { text-decoration: underline; }
+
 
 /* ── Buttons ── */
 .btn {
