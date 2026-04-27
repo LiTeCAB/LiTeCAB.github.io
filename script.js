@@ -1,5 +1,19 @@
 const SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbwJzu-C8bQKH2IwmkGtds-BKM-1mD9lDbMMiXNAoy7oumFxCydJbm3RsO5_mF4fmaQ2/exec";
 
+// ── Smooth-scroll for in-page anchors without leaving a #hash in the URL ──
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const href = link.getAttribute("href");
+    if (!href || href === "#") return;
+    const target = document.querySelector(href);
+    if (!target) return;
+    event.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    // Strip the hash from the address bar
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+  });
+});
+
 const form = document.getElementById("interest-form");
 const statusNode = document.getElementById("form-status");
 
