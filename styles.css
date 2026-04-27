@@ -22,7 +22,7 @@ body {
 /* ── Navbar ── */
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 50;
-  background: #d5e8e4; /* mint tint — pairs with #4fd1c5 accent */
+  background: #cde2db; /* mint tint — same as section-light */
   border-bottom: 1px solid #b9d4cd;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
   backdrop-filter: saturate(140%);
