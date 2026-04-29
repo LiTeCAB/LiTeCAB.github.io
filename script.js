@@ -1,5 +1,27 @@
 const SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbwJzu-C8bQKH2IwmkGtds-BKM-1mD9lDbMMiXNAoy7oumFxCydJbm3RsO5_mF4fmaQ2/exec";
 
+// ── Reveal-on-scroll: fade + slide up sections as they enter the viewport ──
+(() => {
+  const targets = document.querySelectorAll(".hero-inner, .section, .site-footer .container");
+  if (!targets.length || !("IntersectionObserver" in window)) {
+    targets.forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
+  targets.forEach((el) => el.classList.add("reveal"));
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+  );
+  targets.forEach((el) => io.observe(el));
+})();
+
 // ── Smooth-scroll for in-page anchors without leaving a #hash in the URL ──
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
