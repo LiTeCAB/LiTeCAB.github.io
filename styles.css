@@ -1,6 +1,22 @@
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ── Selection ── */
+::selection { background: #4fd1c5; color: #0f1a2e; }
+
+/* ── Scroll progress bar ── */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  z-index: 100;
+  background: linear-gradient(90deg, #4fd1c5 0%, #6ee7db 50%, #38d9c4 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  pointer-events: none;
+  will-change: transform;
+}
+
 /* ── Reveal-on-scroll ── */
 .reveal {
   opacity: 0;
@@ -41,13 +57,22 @@ body {
   border-bottom: 1px solid #b9d4cd;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
   backdrop-filter: saturate(140%);
+  transition: background 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease, border-color 0.25s ease;
+}
+.navbar.is-scrolled {
+  background: rgba(205,226,219,0.82);
+  backdrop-filter: saturate(160%) blur(12px);
+  border-bottom-color: rgba(185,212,205,0.5);
+  box-shadow: 0 4px 18px rgba(15,26,46,0.08);
 }
 
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
   height: 72px;
   padding: 0;
+  transition: height 0.25s ease;
 }
+.navbar.is-scrolled .nav-inner { height: 56px; }
 
 .nav-brand {
   font-size: 1.4rem;
@@ -94,15 +119,42 @@ body {
 
 /* ── Hero ── */
 .hero {
+  position: relative;
+  overflow: hidden;
   padding: 160px 0 80px;
   text-align: center;
-  background:
-    radial-gradient(ellipse at 30% 0%, rgba(30,58,95,0.6) 0%, transparent 60%),
-    radial-gradient(ellipse at 75% 20%, rgba(42,74,127,0.4) 0%, transparent 50%),
-    #0f1a2e;
+  background: #0f1a2e;
+}
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+}
+.hero::before {
+  background: radial-gradient(circle at 50% 50%, rgba(30,58,95,0.65) 0%, transparent 55%);
+  animation: hero-drift-1 22s ease-in-out infinite alternate;
+}
+.hero::after {
+  background: radial-gradient(circle at 50% 50%, rgba(79,209,197,0.18) 0%, transparent 55%);
+  animation: hero-drift-2 28s ease-in-out infinite alternate;
+}
+@keyframes hero-drift-1 {
+  0%   { transform: translate(-12%, -8%) scale(1); }
+  100% { transform: translate(10%, 6%) scale(1.08); }
+}
+@keyframes hero-drift-2 {
+  0%   { transform: translate(15%, 12%) scale(1.05); }
+  100% { transform: translate(-12%, -8%) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero::before, .hero::after { animation: none; }
 }
 
-.hero-inner { max-width: 100%; margin: 0 auto; }
+.hero-inner { position: relative; z-index: 1; max-width: 100%; margin: 0 auto; }
 
 .hero-logo {
   height: 240px;
@@ -228,6 +280,20 @@ body {
   margin-bottom: 8px;
   color: #fff;
 }
+
+/* ── Section kicker (eyebrow label) ── */
+.section-kicker {
+  display: block;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #2a9d8f;
+  margin-bottom: 12px;
+}
+.solution-left .section-kicker,
+.cta-text .section-kicker { text-align: left; }
 
 .section-lead {
   text-align: center;
@@ -412,10 +478,17 @@ body {
 
 /* ── Video ── */
 .video-frame {
-  border-radius: 10px;
+  position: relative;
+  border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  border: 1.5px solid transparent;
+  background:
+    linear-gradient(#0a1220, #0a1220) padding-box,
+    linear-gradient(135deg, rgba(79,209,197,0.55) 0%, rgba(110,231,219,0.18) 45%, rgba(255,255,255,0.05) 100%) border-box;
+  box-shadow:
+    0 1px 2px rgba(0,0,0,0.3),
+    0 16px 40px -12px rgba(79,209,197,0.18),
+    0 12px 32px rgba(0,0,0,0.4);
   width: 100%;
   aspect-ratio: 16 / 9;
 }

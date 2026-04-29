@@ -1,5 +1,33 @@
 const SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbwJzu-C8bQKH2IwmkGtds-BKM-1mD9lDbMMiXNAoy7oumFxCydJbm3RsO5_mF4fmaQ2/exec";
 
+// ── Scroll-driven UI: progress bar + navbar shrink ──
+(() => {
+  const navbar = document.querySelector(".navbar");
+  const progress = document.getElementById("scroll-progress");
+  let ticking = false;
+
+  function update() {
+    const scrollY = window.scrollY || window.pageYOffset;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const ratio = docHeight > 0 ? Math.min(scrollY / docHeight, 1) : 0;
+    if (progress) progress.style.transform = `scaleX(${ratio})`;
+    if (navbar) navbar.classList.toggle("is-scrolled", scrollY > 40);
+    ticking = false;
+  }
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
+  update();
+})();
+
 // ── Reveal-on-scroll: fade + slide up sections as they enter the viewport ──
 (() => {
   const targets = document.querySelectorAll(".hero-inner, .section, .site-footer .container");
