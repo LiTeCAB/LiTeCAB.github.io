@@ -123,32 +123,11 @@ body {
   overflow: hidden;
   padding: 160px 0 80px;
   text-align: center;
-  background: #07101f;
-}
-.hero::before,
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: -40%;
-  pointer-events: none;
-  z-index: 0;
-  will-change: transform;
-}
-.hero::before {
-  background: radial-gradient(circle at 50% 50%, rgba(42,82,140,0.55) 0%, transparent 55%);
-  animation: hero-drift-1 14s ease-in-out infinite alternate;
-}
-.hero::after {
-  background: radial-gradient(circle at 50% 50%, rgba(79,209,197,0.22) 0%, transparent 55%);
-  animation: hero-drift-2 18s ease-in-out infinite alternate;
-}
-@keyframes hero-drift-1 {
-  0%   { transform: translate(-30%, -20%) scale(1); }
-  100% { transform: translate(28%, 18%) scale(1.15); }
-}
-@keyframes hero-drift-2 {
-  0%   { transform: translate(35%, 25%) scale(1.1); }
-  100% { transform: translate(-30%, -20%) scale(1); }
+  background:
+    radial-gradient(ellipse at 30% 0%, rgba(30,58,95,0.7) 0%, transparent 60%),
+    radial-gradient(ellipse at 75% 20%, rgba(42,74,127,0.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(79,209,197,0.08) 0%, transparent 55%),
+    #07101f;
 }
 
 .hero-inner { position: relative; z-index: 1; max-width: 100%; margin: 0 auto; }
