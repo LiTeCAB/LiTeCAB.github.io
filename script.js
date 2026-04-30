@@ -101,10 +101,16 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     const href = link.getAttribute("href");
     if (!href || href === "#") return;
-    const target = document.querySelector(href);
-    if (!target) return;
     event.preventDefault();
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    // #top always scrolls to the very top of the page (the nav is fixed, so
+    // scrollIntoView on the nav itself does nothing).
+    if (href === "#top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const target = document.querySelector(href);
+      if (!target) return;
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
     // Strip the hash from the address bar
     history.replaceState(null, "", window.location.pathname + window.location.search);
   });
