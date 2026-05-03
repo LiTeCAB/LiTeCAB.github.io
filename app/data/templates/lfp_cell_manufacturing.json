@@ -97,7 +97,8 @@
             "photochemical_oxidant": 0.39892870333613706
           },
           "cost_per_unit": 10.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "cost_source": "EverBatt 2023"
         },
         {
           "name": "Al collector foil",
@@ -837,7 +838,8 @@
             "photochemical_oxidant": 2.1134523840455985
           },
           "cost_per_unit": 2.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "cost_source": "EverBatt 2023"
         },
         {
           "name": "Copper",

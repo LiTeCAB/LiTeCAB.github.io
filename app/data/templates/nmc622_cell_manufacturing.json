@@ -929,7 +929,8 @@
             "photochemical_oxidant": 2.1134523840455985
           },
           "cost_per_unit": 2.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "cost_source": "EverBatt 2023"
         },
         {
           "name": "Copper",
