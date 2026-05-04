@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sea-lion/static/css/main.c504b05e.css",
-    "main.js": "/sea-lion/static/js/main.0adb7b87.js",
+    "main.js": "/sea-lion/static/js/main.58f53b2e.js",
     "static/media/logo_transparent.png": "/sea-lion/static/media/logo_transparent.9b5a639930a13fd467d5.png",
     "index.html": "/sea-lion/index.html",
     "main.c504b05e.css.map": "/sea-lion/static/css/main.c504b05e.css.map",
-    "main.0adb7b87.js.map": "/sea-lion/static/js/main.0adb7b87.js.map"
+    "main.58f53b2e.js.map": "/sea-lion/static/js/main.58f53b2e.js.map"
   },
   "entrypoints": [
     "static/css/main.c504b05e.css",
-    "static/js/main.0adb7b87.js"
+    "static/js/main.58f53b2e.js"
   ]
 }
