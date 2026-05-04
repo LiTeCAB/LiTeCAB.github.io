@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280">
+<title>LiTeCAB Desktop — Product Walkthrough</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0f1923;
+    color: white;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  /* ── Slide container ── */
+  .slideshow {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+  }
+
+  .slide.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* ── Title slide ── */
+  .title-slide {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f7f8fa;
+    text-align: center;
+  }
+
+  .title-slide h1 {
+    font-size: 3.5em;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+    background: linear-gradient(90deg, #0d9488, #2563eb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .title-slide .subtitle {
+    font-size: 1.3em;
+    color: #4a5568;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+
+  .title-slide .tagline {
+    font-size: 0.95em;
+    color: #718096;
+    max-width: 500px;
+    line-height: 1.6;
+  }
+
+  /* ── Content slides ── */
+  .content-slide {
+    flex-direction: row;
+    background: #111b27;
+  }
+
+  .slide-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    min-width: 0;
+    order: 2;
+  }
+
+  .slide-image img {
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    object-fit: contain;
+  }
+
+  .slide-caption {
+    width: 320px;
+    flex-shrink: 0;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f7f8fa;
+    border-right: 1px solid #e2e5ea;
+    order: 1;
+  }
+
+  .slide-step {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #0d9488;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .slide-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 1.3;
+    color: #1a202c;
+  }
+
+  .slide-desc {
+    font-size: 0.9em;
+    line-height: 1.7;
+    color: #4a5568;
+    font-weight: 400;
+  }
+
+  .slide-desc strong {
+    color: #0d9488;
+    font-weight: 600;
+  }
+
+  /* ── End slide ── */
+  .end-slide {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f7f8fa;
+    text-align: center;
+  }
+
+  .end-slide h2 {
+    font-size: 2.5em;
+    font-weight: 300;
+    color: #1a202c;
+    margin-bottom: 16px;
+  }
+
+  .end-slide p {
+    font-size: 1.1em;
+    color: #718096;
+    max-width: 450px;
+    line-height: 1.6;
+  }
+
+  /* ── Navigation ── */
+  .nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: rgba(10, 15, 22, 0.9);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 100;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .nav-dots {
+    display: flex;
+    gap: 8px;
+  }
+
+  .nav-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .nav-dot.active {
+    background: #4fd1c5;
+    transform: scale(1.3);
+  }
+
+  .nav-dot:hover {
+    background: rgba(255,255,255,0.5);
+  }
+
+  .nav-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .nav-btn {
+    padding: 6px 18px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: transparent;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85em;
+    transition: all 0.2s;
+  }
+
+  .nav-btn:hover {
+    background: rgba(255,255,255,0.1);
+  }
+
+  .nav-btn.primary {
+    background: #4fd1c5;
+    border-color: #4fd1c5;
+    color: #0f1923;
+    font-weight: 600;
+  }
+
+  .nav-btn.primary:hover {
+    background: #38b2ac;
+  }
+
+  .nav-info {
+    font-size: 0.8em;
+    opacity: 0.4;
+  }
+
+  .auto-badge {
+    font-size: 0.75em;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: rgba(79, 209, 197, 0.15);
+    color: #4fd1c5;
+    cursor: pointer;
+    border: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="slideshow" id="slideshow">
+
+  <!-- Slide 0: Title -->
+  <div class="slide title-slide active" data-index="0">
+    <h1>LiTeCAB</h1>
+    <div class="subtitle">Life Cycle Assessment &amp; Techno-Economic Analysis<br>for Battery Processes</div>
+    <div class="tagline">A desktop tool for evaluating environmental impacts, costs, and material circularity of lithium-ion battery manufacturing and recycling processes. This walkthrough reflects the current startup, inventory, and analysis workflow.</div>
+  </div>
+
+  <!-- Slide 1: Startup -->
+  <div class="slide content-slide" data-index="1">
+    <div class="slide-image"><img src="screenshots/13_capture.png" alt="Startup Screen"></div>
+    <div class="slide-caption">
+      <div class="slide-step">Step 1</div>
+      <div class="slide-title">Welcome Screen</div>
+      <div class="slide-desc">
+        Launch LiTeCAB to open the startup screen. Choose <strong>Load Saved</strong> to open an existing .json project, or <strong>New Project</strong> to start from templates or uploaded data. Use the <strong>Walkthrough</strong> button at bottom-right anytime for this guide.
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2: Template Selection -->
+  <div class="slide content-slide" data-index="2">
+    <div class="slide-image"><img src="screenshots/15_capture.png" alt="Template Selection"></div>
+    <div class="slide-caption">
+      <div class="slide-step">Step 2</div>
+      <div class="slide-title">Select a Template</div>
+      <div class="slide-desc">
+        Choose from built-in manufacturing and recycling templates. Scroll through categories, then use <strong>Download Blank Template</strong> or <strong>Upload Process Template</strong> for custom workflows. Built-in templates include pre-computed <strong>TRACI v2.1</strong> scores and cost fields.
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3: Naming -->
+  <div class="slide content-slide" data-index="3">
+    <div class="slide-image"><img src="screenshots/16_capture.png" alt="Name Your Project"></div>
+    <div class="slide-caption">
+      <div class="slide-step">Step 3</div>
+      <div class="slide-title">Create Project</div>
+      <div class="slide-desc">
+        Enter a project name and confirm chemistry/category when needed. Click <strong>Create Project</strong> to open the model. If a project name already exists, LiTeCAB prompts before overwrite.
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 4: Project Loaded -->
+  <div class="slide content-slide" data-index="4">
+    <div class="slide-image"><img src="screenshots/17_capture.png" alt="Project Loaded"></div>
+    <div class="slide-caption">
+      <div class="slide-step">Step 4</div>
+      <div class="slide-title">Workspace Overview</div>
+      <div class="slide-desc">
+        The main workspace has a left process view and a right panel with <strong>Inventory</strong> and <strong>Analysis</strong> tabs. Select any node to inspect parameters, outputs, and inputs. Use the status bar to track project name, process count, chemistry, and save/analysis messages.
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 5: Process Selection -->
+  <div class="slide content-slide" data-index="5">
+    <div class="slide-image"><img src="screenshots/18_capture.png" alt="Selected Process Inventory"></div>
+    <div class="slide-caption">
+      <div class="slide-step">Step 5</div>
+      <div class="slide-title">Select a Process to Edit</div>
+      <div class="slide-desc">
+        Click a process node in the diagram to focus its inventory. The right panel switches to process-specific inputs, and the bottom specs panel shows duration, temperature, equipment, and source information.
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 6: Editing -->
+  <div class="slide content-slide" data-index="6">
+    <div class="slide-image"><img src="screenshots/20_capture.png" alt="Lookup Input Configuration"></div>
+    <div class="slide-caption">
+      <div class="slide-step">Step 6</div>
+      <div class="slide-title">Add Input from Ecoinvent Lookup</div>
+      <div class="slide-desc">
+        Use <strong>+ Add Input</strong>, search the lookup dataset, select an activity, then set quantity, unit, and cost before adding. The selected item includes attached TRACI data for LCA calculations.
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 7: Cost-Only Items -->
+  <div class="slide content-slide" data-index="7">
+    <div class="slide-image"><img src="screenshots/21_capture.png" alt="Cost-Only Item Panel"></div>
+    <div class="slide-caption">
+      <div class="slide-step">Step 7</div>
+      <div class="slide-title">Add Cost-Only Items</div>
+      <div class="slide-desc">
+        Use <strong>+ Cost Only</strong> to add non-LCA items such as equipment, labor, and transport. These entries contribute to TEA while leaving LCA impacts unchanged.
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 8: LCA Results -->
+  <div class="slide content-slide" data-index="8">
+    <div class="slide-image"><img src="screenshots/23_capture.png" alt="LCA Results"></div>
+    <div class="slide-caption">
+      <div class="slide-step">Step 8</div>
+      <div class="slide-title">Run LCA</div>
+      <div class="slide-desc">
+        In the Analysis tab, run <strong>Life Cycle Assessment (LCA)</strong> to compute TRACI v2.1 impacts. Expand categories to review process-level contribution breakdowns.
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 9: TEA Results -->
+  <div class="slide content-slide" data-index="9">
+    <div class="slide-image"><img src="screenshots/24_capture.png" alt="TEA Results"></div>
+    <div class="slide-caption">
+      <div class="slide-step">Step 9</div>
+      <div class="slide-title">Run TEA</div>
+      <div class="slide-desc">
+        Run <strong>Techno-Economic Analysis (TEA)</strong> for total and per-process cost breakdowns. Edits in Inventory flow directly into TEA. Use the menu save action to <strong>Save As</strong> your current project state.
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 10: Circularity -->
+  <div class="slide content-slide" data-index="10">
+    <div class="slide-image"><img src="screenshots/25_capture.png" alt="Circularity Results"></div>
+    <div class="slide-caption">
+      <div class="slide-step">Step 10</div>
+      <div class="slide-title">Circularity Metrics</div>
+      <div class="slide-desc">
+        Run <strong>Circularity</strong> to evaluate material circularity across key battery materials. Then export consolidated results to Excel for reporting and comparison across scenarios.
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 11: End -->
+  <div class="slide end-slide" data-index="11">
+    <h2>Ready to Get Started?</h2>
+    <p>LiTeCAB Desktop is a standalone application — no internet, database, or Python installation required. Download, install, and start analyzing.</p>
+  </div>
+
+</div>
+
+<!-- Navigation -->
+<div class="nav-bar">
+  <div class="nav-dots" id="navDots"></div>
+  <div class="nav-buttons">
+    <span class="nav-info" id="slideCounter">1 / 12</span>
+    <button class="auto-badge" id="autoBtn" onclick="toggleAuto()">Auto: Off</button>
+    <button class="nav-btn" onclick="prevSlide()">← Prev</button>
+    <button class="nav-btn primary" onclick="nextSlide()">Next →</button>
+  </div>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  let current = 0;
+  let autoInterval = null;
+
+  function showSlide(n) {
+    current = ((n % totalSlides) + totalSlides) % totalSlides;
+    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+    updateNav();
+  }
+
+  function nextSlide() { showSlide(current + 1); }
+  function prevSlide() { showSlide(current - 1); }
+
+  function updateNav() {
+    document.getElementById('slideCounter').textContent = `${current + 1} / ${totalSlides}`;
+    const dots = document.getElementById('navDots');
+    dots.innerHTML = '';
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'nav-dot' + (i === current ? ' active' : '');
+      dot.onclick = () => showSlide(i);
+      dots.appendChild(dot);
+    }
+  }
+
+  function toggleAuto() {
+    const btn = document.getElementById('autoBtn');
+    if (autoInterval) {
+      clearInterval(autoInterval);
+      autoInterval = null;
+      btn.textContent = 'Auto: Off';
+    } else {
+      autoInterval = setInterval(nextSlide, 5000);
+      btn.textContent = 'Auto: 5s';
+    }
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
+    if (e.key === 'Home') showSlide(0);
+    if (e.key === 'End') showSlide(totalSlides - 1);
+  });
+
+  updateNav();
+</script>
+
+</body>
+</html>
