@@ -928,7 +928,7 @@
             "particulate_matter": 0.0349770470106577,
             "photochemical_oxidant": 2.1134523840455985
           },
-          "cost_per_unit": 2.0,
+          "cost_per_unit": 0.0,
           "cost_unit": "USD/kg",
           "cost_source": "EverBatt 2023"
         },
@@ -1079,8 +1079,8 @@
     "photochemical_oxidant": 7.50629529
   },
   "total_cost_per_functional_unit": {
-    "value": 83.9364,
+    "value": 55.628,
     "unit": "USD",
-    "note": "Material/energy costs per 1 kg cell (excludes labor, overhead, capital)"
+    "note": "Material/energy costs per 1 kg cell (excludes labor, overhead, capital). Double-counted NMC811 oxide purchase price and Separator purchase price removed — those costs are captured in their respective upstream processes."
   }
 }
