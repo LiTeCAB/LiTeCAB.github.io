@@ -10,6 +10,7 @@
     "description": "1 kg of NMC111 Li-ion battery cell",
     "scale": "cell",
     "weight_kg": 1.0,
+    "energy_density_wh_per_kg": 150,
     "chemistry": "NMC111",
     "cathode_composition": "LiNi1/3Mn1/3Co1/3O2",
     "anode_material": "Graphite"

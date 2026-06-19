@@ -10,6 +10,7 @@
     "description": "1 kg of LFP Li-ion battery cell",
     "scale": "cell",
     "weight_kg": 1.0,
+    "energy_density_wh_per_kg": 160,
     "chemistry": "LFP",
     "cathode_composition": "LiFePO4",
     "anode_material": "Graphite"

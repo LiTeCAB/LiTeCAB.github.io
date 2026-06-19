@@ -10,6 +10,7 @@
     "description": "1 kg of NMC811 Li-ion battery cell",
     "scale": "cell",
     "weight_kg": 1.0,
+    "energy_density_wh_per_kg": 250,
     "chemistry": "NMC811",
     "cathode_composition": "LiNi0.8Mn0.1Co0.1O2",
     "anode_material": "Graphite"

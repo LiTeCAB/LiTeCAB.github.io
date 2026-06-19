@@ -10,6 +10,7 @@
     "description": "1 kg of NMC622 Li-ion battery cell",
     "scale": "cell",
     "weight_kg": 1.0,
+    "energy_density_wh_per_kg": 200,
     "chemistry": "NMC622",
     "cathode_composition": "LiNi0.6Mn0.2Co0.2O2",
     "anode_material": "Graphite"
