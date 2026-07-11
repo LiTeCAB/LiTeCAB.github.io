@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LiTeCAB — LCA &amp; TEA for Process Engineering</title>
-  <meta name="description" content="LiTeCAB Desktop — life cycle assessment and techno-economic analysis in one guided workflow. Currently featuring battery process templates.">
+  <title>LiTeCAB — Battery LCA &amp; TEA in Your Browser</title>
+  <meta name="description" content="LiTeCAB runs life cycle assessment, techno-economic analysis, and circularity metrics for battery processes — free, in the browser, guided by an AI copilot. Tailored versions available for organizations.">
+  <meta property="og:title" content="LiTeCAB — Battery LCA &amp; TEA in Your Browser">
+  <meta property="og:description" content="Pick a battery process template, run LCA, TEA, and circularity analysis, and compare scenarios — no installation. Tailored versions for organizations.">
+  <meta property="og:image" content="https://litecab.github.io/assets/app-build.png">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,10 +25,10 @@
       <a href="#top" class="nav-brand">LiTeCAB</a>
       <div class="nav-links">
         <a href="#problem">Why</a>
-        <a href="#solution">How</a>
-        <a href="./app/">Web App</a>
+        <a href="#solution">Inside the App</a>
+        <a href="#contact">For Your Org</a>
         <a href="#footer">Contact</a>
-        <a href="#contact" class="nav-cta">Get Full Version</a>
+        <a href="./app/" class="nav-cta">Open the App</a>
       </div>
     </div>
   </nav>
@@ -36,76 +39,85 @@
     <section class="hero">
       <div class="container hero-inner">
         <img src="logo.png" alt="LiTeCAB" class="hero-logo">
-        <h1>From process model to LCA &amp; TEA results. <em>Fast.</em></h1>
+        <h1>Battery LCA &amp; TEA, <em>in your browser.</em></h1>
         <p class="hero-desc">
-          Run environmental impact and cost analyses with built-in data,
-          guided workflows, and zero setup.
+          Pick a battery process template, run environmental, cost, and circularity
+          analysis, and compare scenarios. An AI copilot does the busywork.
+          Nothing to install.
         </p>
         <div class="hero-btns">
-          <a href="./app/" class="btn btn-primary">Open in Browser</a>
+          <a href="./app/" class="btn btn-primary">Open the App — Free</a>
+          <a href="#contact" class="btn btn-outline">Get a Version for Your Org</a>
         </div>
-        <a href="#problem" class="hero-scroll-hint" aria-label="Scroll to learn more">
-          Learn more
-          <span class="chev" aria-hidden="true">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </span>
-        </a>
+        <div class="shot-frame hero-shot">
+          <img src="assets/app-build.png" alt="LiTeCAB web app — battery process diagram with the AI copilot panel open" width="1600" height="1000">
+        </div>
       </div>
     </section>
 
     <!-- ═══ Problem ═══ -->
     <section class="section section-light" id="problem">
       <div class="container">
-        <h2 class="section-heading">Running LCA or TEA usually means&hellip;</h2>
+        <h2 class="section-heading">Why another tool? Because LCA and TEA are usually&hellip;</h2>
         <div class="cards-row">
           <div class="card">
             <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-            <h3>Hours of setup</h3>
-            <p>Install databases, configure Python environments, connect APIs before any analysis.</p>
+            <h3>Slow to start</h3>
+            <p>Databases to install, environments to configure, licenses to sort out — before the first result.</p>
           </div>
           <div class="card">
             <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="7" y1="10" x2="7" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="17" y1="10" x2="17" y2="10.01"/></svg></div>
-            <h3>Separate tools</h3>
-            <p>One tool for LCA, another for cost, another for reporting. Context gets lost in between.</p>
+            <h3>Scattered</h3>
+            <p>Impacts in one tool, costs in a spreadsheet, reports somewhere else. Context gets lost in between.</p>
           </div>
           <div class="card">
             <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg></div>
-            <h3>High barrier to entry</h3>
-            <p>New team members need weeks to learn the toolchain before running their first scenario.</p>
+            <h3>Expert-only</h3>
+            <p>Steep toolchains mean weeks of ramp-up before a new team member can run their first scenario.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══ Solution + Walkthrough ═══ -->
+    <!-- ═══ Solution ═══ -->
     <section class="section section-alt" id="solution">
       <div class="container solution-grid">
         <div class="solution-left">
-          <h2 class="section-heading">How LiTeCAB solves this</h2>
-          <p class="section-lead">One desktop app. Templates included. Results in minutes.</p>
+          <h2 class="section-heading">One tab. Full picture.</h2>
+          <p class="section-lead">Template in, results out — usually in minutes.</p>
           <div class="features">
             <div class="feat">
+              <strong>AI Copilot</strong>
+              <span>Builds and edits process templates, runs analyses, and explains results in plain language</span>
+            </div>
+            <div class="feat">
               <strong>Life Cycle Assessment</strong>
-              <span>Environmental impact scoring with process-level breakdowns</span>
+              <span>Nine TRACI v2.1 impact categories with process-level breakdowns, per kg or per kWh</span>
             </div>
             <div class="feat">
               <strong>Techno-Economic Analysis</strong>
-              <span>Material, labor, and operational cost modeling</span>
+              <span>Material, labor, and energy costs, plus revenue and margin per product</span>
             </div>
             <div class="feat">
               <strong>Circularity Metrics</strong>
-              <span>Material circularity evaluation across flows</span>
+              <span>Material circularity evaluation across your process flows</span>
+            </div>
+            <div class="feat">
+              <strong>Scenario Comparison</strong>
+              <span>Save runs and compare chemistries or process changes side by side</span>
+            </div>
+            <div class="feat">
+              <strong>Templates Included</strong>
+              <span>NMC111, NMC622, NMC811, LFP manufacturing and battery recycling — or upload your own CSV</span>
             </div>
           </div>
         </div>
         <div class="solution-right">
-          <span class="video-badge-btn">Walkthrough</span>
-          <div class="video-frame">
-            <video controls preload="metadata">
-              <source src="walkthrough.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+          <span class="video-badge-btn">Inside the App</span>
+          <div class="shot-frame">
+            <img src="assets/app-results.png" alt="LiTeCAB results screen — TRACI v2.1 impact table and normalized chart with the AI copilot" width="1600" height="1000" loading="lazy">
           </div>
+          <p class="shot-note">The free app ships with illustrative demo data. Tailored versions run on your data.</p>
         </div>
       </div>
     </section>
@@ -115,10 +127,14 @@
       <div class="container">
         <div class="cta-block">
           <div class="cta-text">
-            <h2>Get in touch</h2>
+            <h2>Get LiTeCAB tailored to your organization</h2>
             <p>
-              Interested in early access, a live demo, or have a technical question?
-              Fill out the form and we'll follow up.
+              The free app is a demo with illustrative data. For organizations, we build
+              tailored versions: your process templates and chemistries, full impact
+              datasets, your cost assumptions, and private deployment for your team.
+            </p>
+            <p style="margin-top: 12px;">
+              Tell us what you're working on and we'll follow up with a walkthrough.
             </p>
           </div>
           <form id="interest-form" class="cta-form" novalidate>
@@ -128,35 +144,35 @@
                 <input id="name" name="name" type="text" autocomplete="name" required>
               </div>
               <div class="f-group">
-                <label for="email">Email</label>
+                <label for="email">Work email</label>
                 <input id="email" name="email" type="email" autocomplete="email" required>
               </div>
             </div>
             <div class="f-row f-2col">
               <div class="f-group">
                 <label for="organization">Organization</label>
-                <input id="organization" name="organization" type="text" autocomplete="organization">
+                <input id="organization" name="organization" type="text" autocomplete="organization" required>
               </div>
               <div class="f-group">
-                <label for="next_step">I'm looking for&hellip;</label>
+                <label for="next_step">I'm interested in&hellip;</label>
                 <select id="next_step" name="next_step" required>
                   <option value="">Select</option>
-                  <option value="early-access">Early access</option>
+                  <option value="tailored-version">A version tailored to our org</option>
                   <option value="live-demo">A live demo</option>
-                  <option value="technical-discussion">Technical discussion</option>
+                  <option value="technical-discussion">A technical discussion</option>
                   <option value="exploring">Just exploring</option>
                 </select>
               </div>
             </div>
             <div class="f-group">
-              <label for="inquiry">Question or comment</label>
-              <textarea id="inquiry" name="inquiry" rows="3" placeholder="Anything you'd like us to know or answer?"></textarea>
+              <label for="inquiry">What would you tailor?</label>
+              <textarea id="inquiry" name="inquiry" rows="3" placeholder="Your processes or chemistries, data sources, deployment needs, timeline&hellip;"></textarea>
             </div>
             <div class="f-check">
               <input id="consent" name="consent" type="checkbox" required>
               <label for="consent">I agree to be contacted about LiTeCAB.</label>
             </div>
-            <button class="btn btn-primary btn-full" type="submit">Send</button>
+            <button class="btn btn-primary btn-full" type="submit">Request a Tailored Version</button>
             <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -167,7 +183,7 @@
 
   <footer class="site-footer" id="footer">
     <div class="container footer-row">
-      <p class="footer-tagline">LiTeCAB &mdash; Life Cycle Assessment &amp; Techno-Economic Analysis</p>
+      <p class="footer-tagline">LiTeCAB &mdash; LCA &amp; TEA for battery processes, in the browser</p>
       <p class="footer-questions">
         Questions? Contact <a href="mailto:fzhao@purdue.edu">fzhao@purdue.edu</a>
       </p>

@@ -159,7 +159,7 @@ form?.addEventListener("submit", async (event) => {
 
   if (!isEndpointConfigured(SHEETS_ENDPOINT)) {
     setStatus(
-      "Google Sheets endpoint is not configured yet. Set your Apps Script URL in docs/script.js.",
+      "Google Sheets endpoint is not configured yet. Set your Apps Script URL in script.js.",
       true
     );
     return;
@@ -178,7 +178,7 @@ form?.addEventListener("submit", async (event) => {
 
     await submitToGoogleSheets(payload);
     form.reset();
-    setStatus("Thanks - your interest and inquiry were sent. We will follow up shortly.");
+    setStatus("Thanks — we got your request. We'll follow up shortly to set up a walkthrough.");
   } catch (error) {
     console.error("[Landing Form] Submission error:", error);
     setStatus("Submission failed. Please try again or contact the team directly.", true);

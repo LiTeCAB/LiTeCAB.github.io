@@ -56,12 +56,10 @@ body {
   background: #cde2db; /* mint tint — same as section-light */
   border-bottom: 1px solid #b9d4cd;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  backdrop-filter: saturate(140%);
-  transition: background 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease, border-color 0.25s ease;
+  transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .navbar.is-scrolled {
-  background: rgba(205,226,219,0.82);
-  backdrop-filter: saturate(160%) blur(12px);
+  background: rgba(205,226,219,0.96);
   border-bottom-color: rgba(185,212,205,0.5);
   box-shadow: 0 4px 18px rgba(15,26,46,0.08);
 }
@@ -135,7 +133,7 @@ body {
 .hero-inner { position: relative; z-index: 1; max-width: 100%; margin: 0 auto; }
 
 .hero-logo {
-  height: 240px;
+  height: 150px;
   margin-bottom: 16px;
 }
 
@@ -172,27 +170,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Scroll-down hint under the hero CTA */
-.hero-scroll-hint {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 18px;
-  color: rgba(255,255,255,0.55);
-  font-size: 0.82rem;
-  letter-spacing: 0.3px;
-  text-decoration: none;
-  transition: color 0.2s, transform 0.2s;
-}
-.hero-scroll-hint:hover { color: #4fd1c5; }
-.hero-scroll-hint .chev {
-  display: inline-block;
-  animation: hint-bounce 1.8s ease-in-out infinite;
-}
-@keyframes hint-bounce {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(4px); }
-}
 
 
 /* ── Buttons ── */
@@ -446,8 +423,8 @@ body {
   color: rgba(255,255,255,0.5);
 }
 
-/* ── Video ── */
-.video-frame {
+/* ── App screenshots ── */
+.shot-frame {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
@@ -460,15 +437,25 @@ body {
     0 16px 40px -12px rgba(79,209,197,0.18),
     0 12px 32px rgba(0,0,0,0.4);
   width: 100%;
-  aspect-ratio: 16 / 9;
 }
 
-.video-frame video {
+.shot-frame img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
   display: block;
   background: #0a1220;
+}
+
+.hero-shot {
+  max-width: 1100px;
+  margin: 44px auto 0;
+}
+
+.shot-note {
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.45);
+  text-align: center;
 }
 
 /* ── CTA / Form ── */

@@ -4,13 +4,13 @@
 
 **Life Cycle Assessment · Techno-Economic Analysis · Circularity**
 
-*A desktop tool for process-level environmental and cost evaluation*
+*Battery LCA & TEA, in your browser*
 
 ---
 
 </div>
 
-LiTeCAB helps researchers and engineers move from process concepts to quantified LCA and TEA results — fast. It ships with built-in impact data, ready-to-use process templates, and a guided workflow so teams can start analyzing without external databases or backend setup.
+LiTeCAB helps researchers and engineers move from process concepts to quantified LCA and TEA results — fast. It runs entirely in the browser with built-in impact data, ready-to-use battery process templates, an AI copilot, and a guided workflow, so teams can start analyzing without installing anything.
 
 > **Current focus:** Battery manufacturing and recycling templates are available now. The platform is designed to support additional process domains.
 
@@ -18,15 +18,17 @@ LiTeCAB helps researchers and engineers move from process concepts to quantified
 
 ### What it does
 
-🔬 **Life Cycle Assessment** — Environmental impact scoring with process-level contribution breakdowns
+🔬 **Life Cycle Assessment** — Nine TRACI v2.1 impact categories with process-level contribution breakdowns
 
-💰 **Techno-Economic Analysis** — Cost modeling across materials, labor, and operations
+💰 **Techno-Economic Analysis** — Cost modeling across materials, labor, and energy, plus revenue and margin
 
 ♻️ **Circularity Metrics** — Material circularity evaluation across process flows
 
+🤖 **AI Copilot** — Builds and edits templates, runs analyses, and explains results
+
 📦 **Templates + Custom Data** — Start from built-in templates or upload your own process inventory
 
-🖥️ **Standalone Desktop App** — No internet, no Python, no external databases required
+🌐 **Runs in the Browser** — No installation; tailored versions with full datasets available for organizations
 
 <br>
 
@@ -34,6 +36,6 @@ LiTeCAB helps researchers and engineers move from process concepts to quantified
 
 <div align="center">
 
-### 🔗 [Learn More →](https://litecab.github.io/LiTeCAB-Landing/)
+### 🔗 [Open the App →](https://litecab.github.io/app/) · [Landing Page →](https://litecab.github.io/)
 
 </div>
