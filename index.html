@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LiTeCAB — Battery LCA &amp; TEA in Your Browser</title>
-  <meta name="description" content="LiTeCAB runs life cycle assessment, techno-economic analysis, and circularity metrics for battery processes — free, in the browser, guided by an AI copilot. Tailored versions available for organizations.">
-  <meta property="og:title" content="LiTeCAB — Battery LCA &amp; TEA in Your Browser">
-  <meta property="og:description" content="Pick a battery process template, run LCA, TEA, and circularity analysis, and compare scenarios — no installation. Tailored versions for organizations.">
+  <title>LiTeCAB — See the Impact and Cost of Your Battery Process</title>
+  <meta name="description" content="LiTeCAB is a free browser tool that estimates the environmental footprint (LCA), production cost (TEA), and circularity of battery manufacturing and recycling processes. No installation — an AI copilot guides you. Tailored versions for organizations.">
+  <link rel="canonical" href="https://litecab.github.io/">
+  <meta property="og:title" content="LiTeCAB — See the Impact and Cost of Your Battery Process">
+  <meta property="og:description" content="Free browser tool for battery LCA, TEA, and circularity. Pick a template, press run, compare scenarios. Tailored versions for organizations.">
   <meta property="og:image" content="https://litecab.github.io/assets/app-build.png">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -14,43 +15,91 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "LiTeCAB",
+    "url": "https://litecab.github.io/app/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Any (web browser)",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "Free browser-based tool that estimates the environmental footprint (life cycle assessment), production cost (techno-economic analysis), and circularity of battery manufacturing and recycling processes.",
+    "publisher": { "@type": "Organization", "name": "LiTeCAB (Purdue University, ARPA-E CIRCULAR)" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is LiTeCAB?",
+        "acceptedAnswer": { "@type": "Answer", "text": "LiTeCAB is a free browser-based tool that estimates the environmental footprint (life cycle assessment), production cost (techno-economic analysis), and circularity of battery manufacturing and recycling processes. It was developed at Purdue University with support from ARPA-E's CIRCULAR program." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to install anything or create an account?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. LiTeCAB runs entirely in your web browser, and your projects are stored locally on your device." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to be an LCA or TEA expert?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Ready-made templates and an AI copilot handle the setup, and results come with plain-language explanations. If you can describe your process, you can run an analysis." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the data in the free version real?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The free app uses illustrative demo data: results have realistic structure, but the values are not decision-grade. Organizations that need exact numbers can get a tailored version that runs on full datasets and their own process data." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we get a version for our organization?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. We build tailored deployments with your process templates and chemistries, full impact datasets, your cost assumptions, and private hosting for your team." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to main content</a>
   <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
   <!-- ═══ Navbar ═══ -->
-  <nav class="navbar" id="top">
+  <nav class="navbar" id="top" aria-label="Main">
     <div class="container nav-inner">
       <a href="#top" class="nav-brand">LiTeCAB</a>
       <div class="nav-links">
         <a href="#problem">Why</a>
         <a href="#solution">Inside the App</a>
+        <a href="#learn">Learn</a>
         <a href="#contact">For Your Org</a>
-        <a href="#footer">Contact</a>
         <a href="./app/" class="nav-cta">Open the App</a>
       </div>
     </div>
   </nav>
 
-  <main>
+  <main id="main">
 
     <!-- ═══ Hero ═══ -->
     <section class="hero">
       <div class="container hero-inner">
         <img src="logo.png" alt="LiTeCAB" class="hero-logo">
-        <h1>Battery LCA &amp; TEA, <em>in your browser.</em></h1>
+        <h1>See the impact and cost of your battery process — <em>before you build it.</em></h1>
         <p class="hero-desc">
-          Pick a battery process template, run environmental, cost, and circularity
-          analysis, and compare scenarios. An AI copilot does the busywork.
-          Nothing to install.
+          LiTeCAB is a free tool for battery researchers and manufacturers. It estimates
+          your process's environmental footprint — a life cycle assessment (LCA) — and its
+          production economics — a techno-economic analysis (TEA) — right in your browser.
+          Pick a template, press run, and an AI copilot walks you through the rest.
         </p>
         <div class="hero-btns">
           <a href="./app/" class="btn btn-primary">Open the App — Free</a>
           <a href="#contact" class="btn btn-outline">Get a Version for Your Org</a>
         </div>
         <div class="shot-frame hero-shot">
-          <img src="assets/app-build.png" alt="LiTeCAB web app — battery process diagram with the AI copilot panel open" width="1600" height="1000">
+          <img src="assets/app-build.png" alt="LiTeCAB web app showing a battery manufacturing process diagram with the AI copilot panel open" width="1600" height="1000">
         </div>
       </div>
     </section>
@@ -58,22 +107,22 @@
     <!-- ═══ Problem ═══ -->
     <section class="section section-light" id="problem">
       <div class="container">
-        <h2 class="section-heading">Why another tool? Because LCA and TEA are usually&hellip;</h2>
+        <h2 class="section-heading">"Is it greener? Is it cheaper?" &mdash; simple questions, painful answers</h2>
         <div class="cards-row">
-          <div class="card">
-            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="card card-center">
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
             <h3>Slow to start</h3>
-            <p>Databases to install, environments to configure, licenses to sort out — before the first result.</p>
+            <p>Traditional tools need databases, licenses, and days of setup before they produce a single number.</p>
           </div>
-          <div class="card">
-            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="7" y1="10" x2="7" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="17" y1="10" x2="17" y2="10.01"/></svg></div>
+          <div class="card card-center">
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="7" y1="10" x2="7" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="17" y1="10" x2="17" y2="10.01"/></svg></div>
             <h3>Scattered</h3>
-            <p>Impacts in one tool, costs in a spreadsheet, reports somewhere else. Context gets lost in between.</p>
+            <p>Environmental results in one tool, costs in a spreadsheet, conclusions in slides. The full picture never lives in one place.</p>
           </div>
-          <div class="card">
-            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg></div>
-            <h3>Expert-only</h3>
-            <p>Steep toolchains mean weeks of ramp-up before a new team member can run their first scenario.</p>
+          <div class="card card-center">
+            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg></div>
+            <h3>Experts only</h3>
+            <p>Most tools assume a trained analyst. Most teams don't have one to spare.</p>
           </div>
         </div>
       </div>
@@ -84,40 +133,109 @@
       <div class="container solution-grid">
         <div class="solution-left">
           <h2 class="section-heading">One tab. Full picture.</h2>
-          <p class="section-lead">Template in, results out — usually in minutes.</p>
+          <p class="section-lead">Pick a template, press run, read the results — in plain language.</p>
           <div class="features">
             <div class="feat">
-              <strong>AI Copilot</strong>
-              <span>Builds and edits process templates, runs analyses, and explains results in plain language</span>
+              <strong>Environmental footprint (LCA)</strong>
+              <span>Nine standard impact scores — carbon, water pollution, air quality, and more — for every step of your process</span>
             </div>
             <div class="feat">
-              <strong>Life Cycle Assessment</strong>
-              <span>Nine TRACI v2.1 impact categories with process-level breakdowns, per kg or per kWh</span>
+              <strong>Cost &amp; margin (TEA)</strong>
+              <span>What each step costs in materials, labor, and energy — and the margin you'd make at a given selling price</span>
             </div>
             <div class="feat">
-              <strong>Techno-Economic Analysis</strong>
-              <span>Material, labor, and energy costs, plus revenue and margin per product</span>
+              <strong>Circularity</strong>
+              <span>How much of your material loops back into use instead of ending up as waste</span>
             </div>
             <div class="feat">
-              <strong>Circularity Metrics</strong>
-              <span>Material circularity evaluation across your process flows</span>
+              <strong>Scenario comparison</strong>
+              <span>Save runs and put two options side by side to see which one wins</span>
             </div>
             <div class="feat">
-              <strong>Scenario Comparison</strong>
-              <span>Save runs and compare chemistries or process changes side by side</span>
+              <strong>AI copilot</strong>
+              <span>Builds the model with you, runs the analyses, and explains what the numbers mean</span>
             </div>
             <div class="feat">
-              <strong>Templates Included</strong>
-              <span>NMC111, NMC622, NMC811, LFP manufacturing and battery recycling — or upload your own CSV</span>
+              <strong>Battery templates included</strong>
+              <span>NMC111, NMC622, NMC811, LFP, and recycling — or upload your own process data</span>
             </div>
           </div>
         </div>
         <div class="solution-right">
           <span class="video-badge-btn">Inside the App</span>
           <div class="shot-frame">
-            <img src="assets/app-results.png" alt="LiTeCAB results screen — TRACI v2.1 impact table and normalized chart with the AI copilot" width="1600" height="1000" loading="lazy">
+            <img src="assets/app-results.png" alt="LiTeCAB results screen showing an environmental impact table and chart, with the AI copilot suggesting next steps" width="1600" height="1000" loading="lazy">
           </div>
           <p class="shot-note">The free app ships with illustrative demo data. Tailored versions run on your data.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Benefits ═══ -->
+    <section class="section section-light" id="benefits">
+      <div class="container">
+        <h2 class="section-heading">What the numbers do for your business case</h2>
+        <div class="cards-row cards-4">
+          <div class="card">
+            <h3>Stronger funding proposals</h3>
+            <p>Grant reviewers and investors increasingly expect quantified impact and cost projections. Put real per-kWh numbers in your next application instead of adjectives.</p>
+          </div>
+          <div class="card">
+            <h3>Credible sustainability claims</h3>
+            <p>Back PR and product claims with process-level results you can explain and defend — not figures borrowed from someone else's study.</p>
+          </div>
+          <div class="card">
+            <h3>Evidence against the status quo</h3>
+            <p>Compare your process with the incumbent side by side, and show exactly where you win — emissions, cost, or both.</p>
+          </div>
+          <div class="card">
+            <h3>Cheaper course corrections</h3>
+            <p>Screen options in an afternoon and find the expensive problems while they're still cheap to fix — before pilot-scale money is committed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ Learn + FAQ ═══ -->
+    <section class="section section-alt" id="learn">
+      <div class="container">
+        <h2 class="section-heading">New to LCA and TEA?</h2>
+        <p class="section-lead">Two short guides, written in plain English.</p>
+        <div class="learn-cards">
+          <a class="learn-card" href="./lca.html">
+            <strong>What is Life Cycle Assessment?</strong>
+            <span>What an LCA measures, what the impact scores mean, and when your project needs one.</span>
+            <span class="learn-more">Read the LCA guide &rarr;</span>
+          </a>
+          <a class="learn-card" href="./tea.html">
+            <strong>What is Techno-Economic Analysis?</strong>
+            <span>How a TEA estimates what your process will cost at scale — and why funders ask for one.</span>
+            <span class="learn-more">Read the TEA guide &rarr;</span>
+          </a>
+        </div>
+
+        <h2 class="section-heading" id="faq" style="margin-top: 64px;">Common questions</h2>
+        <div class="faq-list">
+          <details>
+            <summary>What is LiTeCAB?</summary>
+            <p>LiTeCAB is a free browser-based tool that estimates the environmental footprint (life cycle assessment), production cost (techno-economic analysis), and circularity of battery manufacturing and recycling processes. It was developed at Purdue University with support from ARPA-E's CIRCULAR program.</p>
+          </details>
+          <details>
+            <summary>Do I need to install anything or create an account?</summary>
+            <p>No. LiTeCAB runs entirely in your web browser, and your projects are stored locally on your device.</p>
+          </details>
+          <details>
+            <summary>Do I need to be an LCA or TEA expert?</summary>
+            <p>No. Ready-made templates and an AI copilot handle the setup, and results come with plain-language explanations. If you can describe your process, you can run an analysis.</p>
+          </details>
+          <details>
+            <summary>Is the data in the free version real?</summary>
+            <p>The free app uses illustrative demo data: results have realistic structure, but the values are not decision-grade. Organizations that need exact numbers can get a <a href="#contact">tailored version</a> that runs on full datasets and their own process data.</p>
+          </details>
+          <details>
+            <summary>Can we get a version for our organization?</summary>
+            <p>Yes. We build tailored deployments with your process templates and chemistries, full impact datasets, your cost assumptions, and private hosting for your team. <a href="#contact">Tell us what you're working on</a>.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -182,14 +300,22 @@
   </main>
 
   <footer class="site-footer" id="footer">
-    <div class="container footer-row">
-      <p class="footer-tagline">LiTeCAB &mdash; LCA &amp; TEA for battery processes, in the browser</p>
-      <p class="footer-questions">
-        Questions? Contact <a href="mailto:fzhao@purdue.edu">fzhao@purdue.edu</a>
-      </p>
-      <div class="footer-funding">
-        <span class="footer-funding-label">Supported by</span>
-        <span class="footer-funding-name">ARPA-E CIRCULAR</span>
+    <div class="container">
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="./lca.html">What is LCA?</a>
+        <a href="./tea.html">What is TEA?</a>
+        <a href="./app/">Open the App</a>
+        <a href="#contact">Tailored Versions</a>
+      </nav>
+      <div class="footer-row">
+        <p class="footer-tagline">LiTeCAB &mdash; impact &amp; cost analysis for battery processes, in the browser</p>
+        <p class="footer-questions">
+          Questions? Contact <a href="mailto:fzhao@purdue.edu">fzhao@purdue.edu</a>
+        </p>
+        <div class="footer-funding">
+          <span class="footer-funding-label">Supported by</span>
+          <span class="footer-funding-name">ARPA-E CIRCULAR</span>
+        </div>
       </div>
     </div>
   </footer>
