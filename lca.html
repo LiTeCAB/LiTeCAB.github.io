@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What Is Life Cycle Assessment (LCA)? A Plain-English Guide — LiTeCAB</title>
-  <meta name="description" content="Life cycle assessment (LCA) measures the environmental impact of a product or process — like kg of CO₂ per kWh of battery. A plain-English guide: what LCA measures, what the impact categories mean, and when your project needs one.">
+  <title>What Is Life Cycle Assessment (LCA)? A Beginner's Guide | LiTeCAB</title>
+  <meta name="description" content="Life cycle assessment (LCA) measures the environmental impact of a product or process, like kg of CO₂ per kWh of battery. A beginner's guide to what LCA measures, what the impact categories mean, and when your project needs one.">
   <link rel="canonical" href="https://litecab.github.io/lca.html">
-  <meta property="og:title" content="What Is Life Cycle Assessment (LCA)? A Plain-English Guide">
-  <meta property="og:description" content="What an LCA measures, what impact scores like kg CO₂-eq mean, and when your battery project needs one — explained without jargon.">
+  <meta property="og:title" content="What Is Life Cycle Assessment (LCA)? A Beginner's Guide">
+  <meta property="og:description" content="What an LCA measures, what impact scores like kg CO₂-eq mean, and when your battery project needs one.">
   <meta property="og:image" content="https://litecab.github.io/assets/app-results.png">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "What Is Life Cycle Assessment (LCA)? A Plain-English Guide",
+    "headline": "What Is Life Cycle Assessment (LCA)? A Beginner's Guide",
     "description": "What an LCA measures, what the impact categories mean, and when a battery project needs one.",
     "author": { "@type": "Organization", "name": "LiTeCAB" },
     "publisher": { "@type": "Organization", "name": "LiTeCAB (Purdue University, ARPA-E CIRCULAR)" },
@@ -35,7 +35,7 @@
       {
         "@type": "Question",
         "name": "What is the difference between an LCA and a carbon footprint?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A carbon footprint is one slice of an LCA: it counts only greenhouse gas emissions. A full LCA also covers water pollution, air quality, toxicity, ozone depletion, and more — so a process that looks good on carbon alone can't hide problems elsewhere." }
+        "acceptedAnswer": { "@type": "Answer", "text": "A carbon footprint is one slice of an LCA: it counts only greenhouse gas emissions. A full LCA also covers water pollution, air quality, toxicity, ozone depletion, and more, so a process that looks good on carbon alone can't hide problems elsewhere." }
       },
       {
         "@type": "Question",
@@ -50,7 +50,7 @@
       {
         "@type": "Question",
         "name": "How long does an LCA take?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A traditional consultant-led LCA typically takes weeks to months. A screening LCA in LiTeCAB — using templates and built-in data — takes minutes, which makes it practical to compare options during R&D rather than after decisions are made." }
+        "acceptedAnswer": { "@type": "Answer", "text": "A traditional consultant-led LCA typically takes weeks to months. A screening LCA in LiTeCAB, using templates and built-in data, takes minutes, which makes it practical to compare options during R&D rather than after decisions are made." }
       },
       {
         "@type": "Question",
@@ -60,7 +60,7 @@
       {
         "@type": "Question",
         "name": "Why doesn't the free version use ecoinvent?",
-        "acceptedAnswer": { "@type": "Answer", "text": "ecoinvent is the most widely used life cycle inventory database, and it's licensed per organization — its data can't be redistributed through a free public tool. That's why the free app's results are indicative. Tailored LiTeCAB deployments connect through your organization's own ecoinvent (or other database) license, so results use the real factors." }
+        "acceptedAnswer": { "@type": "Answer", "text": "ecoinvent is the most widely used life cycle inventory database, and it's licensed per organization, so its data can't be redistributed through a free public tool. That's why the free app's results are indicative. Tailored LiTeCAB deployments connect through your organization's own ecoinvent (or other database) license, so results use the real factors." }
       }
     ]
   }
@@ -88,11 +88,11 @@
 
     <header class="article-hero">
       <div class="container">
-        <span class="article-kicker">Plain-English Guide</span>
+        <span class="article-kicker">Beginner's Guide</span>
         <h1>What is Life Cycle Assessment?</h1>
         <p class="answer-box">
           <strong>Life cycle assessment (LCA)</strong> is a method for measuring the
-          environmental impact of a product or process — from raw materials through
+          environmental impact of a product or process, from raw materials through
           manufacturing, use, and end of life. Instead of a vague sense that something is
           "green," an LCA gives you numbers, like kilograms of CO&#8322; per kWh of battery
           produced, that you can compare, improve, and defend.
@@ -106,20 +106,20 @@
       <p>
         Think of an LCA as a nutrition label for your process. Everything that goes in
         (materials, energy, water) and everything that comes out (emissions, waste) gets
-        counted for each step — mixing, coating, assembly, recycling, whatever your process
+        counted for each step: mixing, coating, assembly, recycling, whatever your process
         involves. Those inputs and outputs are then translated into a handful of
         environmental impact scores using standardized conversion factors.
       </p>
       <p>
         The result: instead of "cobalt-free sounds cleaner," you can say "our cathode route
-        emits 18% less CO&#8322; per kWh, but uses more freshwater — here's the breakdown by
-        process step."
+        emits 18% less CO&#8322; per kWh but uses more freshwater, and here is the breakdown
+        by process step."
       </p>
 
       <h2>What an LCA actually measures</h2>
       <p>
         LiTeCAB scores processes on the nine impact categories defined by the US EPA's
-        TRACI 2.1 method. In plain terms:
+        TRACI 2.1 method:
       </p>
       <div class="table-scroll">
         <table class="impact-table">
@@ -127,7 +127,7 @@
             <tr><th>Impact category</th><th>What it tells you</th><th>Typical unit</th></tr>
           </thead>
           <tbody>
-            <tr><td>Climate change</td><td>Contribution to global warming — the "carbon footprint"</td><td>kg CO&#8322;-eq</td></tr>
+            <tr><td>Climate change</td><td>Contribution to global warming, the "carbon footprint"</td><td>kg CO&#8322;-eq</td></tr>
             <tr><td>Acidification</td><td>Emissions that cause acid rain and acidify soil and water</td><td>kg SO&#8322;-eq</td></tr>
             <tr><td>Eutrophication</td><td>Nutrient pollution that causes algae blooms and dead zones in water</td><td>kg N-eq</td></tr>
             <tr><td>Smog formation</td><td>Emissions that create ground-level ozone (smog)</td><td>kg O&#8323;-eq</td></tr>
@@ -148,8 +148,8 @@
       <h2>When do you need an LCA?</h2>
       <ul>
         <li><strong>Funding proposals.</strong> ARPA-E, DOE, and EU programs increasingly ask applicants to quantify expected environmental benefits. A proposal with real per-kWh numbers reads very differently from one with adjectives.</li>
-        <li><strong>Sustainability claims and PR.</strong> "Our process cuts emissions by a third" only survives scrutiny if there's an analysis behind it. An LCA is that analysis — and the guard against accidental greenwashing.</li>
-        <li><strong>Beating the status quo.</strong> New processes get compared to the incumbent. An LCA lets you show, category by category, where yours wins — and where it doesn't yet.</li>
+        <li><strong>Sustainability claims and PR.</strong> "Our process cuts emissions by a third" only survives scrutiny if there's an analysis behind it. An LCA is that analysis, and the guard against accidental greenwashing.</li>
+        <li><strong>Beating the status quo.</strong> New processes get compared to the incumbent. An LCA lets you show, category by category, where yours wins and where it doesn't yet.</li>
         <li><strong>Customer and regulatory requirements.</strong> Battery supply chains face growing disclosure rules (like the EU battery passport), and OEM customers pass those requirements upstream.</li>
         <li><strong>R&amp;D screening.</strong> The cheapest time to fix an environmental hotspot is before scale-up. Early screening shows which process step drives impact so you work on the right problem.</li>
       </ul>
@@ -158,13 +158,13 @@
       <p>
         LiTeCAB runs a screening LCA in your browser. You start from a ready-made battery
         template (NMC111, NMC622, NMC811, LFP, or recycling) or describe your own process,
-        and the app calculates all nine TRACI 2.1 categories with a per-step breakdown —
+        and the app calculates all nine TRACI 2.1 categories with a per-step breakdown,
         reported per kilogram of product or per kWh of cell capacity. An AI copilot builds
         and edits the model with you and explains what the results mean.
       </p>
       <p>
         The <a href="./app/">free app</a> is a screening preview. Its templates are built
-        from real, public data, but they describe generic battery processes — and because
+        from real, public data, but they describe generic battery processes. And because
         licensed impact databases such as ecoinvent can't be redistributed in a free web
         tool, its results are indicative rather than decision-grade. Organizations that
         need exact numbers get a <a href="./#contact">tailored version</a> that runs their
@@ -175,7 +175,7 @@
       <div class="faq-list">
         <details>
           <summary>What's the difference between an LCA and a carbon footprint?</summary>
-          <p>A carbon footprint is one slice of an LCA: it counts only greenhouse gas emissions. A full LCA also covers water pollution, air quality, toxicity, ozone depletion, and more — so a process that looks good on carbon alone can't hide problems elsewhere.</p>
+          <p>A carbon footprint is one slice of an LCA: it counts only greenhouse gas emissions. A full LCA also covers water pollution, air quality, toxicity, ozone depletion, and more, so a process that looks good on carbon alone can't hide problems elsewhere.</p>
         </details>
         <details>
           <summary>What is TRACI?</summary>
@@ -187,7 +187,7 @@
         </details>
         <details>
           <summary>How long does an LCA take?</summary>
-          <p>A traditional consultant-led LCA typically takes weeks to months. A screening LCA in LiTeCAB — using templates and built-in data — takes minutes, which makes it practical to compare options during R&amp;D rather than after decisions are made.</p>
+          <p>A traditional consultant-led LCA typically takes weeks to months. A screening LCA in LiTeCAB, using templates and built-in data, takes minutes, which makes it practical to compare options during R&amp;D rather than after decisions are made.</p>
         </details>
         <details>
           <summary>Is a screening LCA enough for a grant proposal or a published claim?</summary>
@@ -195,14 +195,14 @@
         </details>
         <details>
           <summary>Why doesn't the free version use ecoinvent?</summary>
-          <p>ecoinvent is the most widely used life cycle inventory database, and it's licensed per organization — its data can't be redistributed through a free public tool. That's why the free app's results are indicative. Tailored LiTeCAB deployments connect through your organization's own ecoinvent (or other database) license, so results use the real factors.</p>
+          <p>ecoinvent is the most widely used life cycle inventory database, and it's licensed per organization, so its data can't be redistributed through a free public tool. That's why the free app's results are indicative. Tailored LiTeCAB deployments connect through your organization's own ecoinvent (or other database) license, so results use the real factors.</p>
         </details>
       </div>
 
       <div class="article-cta">
-        <p>See your process's footprint in the next ten minutes — no installation, no sign-up.</p>
+        <p>See your process's footprint in the next ten minutes. No installation, no sign-up.</p>
         <div class="hero-btns">
-          <a href="./app/" class="btn btn-primary">Open the App — Free</a>
+          <a href="./app/" class="btn btn-primary">Open the Free App</a>
           <a href="./tea.html" class="btn btn-outline">Next: What is TEA?</a>
         </div>
       </div>
@@ -220,7 +220,7 @@
         <a href="./#contact">Tailored Versions</a>
       </nav>
       <div class="footer-row">
-        <p class="footer-tagline">LiTeCAB &mdash; impact &amp; cost analysis for battery processes, in the browser</p>
+        <p class="footer-tagline">LiTeCAB: impact and cost analysis for battery processes, in the browser</p>
         <p class="footer-questions">
           Questions? Contact <a href="mailto:fzhao@purdue.edu">fzhao@purdue.edu</a>
         </p>

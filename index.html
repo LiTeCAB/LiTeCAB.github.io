@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LiTeCAB — See the Impact and Cost of Your Battery Process</title>
-  <meta name="description" content="LiTeCAB is a free browser tool that estimates the environmental footprint (LCA), production cost (TEA), and circularity of battery manufacturing and recycling processes. No installation — an AI copilot guides you. Tailored versions for organizations.">
+  <title>LiTeCAB: See the Impact and Cost of Your Battery Process</title>
+  <meta name="description" content="LiTeCAB is a free browser tool that estimates the environmental footprint (LCA), production cost (TEA), and circularity of battery manufacturing and recycling processes. No installation, and an AI copilot guides you. Tailored versions for organizations.">
   <link rel="canonical" href="https://litecab.github.io/">
-  <meta property="og:title" content="LiTeCAB — See the Impact and Cost of Your Battery Process">
+  <meta property="og:title" content="LiTeCAB: See the Impact and Cost of Your Battery Process">
   <meta property="og:description" content="Free browser tool for battery LCA, TEA, and circularity. Pick a template, press run, compare scenarios. Tailored versions for organizations.">
   <meta property="og:image" content="https://litecab.github.io/assets/app-build.png">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -46,7 +46,7 @@
       {
         "@type": "Question",
         "name": "Do I need to be an LCA or TEA expert?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No. Ready-made templates and an AI copilot handle the setup, and results come with plain-language explanations. If you can describe your process, you can run an analysis." }
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Ready-made templates and an AI copilot handle the setup, and the copilot explains what each result means." }
       },
       {
         "@type": "Question",
@@ -86,17 +86,18 @@
     <!-- ═══ Hero ═══ -->
     <section class="hero">
       <div class="container hero-inner">
-        <img src="logo.png" alt="LiTeCAB" class="hero-logo">
-        <h1>See the impact and cost of your battery process — <em>before you build it.</em></h1>
-        <p class="hero-desc">
-          LiTeCAB is a free tool for battery researchers and manufacturers. It estimates
-          your process's environmental footprint — a life cycle assessment (LCA) — and its
-          production economics — a techno-economic analysis (TEA) — right in your browser.
-          Pick a template, press run, and an AI copilot walks you through the rest.
-        </p>
-        <div class="hero-btns">
-          <a href="./app/" class="btn btn-primary">Open the App — Free</a>
-          <a href="#contact" class="btn btn-outline">Get a Version for Your Org</a>
+        <div class="hero-copy">
+          <img src="logo.png" alt="LiTeCAB" class="hero-logo">
+          <h1>See the impact and cost of your battery process <em>before you build it.</em></h1>
+          <p class="hero-desc">
+            A free browser tool for battery researchers and manufacturers. It estimates your
+            process's environmental footprint (LCA) and production cost (TEA). Pick a
+            template, press run, and an AI copilot explains the rest.
+          </p>
+          <div class="hero-btns">
+            <a href="./app/" class="btn btn-primary">Open the Free App</a>
+            <a href="#contact" class="btn btn-outline">Get a Version for Your Org</a>
+          </div>
         </div>
         <div class="shot-frame hero-shot">
           <img src="assets/app-build.png" alt="LiTeCAB web app showing a battery manufacturing process diagram with the AI copilot panel open" width="1600" height="1000">
@@ -107,22 +108,20 @@
     <!-- ═══ Problem ═══ -->
     <section class="section section-light" id="problem">
       <div class="container">
-        <h2 class="section-heading">"Is it greener? Is it cheaper?" &mdash; simple questions, painful answers</h2>
-        <div class="cards-row">
-          <div class="card card-center">
-            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h2 class="section-heading">"Is it greener? Is it cheaper?"</h2>
+        <p class="section-lead">Simple questions that traditional tools make painful to answer.</p>
+        <div class="points-row">
+          <div class="point">
             <h3>Slow to start</h3>
-            <p>Traditional tools need databases, licenses, and days of setup before they produce a single number.</p>
+            <p>Databases, licenses, and days of setup before a single number.</p>
           </div>
-          <div class="card card-center">
-            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="7" y1="10" x2="7" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="17" y1="10" x2="17" y2="10.01"/></svg></div>
+          <div class="point">
             <h3>Scattered</h3>
-            <p>Environmental results in one tool, costs in a spreadsheet, conclusions in slides. The full picture never lives in one place.</p>
+            <p>Impacts in one tool, costs in a spreadsheet, conclusions in slides.</p>
           </div>
-          <div class="card card-center">
-            <div class="card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg></div>
+          <div class="point">
             <h3>Experts only</h3>
-            <p>Most tools assume a trained analyst. Most teams don't have one to spare.</p>
+            <p>Built for trained analysts, and most teams don't have one.</p>
           </div>
         </div>
       </div>
@@ -133,40 +132,39 @@
       <div class="container solution-grid">
         <div class="solution-left">
           <h2 class="section-heading">One tab. Full picture.</h2>
-          <p class="section-lead">Pick a template, press run, read the results — in plain language.</p>
+          <p class="section-lead">Pick a template, press run, read the results.</p>
           <div class="features">
             <div class="feat">
               <strong>Environmental footprint (LCA)</strong>
-              <span>Nine standard impact scores — carbon, water pollution, air quality, and more — for every step of your process</span>
+              <span>Nine standard impact scores for every step of your process</span>
             </div>
             <div class="feat">
               <strong>Cost &amp; margin (TEA)</strong>
-              <span>What each step costs in materials, labor, and energy — and the margin you'd make at a given selling price</span>
+              <span>Materials, labor, and energy costs, plus margin at your selling price</span>
             </div>
             <div class="feat">
               <strong>Circularity</strong>
-              <span>How much of your material loops back into use instead of ending up as waste</span>
+              <span>How much material loops back instead of becoming waste</span>
             </div>
             <div class="feat">
               <strong>Scenario comparison</strong>
-              <span>Save runs and put two options side by side to see which one wins</span>
+              <span>Put two saved runs side by side to see which wins</span>
             </div>
             <div class="feat">
               <strong>AI copilot</strong>
-              <span>Builds the model with you, runs the analyses, and explains what the numbers mean</span>
+              <span>Builds the model with you, runs it, and explains the numbers</span>
             </div>
             <div class="feat">
               <strong>Battery templates included</strong>
-              <span>NMC111, NMC622, NMC811, LFP, and recycling — or upload your own process data</span>
+              <span>NMC111, NMC622, NMC811, LFP, recycling, or your own data</span>
             </div>
           </div>
         </div>
         <div class="solution-right">
-          <span class="video-badge-btn">Inside the App</span>
           <div class="shot-frame">
             <img src="assets/app-results.png" alt="LiTeCAB results screen showing an environmental impact table and chart, with the AI copilot suggesting next steps" width="1600" height="1000" loading="lazy">
           </div>
-          <p class="shot-note">The free app is a screening preview &mdash; generic templates, indicative results. Tailored versions run your process data with licensed datasets.</p>
+          <p class="shot-note">The free app is a screening preview: generic templates, indicative results. Tailored versions run your process data with licensed datasets.</p>
         </div>
       </div>
     </section>
@@ -175,24 +173,12 @@
     <section class="section section-light" id="benefits">
       <div class="container">
         <h2 class="section-heading">What the numbers do for your business case</h2>
-        <div class="cards-row cards-4">
-          <div class="card">
-            <h3>Stronger funding proposals</h3>
-            <p>Grant reviewers and investors increasingly expect quantified impact and cost projections. Put real per-kWh numbers in your next application instead of adjectives.</p>
-          </div>
-          <div class="card">
-            <h3>Credible sustainability claims</h3>
-            <p>Back PR and product claims with process-level results you can explain and defend — not figures borrowed from someone else's study.</p>
-          </div>
-          <div class="card">
-            <h3>Evidence against the status quo</h3>
-            <p>Compare your process with the incumbent side by side, and show exactly where you win — emissions, cost, or both.</p>
-          </div>
-          <div class="card">
-            <h3>Cheaper course corrections</h3>
-            <p>Screen options in an afternoon and find the expensive problems while they're still cheap to fix — before pilot-scale money is committed.</p>
-          </div>
-        </div>
+        <ul class="benefits-list">
+          <li><strong>Stronger funding proposals.</strong> Real per-kWh numbers in your next application, not adjectives.</li>
+          <li><strong>Credible sustainability claims.</strong> Process-level results you can explain and defend.</li>
+          <li><strong>Evidence against the status quo.</strong> Show exactly where you win: emissions, cost, or both.</li>
+          <li><strong>Cheaper course corrections.</strong> Find expensive problems before pilot-scale money is committed.</li>
+        </ul>
       </div>
     </section>
 
@@ -200,7 +186,7 @@
     <section class="section section-alt" id="learn">
       <div class="container">
         <h2 class="section-heading">New to LCA and TEA?</h2>
-        <p class="section-lead">Two short guides, written in plain English.</p>
+        <p class="section-lead">Two short guides covering the basics.</p>
         <div class="learn-cards">
           <a class="learn-card" href="./lca.html">
             <strong>What is Life Cycle Assessment?</strong>
@@ -209,7 +195,7 @@
           </a>
           <a class="learn-card" href="./tea.html">
             <strong>What is Techno-Economic Analysis?</strong>
-            <span>How a TEA estimates what your process will cost at scale — and why funders ask for one.</span>
+            <span>How a TEA estimates what your process will cost at scale, and why funders ask for one.</span>
             <span class="learn-more">Read the TEA guide &rarr;</span>
           </a>
         </div>
@@ -226,7 +212,7 @@
           </details>
           <details>
             <summary>Do I need to be an LCA or TEA expert?</summary>
-            <p>No. Ready-made templates and an AI copilot handle the setup, and results come with plain-language explanations. If you can describe your process, you can run an analysis.</p>
+            <p>No. Ready-made templates and an AI copilot handle the setup, and the copilot explains what each result means.</p>
           </details>
           <details>
             <summary>Is the data in the free version real?</summary>
@@ -247,10 +233,9 @@
           <div class="cta-text">
             <h2>Get LiTeCAB tailored to your organization</h2>
             <p>
-              The free app is a screening preview: generic battery templates, indicative
-              results. For organizations, we build tailored versions &mdash; templates from
-              your own process data, results computed with licensed datasets such as
-              ecoinvent, your cost assumptions, and private deployment for your team.
+              Tailored versions run your own process data with licensed datasets such as
+              ecoinvent, your cost assumptions, and private hosting. You get decision-grade
+              numbers instead of the free preview's indicative ones.
             </p>
             <p style="margin-top: 12px;">
               Tell us what you're working on and we'll follow up with a walkthrough.
@@ -309,7 +294,7 @@
         <a href="#contact">Tailored Versions</a>
       </nav>
       <div class="footer-row">
-        <p class="footer-tagline">LiTeCAB &mdash; impact &amp; cost analysis for battery processes, in the browser</p>
+        <p class="footer-tagline">LiTeCAB: impact and cost analysis for battery processes, in the browser</p>
         <p class="footer-questions">
           Questions? Contact <a href="mailto:fzhao@purdue.edu">fzhao@purdue.edu</a>
         </p>

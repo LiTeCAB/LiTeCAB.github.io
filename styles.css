@@ -121,8 +121,7 @@ body {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 160px 0 80px;
-  text-align: center;
+  padding: 140px 0 72px;
   background:
     radial-gradient(ellipse at 30% 0%, rgba(30,58,95,0.7) 0%, transparent 60%),
     radial-gradient(ellipse at 75% 20%, rgba(42,74,127,0.45) 0%, transparent 50%),
@@ -130,24 +129,28 @@ body {
     #07101f;
 }
 
-.hero-inner { position: relative; z-index: 1; max-width: 100%; margin: 0 auto; }
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 56px;
+  align-items: center;
+}
 
 .hero-logo {
-  height: 150px;
-  margin-bottom: 16px;
+  height: 64px;
+  margin-bottom: 20px;
 }
 
 .hero h1 {
-  font-size: clamp(2.2rem, 3.6vw, 2.9rem);
+  font-size: clamp(1.9rem, 2.6vw, 2.5rem);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.02em;
   text-wrap: balance;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   color: #fff;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .hero h1 em {
@@ -160,16 +163,15 @@ body {
 }
 
 .hero-desc {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: rgba(255,255,255,0.78);
-  max-width: 860px;
-  margin: 0 auto 28px;
+  margin: 0 0 28px;
   line-height: 1.7;
 }
 
 .hero-btns {
-  display: flex; gap: 12px; justify-content: center;
-  margin-bottom: 20px;
+  display: flex; gap: 12px;
+  flex-wrap: wrap;
 }
 
 
@@ -258,6 +260,11 @@ body {
   margin-bottom: 40px;
 }
 
+.section-light .section-lead {
+  color: #42526a;
+  margin-top: -32px;
+}
+
 .section-light .cta-text h2 {
   color: #1a2a42 !important;
 }
@@ -302,67 +309,63 @@ body {
   color: #525c6b;
 }
 
-/* ── Problem cards ── */
-.cards-row {
+/* ── Problem points (plain, no cards) ── */
+.points-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.card {
-  background: #ecf5f2;
-  border: 1px solid #b9d4cd;
-  border-radius: 12px;
-  padding: 32px 24px;
+  gap: 40px;
+  max-width: 980px;
+  margin: 0 auto;
   text-align: center;
-  box-shadow:
-    0 1px 2px rgba(15,26,46,0.04),
-    0 8px 24px -8px rgba(15,26,46,0.10);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-.card:hover {
-  transform: translateY(-3px);
-  border-color: #9ec7be;
-  box-shadow:
-    0 2px 4px rgba(15,26,46,0.06),
-    0 16px 36px -10px rgba(15,26,46,0.18);
 }
 
-.card-icon {
-  display: flex; align-items: center; justify-content: center;
-  width: 48px; height: 48px;
-  margin: 0 auto 16px;
-  background: #eef6f5;
-  border-radius: 10px;
-  color: #2a9d8f;
-  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
-}
-.card:hover .card-icon {
-  background: #2a9d8f;
-  color: #fff;
-  transform: scale(1.06);
-}
-
-.card h3 {
+.point h3 {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: #1d3556;
 }
 
-.card p {
-  font-size: 0.88rem;
+.point p {
+  font-size: 0.9rem;
   color: #5f6e82;
   line-height: 1.55;
 }
 
+/* ── Benefits checklist (plain, no cards) ── */
+.benefits-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 48px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.benefits-list li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 0.95rem;
+  color: #42526a;
+  line-height: 1.6;
+}
+
+.benefits-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2a9d8f;
+  font-weight: 700;
+}
+
+.benefits-list strong { color: #1a2a42; }
+
 /* ── Solution grid ── */
 .solution-grid {
   display: grid !important;
-  grid-template-columns: 1fr 2.5fr !important;
-  gap: 96px;
+  grid-template-columns: 1fr 2fr !important;
+  gap: 72px;
   align-items: center;
-  min-height: 700px;
 }
 
 .solution-left {
@@ -385,20 +388,6 @@ body {
   align-items: center;
 }
 
-.video-badge-btn {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #4fd1c5;
-  background: rgba(79,209,197,0.1);
-  border: 1px solid rgba(79,209,197,0.3);
-  padding: 6px 14px;
-  border-radius: 6px;
-  margin-bottom: 16px;
-}
-
 /* ── Features ── */
 .features {
   display: grid;
@@ -408,10 +397,8 @@ body {
 
 .feat {
   display: flex; flex-direction: column;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.07);
-  border-radius: 10px;
-  padding: 18px 20px;
+  padding: 10px 0 10px 18px;
+  border-left: 2px solid rgba(79,209,197,0.4);
 }
 
 .feat strong {
@@ -448,10 +435,7 @@ body {
   background: #0a1220;
 }
 
-.hero-shot {
-  max-width: 1100px;
-  margin: 44px auto 0;
-}
+.hero-shot { margin: 0; }
 
 .shot-note {
   margin-top: 14px;
@@ -611,11 +595,19 @@ body {
   .solution-grid { gap: 48px; }
 }
 
+@media (max-width: 960px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+  .hero-desc { max-width: 640px; margin-left: auto; margin-right: auto; }
+  .hero-btns { justify-content: center; }
+  .hero-shot { max-width: 640px; margin: 0 auto; }
+}
+
 @media (max-width: 768px) {
-  .hero { padding: 130px 0 60px; }
-  .hero-logo { height: 160px; }
+  .hero { padding: 120px 0 56px; }
+  .hero-logo { height: 48px; }
   .hero h1 { font-size: 1.8rem; white-space: normal; }
-  .cards-row { grid-template-columns: 1fr; }
+  .points-row { grid-template-columns: 1fr; gap: 24px; }
+  .benefits-list { grid-template-columns: 1fr; }
   .solution-grid { grid-template-columns: 1fr !important; gap: 32px; min-height: auto; }
   .solution-left .section-heading,
   .solution-left .section-lead { text-align: center; }
@@ -660,11 +652,6 @@ summary:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
-
-/* ── Benefits (4-up cards) ── */
-.cards-4 { grid-template-columns: repeat(4, 1fr); }
-.card { text-align: left; }
-.card-center { text-align: center; }
 
 /* ── Learn strip ── */
 .learn-cards {
@@ -872,12 +859,7 @@ summary:focus-visible {
 }
 .article-cta .hero-btns { margin-bottom: 0; }
 
-@media (max-width: 1200px) {
-  .cards-4 { grid-template-columns: repeat(2, 1fr); }
-}
-
 @media (max-width: 768px) {
-  .cards-4 { grid-template-columns: 1fr; }
   .learn-cards { grid-template-columns: 1fr; }
   .article { padding: 16px 24px 56px; }
   .article-hero { padding: 120px 0 28px; }

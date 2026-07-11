@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What Is Techno-Economic Analysis (TEA)? A Plain-English Guide — LiTeCAB</title>
-  <meta name="description" content="Techno-economic analysis (TEA) estimates what a technology will cost to run at scale and what it could earn — like $ per kWh of battery. A plain-English guide: what a TEA gives you, when you need one, and how it strengthens funding proposals.">
+  <title>What Is Techno-Economic Analysis (TEA)? A Beginner's Guide | LiTeCAB</title>
+  <meta name="description" content="Techno-economic analysis (TEA) estimates what a technology will cost to run at scale and what it could earn, like $ per kWh of battery. A beginner's guide to what a TEA gives you, when you need one, and how it strengthens funding proposals.">
   <link rel="canonical" href="https://litecab.github.io/tea.html">
-  <meta property="og:title" content="What Is Techno-Economic Analysis (TEA)? A Plain-English Guide">
-  <meta property="og:description" content="How a TEA estimates cost per unit, margin, and cost drivers for a new process — and why funders and investors ask for one.">
+  <meta property="og:title" content="What Is Techno-Economic Analysis (TEA)? A Beginner's Guide">
+  <meta property="og:description" content="How a TEA estimates cost per unit, margin, and cost drivers for a new process, and why funders and investors ask for one.">
   <meta property="og:image" content="https://litecab.github.io/assets/app-results.png">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "What Is Techno-Economic Analysis (TEA)? A Plain-English Guide",
+    "headline": "What Is Techno-Economic Analysis (TEA)? A Beginner's Guide",
     "description": "What a TEA estimates, what outputs like cost per kWh and margin mean, and when a new process needs one.",
     "author": { "@type": "Organization", "name": "LiTeCAB" },
     "publisher": { "@type": "Organization", "name": "LiTeCAB (Purdue University, ARPA-E CIRCULAR)" },
@@ -35,12 +35,12 @@
       {
         "@type": "Question",
         "name": "How is a TEA different from a regular financial model?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A financial model usually starts from top-down assumptions (market size, price, growth). A TEA is built bottom-up from the physics of your process: the actual materials, energy, and labor each step consumes. That makes it far more useful for engineering decisions — you can see exactly which step and which input drive the cost." }
+        "acceptedAnswer": { "@type": "Answer", "text": "A financial model usually starts from top-down assumptions (market size, price, growth). A TEA is built bottom-up from the physics of your process: the actual materials, energy, and labor each step consumes. That makes it far more useful for engineering decisions: you can see exactly which step and which input drive the cost." }
       },
       {
         "@type": "Question",
         "name": "What data do I need to run a TEA?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The same process model an LCA uses — materials and energy per step — plus prices for those inputs and, optionally, a selling price for your product. LiTeCAB templates come with starting quantities and prices you can adjust." }
+        "acceptedAnswer": { "@type": "Answer", "text": "The same process model an LCA uses (materials and energy per step) plus prices for those inputs and, optionally, a selling price for your product. LiTeCAB templates come with starting quantities and prices you can adjust." }
       },
       {
         "@type": "Question",
@@ -50,12 +50,12 @@
       {
         "@type": "Question",
         "name": "Can a TEA and an LCA share the same model?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes — both start from the same description of your process. That is the core idea behind LiTeCAB: build the process model once, then read off environmental impacts, costs, and circularity from the same source, so the numbers always describe the same process." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Both start from the same description of your process. That is the core idea behind LiTeCAB: build the process model once, then read off environmental impacts, costs, and circularity from the same source, so the numbers always describe the same process." }
       },
       {
         "@type": "Question",
         "name": "Is a screening TEA enough for a funding proposal?",
-        "acceptedAnswer": { "@type": "Answer", "text": "For most proposals, yes — reviewers want to see that you understand your cost structure and have a credible path to a competitive cost, not a bankable feasibility study. Later stages (project finance, offtake agreements) require detailed engineering estimates that build on the same foundations." }
+        "acceptedAnswer": { "@type": "Answer", "text": "For most proposals, yes: reviewers want to see that you understand your cost structure and have a credible path to a competitive cost, not a bankable feasibility study. Later stages (project finance, offtake agreements) require detailed engineering estimates that build on the same foundations." }
       }
     ]
   }
@@ -83,11 +83,11 @@
 
     <header class="article-hero">
       <div class="container">
-        <span class="article-kicker">Plain-English Guide</span>
+        <span class="article-kicker">Beginner's Guide</span>
         <h1>What is Techno-Economic Analysis?</h1>
         <p class="answer-box">
           <strong>Techno-economic analysis (TEA)</strong> estimates what a technology will
-          cost to run at scale — and what it could earn. It combines the engineering of
+          cost to run at scale and what it could earn. It combines the engineering of
           your process (what each step consumes) with economics (what those inputs cost)
           to answer the questions every funder and founder asks: <em>can this be
           competitive, and what drives the cost?</em>
@@ -100,30 +100,30 @@
       <h2>The idea in one minute</h2>
       <p>
         A TEA is a business case grounded in the physics of your process. Instead of
-        guessing a cost per unit, you list what each process step actually consumes —
-        lithium salts, electricity, labor hours — attach prices, and add it up. Because the
+        guessing a cost per unit, you list what each process step actually consumes
+        (lithium salts, electricity, labor hours), attach prices, and add it up. Because the
         cost is built step by step, you can see exactly where the money goes and what
         happens if an input price or a process parameter changes.
       </p>
       <p>
         The result: instead of "we expect costs to fall at scale," you can say "cathode
         materials are 62% of our cell cost, so our coating innovation cuts total cost by
-        11% — here's the math."
+        11%, and here is the math."
       </p>
 
       <h2>What a TEA gives you</h2>
       <ul>
-        <li><strong>Cost per unit</strong> — dollars per kilogram of product, or per kWh of cell capacity, so results compare directly with market benchmarks.</li>
-        <li><strong>Cost breakdown</strong> — how much each process step, and each input within it, contributes to the total.</li>
-        <li><strong>Margin</strong> — expected profit at a given selling price, and the price you'd need to break even.</li>
-        <li><strong>Cost drivers</strong> — the handful of inputs that dominate the total, which tells you where R&amp;D effort pays off fastest.</li>
+        <li><strong>Cost per unit.</strong> Dollars per kilogram of product, or per kWh of cell capacity, so results compare directly with market benchmarks.</li>
+        <li><strong>Cost breakdown.</strong> How much each process step, and each input within it, contributes to the total.</li>
+        <li><strong>Margin.</strong> Expected profit at a given selling price, and the price you'd need to break even.</li>
+        <li><strong>Cost drivers.</strong> The handful of inputs that dominate the total, which tells you where R&amp;D effort pays off fastest.</li>
       </ul>
 
       <h2>When do you need a TEA?</h2>
       <ul>
         <li><strong>Funding proposals and investor diligence.</strong> "Show a credible path to a competitive cost" is a standing requirement in grant programs and pitch meetings alike. A per-kWh cost estimate with a transparent breakdown answers it directly.</li>
-        <li><strong>Beating the status quo.</strong> A new process rarely wins on sustainability alone — it also has to be affordable. A TEA shows whether "greener" can also be "cheaper," which is the strongest version of your story.</li>
-        <li><strong>Scale-up decisions.</strong> Before committing pilot-scale budgets, a TEA reveals whether the economics survive contact with real prices — and which assumption the whole case leans on.</li>
+        <li><strong>Beating the status quo.</strong> A new process rarely wins on sustainability alone; it also has to be affordable. A TEA shows whether "greener" can also be "cheaper," which is the strongest version of your story.</li>
+        <li><strong>Scale-up decisions.</strong> Before committing pilot-scale budgets, a TEA reveals whether the economics survive contact with real prices, and which assumption the whole case leans on.</li>
         <li><strong>Choosing between routes.</strong> When two process options both work in the lab, cost per unit is usually the tiebreaker.</li>
         <li><strong>Setting prices.</strong> If you sell an intermediate product, a TEA tells you the floor price at which you're not losing money.</li>
       </ul>
@@ -134,7 +134,7 @@
         the environmental analysis. Start from a battery template or your own data, attach
         or adjust prices, and the app reports cost per kg or per kWh, a step-by-step cost
         breakdown, and margin at your selling price. The AI copilot can point out the
-        biggest cost driver and explain the result in plain language.
+        biggest cost driver and explain what the result means.
       </p>
       <p>
         The <a href="./app/">free app</a> is a screening preview: its templates use real,
@@ -148,11 +148,11 @@
       <div class="faq-list">
         <details>
           <summary>How is a TEA different from a regular financial model?</summary>
-          <p>A financial model usually starts from top-down assumptions (market size, price, growth). A TEA is built bottom-up from the physics of your process: the actual materials, energy, and labor each step consumes. That makes it far more useful for engineering decisions — you can see exactly which step and which input drive the cost.</p>
+          <p>A financial model usually starts from top-down assumptions (market size, price, growth). A TEA is built bottom-up from the physics of your process: the actual materials, energy, and labor each step consumes. That makes it far more useful for engineering decisions: you can see exactly which step and which input drive the cost.</p>
         </details>
         <details>
           <summary>What data do I need to run a TEA?</summary>
-          <p>The same process model an LCA uses — materials and energy per step — plus prices for those inputs and, optionally, a selling price for your product. LiTeCAB templates come with starting quantities and prices you can adjust.</p>
+          <p>The same process model an LCA uses (materials and energy per step) plus prices for those inputs and, optionally, a selling price for your product. LiTeCAB templates come with starting quantities and prices you can adjust.</p>
         </details>
         <details>
           <summary>What is a good cost target for a battery process?</summary>
@@ -160,18 +160,18 @@
         </details>
         <details>
           <summary>Can a TEA and an LCA share the same model?</summary>
-          <p>Yes — both start from the same description of your process. That's the core idea behind LiTeCAB: build the process model once, then read off environmental impacts, costs, and circularity from the same source, so the numbers always describe the same process. (New to LCA? <a href="./lca.html">Read the LCA guide</a>.)</p>
+          <p>Yes. Both start from the same description of your process. That's the core idea behind LiTeCAB: build the process model once, then read off environmental impacts, costs, and circularity from the same source, so the numbers always describe the same process. (New to LCA? <a href="./lca.html">Read the LCA guide</a>.)</p>
         </details>
         <details>
           <summary>Is a screening TEA enough for a funding proposal?</summary>
-          <p>For most proposals, yes — reviewers want to see that you understand your cost structure and have a credible path to a competitive cost, not a bankable feasibility study. Later stages (project finance, offtake agreements) require detailed engineering estimates that build on the same foundations.</p>
+          <p>For most proposals, yes: reviewers want to see that you understand your cost structure and have a credible path to a competitive cost, not a bankable feasibility study. Later stages (project finance, offtake agreements) require detailed engineering estimates that build on the same foundations.</p>
         </details>
       </div>
 
       <div class="article-cta">
-        <p>Find your biggest cost driver in the next ten minutes — no installation, no sign-up.</p>
+        <p>Find your biggest cost driver in the next ten minutes. No installation, no sign-up.</p>
         <div class="hero-btns">
-          <a href="./app/" class="btn btn-primary">Open the App — Free</a>
+          <a href="./app/" class="btn btn-primary">Open the Free App</a>
           <a href="./lca.html" class="btn btn-outline">Next: What is LCA?</a>
         </div>
       </div>
@@ -189,7 +189,7 @@
         <a href="./#contact">Tailored Versions</a>
       </nav>
       <div class="footer-row">
-        <p class="footer-tagline">LiTeCAB &mdash; impact &amp; cost analysis for battery processes, in the browser</p>
+        <p class="footer-tagline">LiTeCAB: impact and cost analysis for battery processes, in the browser</p>
         <p class="footer-questions">
           Questions? Contact <a href="mailto:fzhao@purdue.edu">fzhao@purdue.edu</a>
         </p>
