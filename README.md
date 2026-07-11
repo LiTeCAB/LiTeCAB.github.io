@@ -10,7 +10,7 @@
 
 </div>
 
-LiTeCAB helps researchers and engineers move from process concepts to quantified LCA and TEA results — fast. It runs entirely in the browser with built-in impact data, ready-to-use battery process templates, an AI copilot, and a guided workflow, so teams can start analyzing without installing anything.
+LiTeCAB helps researchers and engineers move from process concepts to quantified LCA and TEA screening results — fast. It runs entirely in the browser with ready-to-use battery process templates, an AI copilot, and a guided workflow, so teams can start analyzing without installing anything. The free app is a screening preview; tailored deployments run an organization's own process data through licensed datasets (e.g., ecoinvent).
 
 > **Current focus:** Battery manufacturing and recycling templates are available now. The platform is designed to support additional process domains.
 
@@ -28,7 +28,7 @@ LiTeCAB helps researchers and engineers move from process concepts to quantified
 
 📦 **Templates + Custom Data** — Start from built-in templates or upload your own process inventory
 
-🌐 **Runs in the Browser** — No installation; tailored versions with full datasets available for organizations
+🌐 **Runs in the Browser** — No installation; the free app is a screening preview, and tailored versions with licensed datasets and primary data are available for organizations
 
 <br>
 

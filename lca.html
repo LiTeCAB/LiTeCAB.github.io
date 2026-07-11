@@ -56,6 +56,11 @@
         "@type": "Question",
         "name": "Is a screening LCA enough for a grant proposal or a published claim?",
         "acceptedAnswer": { "@type": "Answer", "text": "Screening results are well suited to proposals, internal decisions, and early comparisons. Public marketing claims or regulatory submissions usually call for a full ISO 14040/14044 study with reviewed data. A tailored LiTeCAB deployment on full datasets can be the foundation for that." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why doesn't the free version use ecoinvent?",
+        "acceptedAnswer": { "@type": "Answer", "text": "ecoinvent is the most widely used life cycle inventory database, and it's licensed per organization — its data can't be redistributed through a free public tool. That's why the free app's results are indicative. Tailored LiTeCAB deployments connect through your organization's own ecoinvent (or other database) license, so results use the real factors." }
       }
     ]
   }
@@ -158,10 +163,12 @@
         and edits the model with you and explains what the results mean.
       </p>
       <p>
-        The <a href="./app/">free app</a> uses illustrative demo data — realistic structure,
-        not decision-grade values. Organizations that need exact numbers can get a
-        <a href="./#contact">tailored version</a> that runs on full impact datasets and
-        their own process data.
+        The <a href="./app/">free app</a> is a screening preview. Its templates are built
+        from real, public data, but they describe generic battery processes — and because
+        licensed impact databases such as ecoinvent can't be redistributed in a free web
+        tool, its results are indicative rather than decision-grade. Organizations that
+        need exact numbers get a <a href="./#contact">tailored version</a> that runs their
+        own process data through licensed datasets.
       </p>
 
       <h2>Common questions</h2>
@@ -185,6 +192,10 @@
         <details>
           <summary>Is a screening LCA enough for a grant proposal or a published claim?</summary>
           <p>Screening results are well suited to proposals, internal decisions, and early comparisons. Public marketing claims or regulatory submissions usually call for a full ISO 14040/14044 study with reviewed data. A tailored LiTeCAB deployment on full datasets can be the foundation for that.</p>
+        </details>
+        <details>
+          <summary>Why doesn't the free version use ecoinvent?</summary>
+          <p>ecoinvent is the most widely used life cycle inventory database, and it's licensed per organization — its data can't be redistributed through a free public tool. That's why the free app's results are indicative. Tailored LiTeCAB deployments connect through your organization's own ecoinvent (or other database) license, so results use the real factors.</p>
         </details>
       </div>
 
