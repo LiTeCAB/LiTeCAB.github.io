@@ -1552,6 +1552,7 @@
       "anode_kg": "coat_neg_kg + cu_foil_kg",
       "electrolyte_kg": "area_cm2 * electrolyte_g_cm2 / 1000",
       "separator_kg": "area_cm2 * sep_g_cm2 / 1000",
+      "cell_hardware_kg": "hardware_kg",
       "specific_energy_wh_kg": "area_cm2 * cap_pos_mah_cm2 / 1000 * ocv_v / cell_mass_kg",
       "q_C001_nmc622_hydroxide": "am_pos_kg * k_C001_nmc622_hydroxide",
       "q_C001_lithium_carbonate": "am_pos_kg * k_C001_lithium_carbonate",
@@ -1629,6 +1630,11 @@
       {
         "key": "separator_kg",
         "label": "Separator",
+        "unit": "kg"
+      },
+      {
+        "key": "cell_hardware_kg",
+        "label": "Cell hardware (can, tabs; fixed)",
         "unit": "kg"
       }
     ],
