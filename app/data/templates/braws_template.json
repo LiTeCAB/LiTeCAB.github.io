@@ -209,7 +209,26 @@
           },
           "ecoinvent_version": "3.11",
           "cost_per_unit": 0.071,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00042899,
+                "climate_change": 0.392645,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 1.58806e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 4.02869e-05,
+                "photochemical_oxidant": 0.00916165
+              },
+              "activity_name": "electricity, grid mix at user site, US average",
+              "reference_product": "electricity",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         }
       ]
     },
@@ -253,7 +272,26 @@
           },
           "ecoinvent_version": "3.11",
           "cost_per_unit": 0.071,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00042899,
+                "climate_change": 0.392645,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 1.58806e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 4.02869e-05,
+                "photochemical_oxidant": 0.00916165
+              },
+              "activity_name": "electricity, grid mix at user site, US average",
+              "reference_product": "electricity",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         }
       ]
     },
@@ -297,7 +335,26 @@
           },
           "ecoinvent_version": "3.11",
           "cost_per_unit": 0.071,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00042899,
+                "climate_change": 0.392645,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 1.58806e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 4.02869e-05,
+                "photochemical_oxidant": 0.00916165
+              },
+              "activity_name": "electricity, grid mix at user site, US average",
+              "reference_product": "electricity",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         }
       ]
     },
@@ -341,7 +398,26 @@
           },
           "ecoinvent_version": "3.11",
           "cost_per_unit": 0.071,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00042899,
+                "climate_change": 0.392645,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 1.58806e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 4.02869e-05,
+                "photochemical_oxidant": 0.00916165
+              },
+              "activity_name": "electricity, grid mix at user site, US average",
+              "reference_product": "electricity",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         }
       ]
     },
@@ -385,7 +461,26 @@
           },
           "ecoinvent_version": "3.11",
           "cost_per_unit": 0.071,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00042899,
+                "climate_change": 0.392645,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 1.58806e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 4.02869e-05,
+                "photochemical_oxidant": 0.00916165
+              },
+              "activity_name": "electricity, grid mix at user site, US average",
+              "reference_product": "electricity",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         }
       ]
     },
@@ -429,7 +524,26 @@
           },
           "ecoinvent_version": "3.11",
           "cost_per_unit": 0.071,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00042899,
+                "climate_change": 0.392645,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 1.58806e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 4.02869e-05,
+                "photochemical_oxidant": 0.00916165
+              },
+              "activity_name": "electricity, grid mix at user site, US average",
+              "reference_product": "electricity",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         }
       ]
     },
@@ -505,7 +619,26 @@
           },
           "ecoinvent_version": "3.11",
           "cost_per_unit": 0.071,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00042899,
+                "climate_change": 0.392645,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 1.58806e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 4.02869e-05,
+                "photochemical_oxidant": 0.00916165
+              },
+              "activity_name": "electricity, grid mix at user site, US average",
+              "reference_product": "electricity",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Water",
@@ -571,7 +704,26 @@
           },
           "ecoinvent_version": "3.11",
           "cost_per_unit": 0.071,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00042899,
+                "climate_change": 0.392645,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 1.58806e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 4.02869e-05,
+                "photochemical_oxidant": 0.00916165
+              },
+              "activity_name": "electricity, grid mix at user site, US average",
+              "reference_product": "electricity",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         }
       ]
     },
@@ -615,7 +767,26 @@
           },
           "ecoinvent_version": "3.11",
           "cost_per_unit": 0.071,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00042899,
+                "climate_change": 0.392645,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 1.58806e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 4.02869e-05,
+                "photochemical_oxidant": 0.00916165
+              },
+              "activity_name": "electricity, grid mix at user site, US average",
+              "reference_product": "electricity",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Water",
@@ -659,7 +830,26 @@
           },
           "ecoinvent_version": "3.11",
           "cost_per_unit": 81.25,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.000367245,
+                "climate_change": 0.633354,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 1.29701e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.000143521,
+                "photochemical_oxidant": 0.00758528
+              },
+              "activity_name": "soda ash (sodium carbonate, Na2CO3)",
+              "reference_product": "soda ash",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         }
       ]
     },
@@ -728,7 +918,26 @@
           },
           "ecoinvent_version": "3.11",
           "cost_per_unit": 0.071,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00042899,
+                "climate_change": 0.392645,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 1.58806e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 4.02869e-05,
+                "photochemical_oxidant": 0.00916165
+              },
+              "activity_name": "electricity, grid mix at user site, US average",
+              "reference_product": "electricity",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         }
       ]
     },
@@ -776,7 +985,26 @@
           },
           "ecoinvent_version": "3.11",
           "cost_per_unit": 0.071,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00042899,
+                "climate_change": 0.392645,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 1.58806e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 4.02869e-05,
+                "photochemical_oxidant": 0.00916165
+              },
+              "activity_name": "electricity, grid mix at user site, US average",
+              "reference_product": "electricity",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         }
       ]
     }

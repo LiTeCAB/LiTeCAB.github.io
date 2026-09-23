@@ -98,7 +98,26 @@
             "photochemical_oxidant": 1.2916623473917248
           },
           "cost_per_unit": 22.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.164633,
+                "climate_change": 11.8838,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 0.000857925,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.015464,
+                "photochemical_oxidant": 0.493867
+              },
+              "activity_name": "NMC111 precursor hydroxide (Ni1/3Co1/3Mn1/3(OH)2)",
+              "reference_product": "NMC111 hydroxide precursor",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Lithium Carbonate",
@@ -120,29 +139,67 @@
             "photochemical_oxidant": 0.6982543787598162
           },
           "cost_per_unit": 16.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.0243369,
+                "climate_change": 11.0685,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 0.000691662,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.00361331,
+                "photochemical_oxidant": 0.394366
+              },
+              "activity_name": "lithium carbonate (Li2CO3), GREET average supply mix",
+              "reference_product": "lithium carbonate",
+              "location": "GLO",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Electricity",
           "quantity": 2.67208,
           "unit": "kWh",
-          "activity_name": "market for electricity, medium voltage",
+          "activity_name": "market group for electricity, medium voltage",
           "reference_product": "electricity, medium voltage",
           "location": "CN",
           "ecoinvent_version": "3.11",
           "traci_scores_per_unit": {
-            "acidification": 0.0013914607715055597,
-            "climate_change": 0.257946891271088,
-            "ecotoxicity_freshwater": 5.558585588858751,
-            "eutrophication": 0.002274887212205711,
-            "human_toxicity_carcinogenic": 7.179576351169037e-08,
-            "human_toxicity_non_carcinogenic": 1.0469879359315577e-07,
-            "ozone_depletion": 1.3580311271451129e-09,
-            "particulate_matter": 0.0008884430083259766,
-            "photochemical_oxidant": 0.01273740740475687
+            "acidification": 0.004364564757923443,
+            "climate_change": 0.8417479449382136,
+            "ecotoxicity_freshwater": 8.41475778897201,
+            "eutrophication": 0.0031432085275863286,
+            "human_toxicity_carcinogenic": 1.8431340601476072e-07,
+            "human_toxicity_non_carcinogenic": 2.625006671353922e-07,
+            "ozone_depletion": 2.222431375066357e-09,
+            "particulate_matter": 0.0007529078367254139,
+            "photochemical_oxidant": 0.06512073803851437
           },
           "cost_per_unit": 0.08,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00102736,
+                "climate_change": 0.693274,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 2.31184e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.000105472,
+                "photochemical_oxidant": 0.0131875
+              },
+              "activity_name": "electricity, grid mix at user site, China",
+              "reference_product": "electricity",
+              "location": "CN",
+              "database": "greet_2025"
+            }
+          }
         }
       ]
     },
@@ -190,7 +247,26 @@
             "photochemical_oxidant": 1.0171390028584224
           },
           "cost_per_unit": 8.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.0500154,
+                "climate_change": 14.4482,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 0.000643862,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.0065513,
+                "photochemical_oxidant": 0.370482
+              },
+              "activity_name": "aluminium foil, from primary (virgin) aluminium",
+              "reference_product": "aluminium foil",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Carbon black",
@@ -234,7 +310,26 @@
             "photochemical_oxidant": 0.5989507104429128
           },
           "cost_per_unit": 15.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00201054,
+                "climate_change": 1.83613,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 9.37785e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.000201783,
+                "photochemical_oxidant": 0.054076
+              },
+              "activity_name": "polyvinylidene fluoride (PVDF) binder production",
+              "reference_product": "polyvinylidene fluoride",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "NMP solvent",
@@ -256,29 +351,67 @@
             "photochemical_oxidant": 0.41449632657980606
           },
           "cost_per_unit": 3.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00414293,
+                "climate_change": 4.1241,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 0.000251743,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.00031887,
+                "photochemical_oxidant": 0.149646
+              },
+              "activity_name": "N-methyl-2-pyrrolidone (NMP) production",
+              "reference_product": "N-methyl-2-pyrrolidone",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Electricity",
           "quantity": 0.208428,
           "unit": "kWh",
-          "activity_name": "market for electricity, medium voltage",
+          "activity_name": "market group for electricity, medium voltage",
           "reference_product": "electricity, medium voltage",
           "location": "CN",
           "ecoinvent_version": "3.11",
           "traci_scores_per_unit": {
-            "acidification": 0.0013914607715055597,
-            "climate_change": 0.257946891271088,
-            "ecotoxicity_freshwater": 5.558585588858751,
-            "eutrophication": 0.002274887212205711,
-            "human_toxicity_carcinogenic": 7.179576351169037e-08,
-            "human_toxicity_non_carcinogenic": 1.0469879359315577e-07,
-            "ozone_depletion": 1.3580311271451129e-09,
-            "particulate_matter": 0.0008884430083259766,
-            "photochemical_oxidant": 0.01273740740475687
+            "acidification": 0.004364564757923443,
+            "climate_change": 0.8417479449382136,
+            "ecotoxicity_freshwater": 8.41475778897201,
+            "eutrophication": 0.0031432085275863286,
+            "human_toxicity_carcinogenic": 1.8431340601476072e-07,
+            "human_toxicity_non_carcinogenic": 2.625006671353922e-07,
+            "ozone_depletion": 2.222431375066357e-09,
+            "particulate_matter": 0.0007529078367254139,
+            "photochemical_oxidant": 0.06512073803851437
           },
           "cost_per_unit": 0.08,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00102736,
+                "climate_change": 0.693274,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 2.31184e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.000105472,
+                "photochemical_oxidant": 0.0131875
+              },
+              "activity_name": "electricity, grid mix at user site, China",
+              "reference_product": "electricity",
+              "location": "CN",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Heat, natural gas",
@@ -286,18 +419,18 @@
           "unit": "MJ",
           "activity_name": "market for heat, district or industrial, natural gas",
           "reference_product": "heat, district or industrial, natural gas",
-          "location": "CN",
+          "location": "RoW",
           "ecoinvent_version": "3.11",
           "traci_scores_per_unit": {
-            "acidification": 3.2975543712396295e-05,
-            "climate_change": 0.07143249042066027,
-            "ecotoxicity_freshwater": 0.12130560847074656,
-            "eutrophication": 1.2374736880222887e-05,
-            "human_toxicity_carcinogenic": 5.14771187757037e-09,
-            "human_toxicity_non_carcinogenic": 1.5645712643200367e-09,
-            "ozone_depletion": 5.704941981631038e-10,
-            "particulate_matter": 4.113622172107438e-06,
-            "photochemical_oxidant": 0.0012511501361348483
+            "acidification": 3.234396078088452e-05,
+            "climate_change": 0.03812409249384963,
+            "ecotoxicity_freshwater": 0.09785705310442724,
+            "eutrophication": 9.586600420840387e-06,
+            "human_toxicity_carcinogenic": 3.1697079164397928e-09,
+            "human_toxicity_non_carcinogenic": 1.253775759700996e-09,
+            "ozone_depletion": 6.678873333750871e-10,
+            "particulate_matter": 3.384822645158938e-06,
+            "photochemical_oxidant": 0.0010477825153777038
           },
           "cost_per_unit": 0.03,
           "cost_unit": "USD/MJ"
@@ -334,21 +467,40 @@
           "unit": "kg",
           "activity_name": "market for synthetic graphite, battery grade",
           "reference_product": "synthetic graphite, battery grade",
-          "location": "GLO",
+          "location": "CN",
           "ecoinvent_version": "3.11",
           "traci_scores_per_unit": {
-            "acidification": 0.277149296701687,
-            "climate_change": 46.78331533954585,
-            "ecotoxicity_freshwater": 437.1863470738482,
-            "eutrophication": 0.1827545591169161,
-            "human_toxicity_carcinogenic": 9.685102949669251e-06,
-            "human_toxicity_non_carcinogenic": 1.2651930418738968e-05,
-            "ozone_depletion": 3.348117123438532e-07,
-            "particulate_matter": 0.04122892614270543,
-            "photochemical_oxidant": 3.1873494906296402
+            "acidification": 0.27803576845477324,
+            "climate_change": 47.03961693814685,
+            "ecotoxicity_freshwater": 441.01134404888575,
+            "eutrophication": 0.1832223087955407,
+            "human_toxicity_carcinogenic": 9.77181023465775e-06,
+            "human_toxicity_non_carcinogenic": 1.2736220298758703e-05,
+            "ozone_depletion": 3.3818871696614377e-07,
+            "particulate_matter": 0.041394850598619165,
+            "photochemical_oxidant": 3.2128412247065525
           },
           "cost_per_unit": 12.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.0130058,
+                "climate_change": 10.0682,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 0.000322857,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.00167586,
+                "photochemical_oxidant": 0.18651
+              },
+              "activity_name": "graphite, synthetic, battery grade (GREET default, Wang et al.)",
+              "reference_product": "synthetic graphite",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Natural graphite, coated",
@@ -356,21 +508,40 @@
           "unit": "kg",
           "activity_name": "market for natural graphite, coated",
           "reference_product": "natural graphite, coated",
-          "location": "GLO",
+          "location": "CN",
           "ecoinvent_version": "3.11",
           "traci_scores_per_unit": {
-            "acidification": 0.04632872406603233,
-            "climate_change": 8.948803769559103,
-            "ecotoxicity_freshwater": 154.8728439036043,
-            "eutrophication": 0.0350553071533767,
-            "human_toxicity_carcinogenic": 4.057675099722855e-06,
-            "human_toxicity_non_carcinogenic": 2.966656756471487e-06,
-            "ozone_depletion": 7.078763835013182e-08,
-            "particulate_matter": 0.007444274966886153,
-            "photochemical_oxidant": 0.7334699130160033
+            "acidification": 0.04688692522394557,
+            "climate_change": 9.128437592054096,
+            "ecotoxicity_freshwater": 157.74011075175338,
+            "eutrophication": 0.035401574039416614,
+            "human_toxicity_carcinogenic": 4.1223467483706236e-06,
+            "human_toxicity_non_carcinogenic": 3.0290677703920904e-06,
+            "ozone_depletion": 7.308099539774962e-08,
+            "particulate_matter": 0.007563713889630589,
+            "photochemical_oxidant": 0.7501172918293363
           },
           "cost_per_unit": 8.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.0140883,
+                "climate_change": 7.74733,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 0.000426473,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.00134249,
+                "photochemical_oxidant": 0.242775
+              },
+              "activity_name": "natural graphite, coated spherical, cradle to gate (mining to coating)",
+              "reference_product": "natural graphite, coated",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Copper collector foil",
@@ -392,7 +563,27 @@
             "photochemical_oxidant": 1.7748560262392044
           },
           "cost_per_unit": 12.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00664502,
+                "climate_change": 3.47476,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 0.000188067,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.000871644,
+                "photochemical_oxidant": 0.109183
+              },
+              "activity_name": "copper product incl. wire drawing, US consumption mix",
+              "reference_product": "copper, drawn",
+              "location": "US",
+              "database": "greet_2025",
+              "note": "Proxy: Copper product incl. wire drawing stands in for foil rolling, which GREET does not model"
+            }
+          }
         },
         {
           "name": "Water, deionised",
@@ -444,7 +635,7 @@
           "unit": "kg",
           "activity_name": "market for latex",
           "reference_product": "latex",
-          "location": "GLO",
+          "location": "RoW",
           "ecoinvent_version": "3.11",
           "traci_scores_per_unit": {
             "acidification": 0.015836781144749904,
@@ -458,7 +649,27 @@
             "photochemical_oxidant": 0.2733933479002067
           },
           "cost_per_unit": 2.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00496369,
+                "climate_change": 2.80309,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 0.000186212,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.000620876,
+                "photochemical_oxidant": 0.124961
+              },
+              "activity_name": "styrene-butadiene rubber (SBR)",
+              "reference_product": "styrene-butadiene rubber",
+              "location": "US",
+              "database": "greet_2025",
+              "note": "Proxy: SBR stands in for latex binder"
+            }
+          }
         },
         {
           "name": "Carbon black",
@@ -486,23 +697,42 @@
           "name": "Electricity",
           "quantity": 0.206685,
           "unit": "kWh",
-          "activity_name": "market for electricity, medium voltage",
+          "activity_name": "market group for electricity, medium voltage",
           "reference_product": "electricity, medium voltage",
           "location": "CN",
           "ecoinvent_version": "3.11",
           "traci_scores_per_unit": {
-            "acidification": 0.0013914607715055597,
-            "climate_change": 0.257946891271088,
-            "ecotoxicity_freshwater": 5.558585588858751,
-            "eutrophication": 0.002274887212205711,
-            "human_toxicity_carcinogenic": 7.179576351169037e-08,
-            "human_toxicity_non_carcinogenic": 1.0469879359315577e-07,
-            "ozone_depletion": 1.3580311271451129e-09,
-            "particulate_matter": 0.0008884430083259766,
-            "photochemical_oxidant": 0.01273740740475687
+            "acidification": 0.004364564757923443,
+            "climate_change": 0.8417479449382136,
+            "ecotoxicity_freshwater": 8.41475778897201,
+            "eutrophication": 0.0031432085275863286,
+            "human_toxicity_carcinogenic": 1.8431340601476072e-07,
+            "human_toxicity_non_carcinogenic": 2.625006671353922e-07,
+            "ozone_depletion": 2.222431375066357e-09,
+            "particulate_matter": 0.0007529078367254139,
+            "photochemical_oxidant": 0.06512073803851437
           },
           "cost_per_unit": 0.08,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00102736,
+                "climate_change": 0.693274,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 2.31184e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.000105472,
+                "photochemical_oxidant": 0.0131875
+              },
+              "activity_name": "electricity, grid mix at user site, China",
+              "reference_product": "electricity",
+              "location": "CN",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Heat, natural gas",
@@ -510,18 +740,18 @@
           "unit": "MJ",
           "activity_name": "market for heat, district or industrial, natural gas",
           "reference_product": "heat, district or industrial, natural gas",
-          "location": "CN",
+          "location": "RoW",
           "ecoinvent_version": "3.11",
           "traci_scores_per_unit": {
-            "acidification": 3.2975543712396295e-05,
-            "climate_change": 0.07143249042066027,
-            "ecotoxicity_freshwater": 0.12130560847074656,
-            "eutrophication": 1.2374736880222887e-05,
-            "human_toxicity_carcinogenic": 5.14771187757037e-09,
-            "human_toxicity_non_carcinogenic": 1.5645712643200367e-09,
-            "ozone_depletion": 5.704941981631038e-10,
-            "particulate_matter": 4.113622172107438e-06,
-            "photochemical_oxidant": 0.0012511501361348483
+            "acidification": 3.234396078088452e-05,
+            "climate_change": 0.03812409249384963,
+            "ecotoxicity_freshwater": 0.09785705310442724,
+            "eutrophication": 9.586600420840387e-06,
+            "human_toxicity_carcinogenic": 3.1697079164397928e-09,
+            "human_toxicity_non_carcinogenic": 1.253775759700996e-09,
+            "ozone_depletion": 6.678873333750871e-10,
+            "particulate_matter": 3.384822645158938e-06,
+            "photochemical_oxidant": 0.0010477825153777038
           },
           "cost_per_unit": 0.03,
           "cost_unit": "USD/MJ"
@@ -572,7 +802,26 @@
             "photochemical_oxidant": 0.14815813017632956
           },
           "cost_per_unit": 5.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.000328181,
+                "climate_change": 0.305485,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 1.85363e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 2.5114e-05,
+                "photochemical_oxidant": 0.0109344
+              },
+              "activity_name": "ethylene carbonate (EC) production",
+              "reference_product": "ethylene carbonate",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Dimethyl carbonate",
@@ -594,7 +843,26 @@
             "photochemical_oxidant": 0.19553340296729835
           },
           "cost_per_unit": 3.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00121572,
+                "climate_change": 1.1348,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 6.89816e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 9.30966e-05,
+                "photochemical_oxidant": 0.0406703
+              },
+              "activity_name": "dimethyl carbonate (DMC) production",
+              "reference_product": "dimethyl carbonate",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "LiPF6",
@@ -602,7 +870,7 @@
           "unit": "kg",
           "activity_name": "market for lithium hexafluorophosphate",
           "reference_product": "lithium hexafluorophosphate",
-          "location": "GLO",
+          "location": "RoW",
           "ecoinvent_version": "3.11",
           "traci_scores_per_unit": {
             "acidification": 0.15020597420799164,
@@ -616,7 +884,26 @@
             "photochemical_oxidant": 1.5554756571047568
           },
           "cost_per_unit": 25.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.0224419,
+                "climate_change": 8.64576,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 0.000439053,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.00189198,
+                "photochemical_oxidant": 0.25204
+              },
+              "activity_name": "lithium hexafluorophosphate (LiPF6) production",
+              "reference_product": "lithium hexafluorophosphate",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Vinyl carbonate",
@@ -686,7 +973,26 @@
             "photochemical_oxidant": 0.14901827136381784
           },
           "cost_per_unit": 1.5,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00183019,
+                "climate_change": 1.04122,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 0.000109464,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.000125197,
+                "photochemical_oxidant": 0.0650149
+              },
+              "activity_name": "high-density polyethylene (HDPE) resin",
+              "reference_product": "polyethylene, high density",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Extrusion",
@@ -716,21 +1022,40 @@
           "unit": "kg",
           "activity_name": "market for dichloromethane",
           "reference_product": "dichloromethane",
-          "location": "GLO",
+          "location": "RoW",
           "ecoinvent_version": "3.11",
           "traci_scores_per_unit": {
-            "acidification": 0.02302330046042421,
-            "climate_change": 3.398827927466915,
-            "ecotoxicity_freshwater": 11.663027094057583,
-            "eutrophication": 0.0012137463221854486,
-            "human_toxicity_carcinogenic": 1.7741542217868557e-07,
-            "human_toxicity_non_carcinogenic": 4.994346324358822e-07,
-            "ozone_depletion": 6.700023744820165e-05,
-            "particulate_matter": 0.0026422631109522567,
-            "photochemical_oxidant": 0.35263472662425516
+            "acidification": 0.023083479174430925,
+            "climate_change": 3.4077633544558097,
+            "ecotoxicity_freshwater": 10.978795862395648,
+            "eutrophication": 0.0011988997052863864,
+            "human_toxicity_carcinogenic": 1.7800349701871878e-07,
+            "human_toxicity_non_carcinogenic": 4.968580045858552e-07,
+            "ozone_depletion": 6.700028984003196e-05,
+            "particulate_matter": 0.002652701455709485,
+            "photochemical_oxidant": 0.3541134554295634
           },
           "cost_per_unit": 0.5,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00323259,
+                "climate_change": 2.65257,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 0.000150158,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.000289322,
+                "photochemical_oxidant": 0.0868652
+              },
+              "activity_name": "dichloromethane production",
+              "reference_product": "dichloromethane",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Paraffin",
@@ -758,23 +1083,42 @@
           "name": "Electricity",
           "quantity": 0.724,
           "unit": "kWh",
-          "activity_name": "market for electricity, medium voltage",
+          "activity_name": "market group for electricity, medium voltage",
           "reference_product": "electricity, medium voltage",
           "location": "CN",
           "ecoinvent_version": "3.11",
           "traci_scores_per_unit": {
-            "acidification": 0.0013914607715055597,
-            "climate_change": 0.257946891271088,
-            "ecotoxicity_freshwater": 5.558585588858751,
-            "eutrophication": 0.002274887212205711,
-            "human_toxicity_carcinogenic": 7.179576351169037e-08,
-            "human_toxicity_non_carcinogenic": 1.0469879359315577e-07,
-            "ozone_depletion": 1.3580311271451129e-09,
-            "particulate_matter": 0.0008884430083259766,
-            "photochemical_oxidant": 0.01273740740475687
+            "acidification": 0.004364564757923443,
+            "climate_change": 0.8417479449382136,
+            "ecotoxicity_freshwater": 8.41475778897201,
+            "eutrophication": 0.0031432085275863286,
+            "human_toxicity_carcinogenic": 1.8431340601476072e-07,
+            "human_toxicity_non_carcinogenic": 2.625006671353922e-07,
+            "ozone_depletion": 2.222431375066357e-09,
+            "particulate_matter": 0.0007529078367254139,
+            "photochemical_oxidant": 0.06512073803851437
           },
           "cost_per_unit": 0.08,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00102736,
+                "climate_change": 0.693274,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 2.31184e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.000105472,
+                "photochemical_oxidant": 0.0131875
+              },
+              "activity_name": "electricity, grid mix at user site, China",
+              "reference_product": "electricity",
+              "location": "CN",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Heat, natural gas",
@@ -782,18 +1126,18 @@
           "unit": "MJ",
           "activity_name": "market for heat, district or industrial, natural gas",
           "reference_product": "heat, district or industrial, natural gas",
-          "location": "CN",
+          "location": "RoW",
           "ecoinvent_version": "3.11",
           "traci_scores_per_unit": {
-            "acidification": 3.2975543712396295e-05,
-            "climate_change": 0.07143249042066027,
-            "ecotoxicity_freshwater": 0.12130560847074656,
-            "eutrophication": 1.2374736880222887e-05,
-            "human_toxicity_carcinogenic": 5.14771187757037e-09,
-            "human_toxicity_non_carcinogenic": 1.5645712643200367e-09,
-            "ozone_depletion": 5.704941981631038e-10,
-            "particulate_matter": 4.113622172107438e-06,
-            "photochemical_oxidant": 0.0012511501361348483
+            "acidification": 3.234396078088452e-05,
+            "climate_change": 0.03812409249384963,
+            "ecotoxicity_freshwater": 0.09785705310442724,
+            "eutrophication": 9.586600420840387e-06,
+            "human_toxicity_carcinogenic": 3.1697079164397928e-09,
+            "human_toxicity_non_carcinogenic": 1.253775759700996e-09,
+            "ozone_depletion": 6.678873333750871e-10,
+            "particulate_matter": 3.384822645158938e-06,
+            "photochemical_oxidant": 0.0010477825153777038
           },
           "cost_per_unit": 0.03,
           "cost_unit": "USD/MJ"
@@ -842,7 +1186,26 @@
             "photochemical_oxidant": 1.556158939274462
           },
           "cost_per_unit": 9.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.0062451,
+                "climate_change": 3.20435,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 0.000174663,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.000823358,
+                "photochemical_oxidant": 0.101525
+              },
+              "activity_name": "copper cathode, US consumption mix (laterite + sulfide ore)",
+              "reference_product": "copper",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Aluminium",
@@ -864,7 +1227,26 @@
             "photochemical_oxidant": 0.9200709671019907
           },
           "cost_per_unit": 3.0,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.022854,
+                "climate_change": 6.70563,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 0.000304977,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.00306973,
+                "photochemical_oxidant": 0.176064
+              },
+              "activity_name": "aluminum sheet, automotive",
+              "reference_product": "aluminum sheet",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "PET",
@@ -886,7 +1268,26 @@
             "photochemical_oxidant": 0.19894142810364218
           },
           "cost_per_unit": 1.2,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00227533,
+                "climate_change": 1.94387,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 0.000118251,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.000203104,
+                "photochemical_oxidant": 0.0706665
+              },
+              "activity_name": "polyethylene terephthalate (PET), GREET battery-model value",
+              "reference_product": "polyethylene terephthalate",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "PP",
@@ -908,29 +1309,67 @@
             "photochemical_oxidant": 0.15368158841805896
           },
           "cost_per_unit": 1.3,
-          "cost_unit": "USD/kg"
+          "cost_unit": "USD/kg",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00163397,
+                "climate_change": 1.37827,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 8.23783e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.00016453,
+                "photochemical_oxidant": 0.048582
+              },
+              "activity_name": "polypropylene (PP), GREET battery-model value",
+              "reference_product": "polypropylene",
+              "location": "US",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Electricity",
           "quantity": 2.9541,
           "unit": "kWh",
-          "activity_name": "market for electricity, medium voltage",
+          "activity_name": "market group for electricity, medium voltage",
           "reference_product": "electricity, medium voltage",
           "location": "CN",
           "ecoinvent_version": "3.11",
           "traci_scores_per_unit": {
-            "acidification": 0.0013914607715055597,
-            "climate_change": 0.257946891271088,
-            "ecotoxicity_freshwater": 5.558585588858751,
-            "eutrophication": 0.002274887212205711,
-            "human_toxicity_carcinogenic": 7.179576351169037e-08,
-            "human_toxicity_non_carcinogenic": 1.0469879359315577e-07,
-            "ozone_depletion": 1.3580311271451129e-09,
-            "particulate_matter": 0.0008884430083259766,
-            "photochemical_oxidant": 0.01273740740475687
+            "acidification": 0.004364564757923443,
+            "climate_change": 0.8417479449382136,
+            "ecotoxicity_freshwater": 8.41475778897201,
+            "eutrophication": 0.0031432085275863286,
+            "human_toxicity_carcinogenic": 1.8431340601476072e-07,
+            "human_toxicity_non_carcinogenic": 2.625006671353922e-07,
+            "ozone_depletion": 2.222431375066357e-09,
+            "particulate_matter": 0.0007529078367254139,
+            "photochemical_oxidant": 0.06512073803851437
           },
           "cost_per_unit": 0.08,
-          "cost_unit": "USD/kWh"
+          "cost_unit": "USD/kWh",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 0.00102736,
+                "climate_change": 0.693274,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 2.31184e-05,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 0.000105472,
+                "photochemical_oxidant": 0.0131875
+              },
+              "activity_name": "electricity, grid mix at user site, China",
+              "reference_product": "electricity",
+              "location": "CN",
+              "database": "greet_2025"
+            }
+          }
         },
         {
           "name": "Heat",
@@ -938,18 +1377,18 @@
           "unit": "MJ",
           "activity_name": "market for heat, district or industrial, natural gas",
           "reference_product": "heat, district or industrial, natural gas",
-          "location": "CN",
+          "location": "RoW",
           "ecoinvent_version": "3.11",
           "traci_scores_per_unit": {
-            "acidification": 3.2975543712396295e-05,
-            "climate_change": 0.07143249042066027,
-            "ecotoxicity_freshwater": 0.12130560847074656,
-            "eutrophication": 1.2374736880222887e-05,
-            "human_toxicity_carcinogenic": 5.14771187757037e-09,
-            "human_toxicity_non_carcinogenic": 1.5645712643200367e-09,
-            "ozone_depletion": 5.704941981631038e-10,
-            "particulate_matter": 4.113622172107438e-06,
-            "photochemical_oxidant": 0.0012511501361348483
+            "acidification": 3.234396078088452e-05,
+            "climate_change": 0.03812409249384963,
+            "ecotoxicity_freshwater": 0.09785705310442724,
+            "eutrophication": 9.586600420840387e-06,
+            "human_toxicity_carcinogenic": 3.1697079164397928e-09,
+            "human_toxicity_non_carcinogenic": 1.253775759700996e-09,
+            "ozone_depletion": 6.678873333750871e-10,
+            "particulate_matter": 3.384822645158938e-06,
+            "photochemical_oxidant": 0.0010477825153777038
           },
           "cost_per_unit": 0.03,
           "cost_unit": "USD/MJ"
@@ -958,15 +1397,15 @@
     }
   },
   "total_impacts_per_functional_unit": {
-    "acidification": 0.2082601957,
-    "climate_change": 20.99523817,
-    "ecotoxicity_freshwater": 2468.841479,
-    "eutrophication": 0.1677012579,
-    "human_toxicity_carcinogenic": 8.267196874e-06,
-    "human_toxicity_non_carcinogenic": 3.654142759e-05,
-    "ozone_depletion": 4.239765921e-07,
-    "particulate_matter": 0.03082534052,
-    "photochemical_oxidant": 1.50728913
+    "acidification": 0.2285096198,
+    "climate_change": 24.54379964,
+    "ecotoxicity_freshwater": 2488.50243,
+    "eutrophication": 0.1736178527,
+    "human_toxicity_carcinogenic": 9.016787943e-06,
+    "human_toxicity_non_carcinogenic": 3.76191528e-05,
+    "ozone_depletion": 4.316813248e-07,
+    "particulate_matter": 0.02992660853,
+    "photochemical_oxidant": 1.863145306
   },
   "total_cost_per_functional_unit": {
     "value": 16.7268,

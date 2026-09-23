@@ -1,0 +1,14 @@
+{
+  "version": "6700eb56cec2",
+  "source": "GREET 2025 (Argonne National Laboratory): GREET2 material sheets, converted to ecospold2; grid electricity from GREET1 Electric sheet (full fuel cycle, at user site)",
+  "method": "TRACI 2.1, applied to GREET air emissions (CO2, CH4, N2O, CO, NOx, SO2, NMVOC, PM2.5, PM10)",
+  "row_count": 194,
+  "noised": false,
+  "not_covered": [
+    "traci_ecotoxicity_freshwater",
+    "traci_human_toxicity_carcinogenic",
+    "traci_human_toxicity_non-carcinogenic",
+    "traci_ozone_depletion"
+  ],
+  "note": "GREET has no toxic or ozone-depleting emissions, so the not_covered categories are always 0 and mean \"not covered\", not \"no impact\". Eutrophication counts NOx to air only."
+}
