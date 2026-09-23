@@ -1166,9 +1166,21 @@
         "unit": "kg"
       },
       {
+        "key": "al_foil_kg",
+        "label": "Al foil (part of cathode)",
+        "unit": "kg",
+        "sub": true
+      },
+      {
         "key": "anode_kg",
         "label": "Anode (coating + Cu foil)",
         "unit": "kg"
+      },
+      {
+        "key": "cu_foil_kg",
+        "label": "Cu foil (part of anode)",
+        "unit": "kg",
+        "sub": true
       },
       {
         "key": "electrolyte_kg",
@@ -1178,11 +1190,6 @@
       {
         "key": "separator_kg",
         "label": "Separator",
-        "unit": "kg"
-      },
-      {
-        "key": "cu_foil_kg",
-        "label": "…of which Cu foil",
         "unit": "kg"
       }
     ],
