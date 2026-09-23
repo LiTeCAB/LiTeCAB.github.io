@@ -69,18 +69,18 @@
       "next_process_ids": [
         "C002"
       ],
-      "description": "NMC811 oxide from hydroxide + lithium hydroxide. ecoinvent: NMC811 oxide production [CN]",
+      "description": "NMC811 oxide from hydroxide + lithium hydroxide. ecoinvent: NMC811 oxide production [CN]. Quantities are per kg of cell: this process supplies the cell directly.",
       "products": [
         {
           "material": "NMC811 oxide",
-          "quantity": 1.0,
+          "quantity": 0.358436,
           "unit": "kg"
         }
       ],
       "lci_inputs": [
         {
           "name": "NMC811 hydroxide",
-          "quantity": 0.949,
+          "quantity": 0.340156,
           "unit": "kg",
           "activity_name": "NMC811 hydroxide production, for Li-ion battery",
           "reference_product": "NMC811 hydroxide",
@@ -102,7 +102,7 @@
         },
         {
           "name": "Lithium Hydroxide",
-          "quantity": 0.246,
+          "quantity": 0.0881752,
           "unit": "kg",
           "activity_name": "market for lithium hydroxide",
           "reference_product": "lithium hydroxide",
@@ -124,7 +124,7 @@
         },
         {
           "name": "Electricity",
-          "quantity": 7.26,
+          "quantity": 2.60224,
           "unit": "kWh",
           "activity_name": "market for electricity, medium voltage",
           "reference_product": "electricity, medium voltage",
@@ -161,40 +161,18 @@
       "next_process_ids": [
         "CELL"
       ],
-      "description": "NMC811 cathode: slurry mixing, coating, drying. ecoinvent: cathode production, NMC811 [CN]",
+      "description": "NMC811 cathode: slurry mixing, coating, drying. ecoinvent: cathode production, NMC811 [CN]. Quantities are per kg of cell: this process supplies the cell directly.",
       "products": [
         {
           "material": "NMC811 cathode",
-          "quantity": 1.0,
+          "quantity": 0.4057,
           "unit": "kg"
         }
       ],
       "lci_inputs": [
         {
-          "name": "NMC811 oxide",
-          "quantity": 0.8835,
-          "unit": "kg",
-          "activity_name": "market for NMC811 oxide",
-          "reference_product": "NMC811 oxide",
-          "location": "CN",
-          "ecoinvent_version": "3.11",
-          "traci_scores_per_unit": {
-            "acidification": 0.20344102655875618,
-            "climate_change": 23.151878027402322,
-            "ecotoxicity_freshwater": 1059.922270710325,
-            "eutrophication": 0.14324033657922705,
-            "human_toxicity_carcinogenic": 7.439798126344533e-06,
-            "human_toxicity_non_carcinogenic": 2.451428555340677e-05,
-            "ozone_depletion": 4.79328690295739e-07,
-            "particulate_matter": 0.02612615670996265,
-            "photochemical_oxidant": 1.640317080921221
-          },
-          "cost_per_unit": 32.0,
-          "cost_unit": "USD/kg"
-        },
-        {
           "name": "Al collector foil",
-          "quantity": 0.07,
+          "quantity": 0.028399,
           "unit": "kg",
           "activity_name": "market for aluminium collector foil, for Li-ion battery",
           "reference_product": "aluminium collector foil, for Li-ion battery",
@@ -216,7 +194,7 @@
         },
         {
           "name": "Carbon black",
-          "quantity": 0.02325,
+          "quantity": 0.00943253,
           "unit": "kg",
           "activity_name": "market for carbon black",
           "reference_product": "carbon black",
@@ -238,7 +216,7 @@
         },
         {
           "name": "PVDF binder",
-          "quantity": 0.02325,
+          "quantity": 0.00943253,
           "unit": "kg",
           "activity_name": "market for polyvinylfluoride",
           "reference_product": "polyvinylfluoride",
@@ -260,7 +238,7 @@
         },
         {
           "name": "NMP solvent",
-          "quantity": 0.005208,
+          "quantity": 0.00211289,
           "unit": "kg",
           "activity_name": "market for N-methyl-2-pyrrolidone",
           "reference_product": "N-methyl-2-pyrrolidone",
@@ -282,7 +260,7 @@
         },
         {
           "name": "Electricity",
-          "quantity": 0.47368,
+          "quantity": 0.192172,
           "unit": "kWh",
           "activity_name": "market for electricity, medium voltage",
           "reference_product": "electricity, medium voltage",
@@ -304,7 +282,7 @@
         },
         {
           "name": "Heat, natural gas",
-          "quantity": 13.7324,
+          "quantity": 5.57123,
           "unit": "MJ",
           "activity_name": "market for heat, district or industrial, natural gas",
           "reference_product": "heat, district or industrial, natural gas",
@@ -341,18 +319,18 @@
       "next_process_ids": [
         "CELL"
       ],
-      "description": "Graphite anode: slurry mixing, coating on Cu foil, drying. ecoinvent: anode production, graphite [CN]",
+      "description": "Graphite anode: slurry mixing, coating on Cu foil, drying. ecoinvent: anode production, graphite [CN]. Quantities are per kg of cell: this process supplies the cell directly.",
       "products": [
         {
           "material": "Graphite anode",
-          "quantity": 1.0,
+          "quantity": 0.3424,
           "unit": "kg"
         }
       ],
       "lci_inputs": [
         {
           "name": "Synthetic graphite",
-          "quantity": 0.37882,
+          "quantity": 0.129708,
           "unit": "kg",
           "activity_name": "market for synthetic graphite, battery grade",
           "reference_product": "synthetic graphite, battery grade",
@@ -374,7 +352,7 @@
         },
         {
           "name": "Natural graphite, coated",
-          "quantity": 0.20398,
+          "quantity": 0.0698428,
           "unit": "kg",
           "activity_name": "market for natural graphite, coated",
           "reference_product": "natural graphite, coated",
@@ -396,7 +374,7 @@
         },
         {
           "name": "Copper collector foil",
-          "quantity": 0.38,
+          "quantity": 0.130112,
           "unit": "kg",
           "activity_name": "market for copper collector foil, for Li-ion battery",
           "reference_product": "copper collector foil, for Li-ion battery",
@@ -418,7 +396,7 @@
         },
         {
           "name": "Water, deionised",
-          "quantity": 0.62,
+          "quantity": 0.212288,
           "unit": "kg",
           "activity_name": "market for water, deionised",
           "reference_product": "water, deionised",
@@ -440,7 +418,7 @@
         },
         {
           "name": "CMC binder",
-          "quantity": 0.0186,
+          "quantity": 0.00636864,
           "unit": "kg",
           "activity_name": "market for carboxymethyl cellulose, powder",
           "reference_product": "carboxymethyl cellulose, powder",
@@ -462,7 +440,7 @@
         },
         {
           "name": "SBR binder (latex)",
-          "quantity": 0.0124,
+          "quantity": 0.00424576,
           "unit": "kg",
           "activity_name": "market for latex",
           "reference_product": "latex",
@@ -484,7 +462,7 @@
         },
         {
           "name": "Carbon black",
-          "quantity": 0.0062,
+          "quantity": 0.00212288,
           "unit": "kg",
           "activity_name": "market for carbon black",
           "reference_product": "carbon black",
@@ -506,7 +484,7 @@
         },
         {
           "name": "Electricity",
-          "quantity": 0.64589,
+          "quantity": 0.221153,
           "unit": "kWh",
           "activity_name": "market for electricity, medium voltage",
           "reference_product": "electricity, medium voltage",
@@ -528,7 +506,7 @@
         },
         {
           "name": "Heat, natural gas",
-          "quantity": 18.7057,
+          "quantity": 6.40483,
           "unit": "MJ",
           "activity_name": "market for heat, district or industrial, natural gas",
           "reference_product": "heat, district or industrial, natural gas",
@@ -565,18 +543,18 @@
       "next_process_ids": [
         "CELL"
       ],
-      "description": "Li-ion electrolyte: LiPF6 in EC/DMC. ecoinvent: electrolyte production, for Li-ion battery [GLO]",
+      "description": "Li-ion electrolyte: LiPF6 in EC/DMC. ecoinvent: electrolyte production, for Li-ion battery [GLO]. Quantities are per kg of cell: this process supplies the cell directly.",
       "products": [
         {
           "material": "Li-ion electrolyte",
-          "quantity": 1.0,
+          "quantity": 0.1683,
           "unit": "kg"
         }
       ],
       "lci_inputs": [
         {
           "name": "Ethylene carbonate",
-          "quantity": 0.48002,
+          "quantity": 0.0807874,
           "unit": "kg",
           "activity_name": "market for ethylene carbonate",
           "reference_product": "ethylene carbonate",
@@ -598,7 +576,7 @@
         },
         {
           "name": "Dimethyl carbonate",
-          "quantity": 0.38728,
+          "quantity": 0.0651792,
           "unit": "kg",
           "activity_name": "market for dimethyl carbonate",
           "reference_product": "dimethyl carbonate",
@@ -620,7 +598,7 @@
         },
         {
           "name": "LiPF6",
-          "quantity": 0.1127,
+          "quantity": 0.0189674,
           "unit": "kg",
           "activity_name": "market for lithium hexafluorophosphate",
           "reference_product": "lithium hexafluorophosphate",
@@ -642,7 +620,7 @@
         },
         {
           "name": "Vinyl carbonate",
-          "quantity": 0.02,
+          "quantity": 0.003366,
           "unit": "kg",
           "activity_name": "market for vinyl carbonate",
           "reference_product": "vinyl carbonate",
@@ -679,18 +657,18 @@
       "next_process_ids": [
         "CELL"
       ],
-      "description": "PE separator film. ecoinvent: battery separator production [CN]",
+      "description": "PE separator film. ecoinvent: battery separator production [CN]. Quantities are per kg of cell: this process supplies the cell directly.",
       "products": [
         {
           "material": "Battery separator",
-          "quantity": 1.0,
+          "quantity": 0.0182,
           "unit": "kg"
         }
       ],
       "lci_inputs": [
         {
           "name": "PE granulate",
-          "quantity": 1.09,
+          "quantity": 0.019838,
           "unit": "kg",
           "activity_name": "market for polyethylene, high density, granulate",
           "reference_product": "polyethylene, high density, granulate",
@@ -712,7 +690,7 @@
         },
         {
           "name": "Extrusion",
-          "quantity": 1.09,
+          "quantity": 0.019838,
           "unit": "kg",
           "activity_name": "market for extrusion, plastic film",
           "reference_product": "extrusion, plastic film",
@@ -734,7 +712,7 @@
         },
         {
           "name": "Dichloromethane",
-          "quantity": 0.0203,
+          "quantity": 0.00036946,
           "unit": "kg",
           "activity_name": "market for dichloromethane",
           "reference_product": "dichloromethane",
@@ -756,7 +734,7 @@
         },
         {
           "name": "Paraffin",
-          "quantity": 0.00293,
+          "quantity": 5.3326e-05,
           "unit": "kg",
           "activity_name": "market for paraffin",
           "reference_product": "paraffin",
@@ -778,7 +756,7 @@
         },
         {
           "name": "Electricity",
-          "quantity": 36.2,
+          "quantity": 0.65884,
           "unit": "kWh",
           "activity_name": "market for electricity, medium voltage",
           "reference_product": "electricity, medium voltage",
@@ -800,7 +778,7 @@
         },
         {
           "name": "Heat, natural gas",
-          "quantity": 40.703,
+          "quantity": 0.740795,
           "unit": "MJ",
           "activity_name": "market for heat, district or industrial, natural gas",
           "reference_product": "heat, district or industrial, natural gas",
@@ -844,95 +822,6 @@
         }
       ],
       "lci_inputs": [
-        {
-          "name": "NMC811 cathode",
-          "quantity": 0.4057,
-          "unit": "kg",
-          "activity_name": "market for cathode, NMC811, for Li-ion battery",
-          "reference_product": "cathode, NMC811, for Li-ion battery",
-          "location": "CN",
-          "ecoinvent_version": "3.11",
-          "traci_scores_per_unit": {
-            "acidification": 0.19147276836610133,
-            "climate_change": 23.154382751552145,
-            "ecotoxicity_freshwater": 1008.0941776154993,
-            "eutrophication": 0.13632076542776977,
-            "human_toxicity_carcinogenic": 7.930286810245657e-06,
-            "human_toxicity_non_carcinogenic": 2.258946945407286e-05,
-            "ozone_depletion": 4.537838914958406e-07,
-            "particulate_matter": 0.02519190097266575,
-            "photochemical_oxidant": 1.6264123286997159
-          },
-          "cost_per_unit": 0.0,
-          "cost_unit": "USD/kg"
-        },
-        {
-          "name": "Graphite anode",
-          "quantity": 0.3424,
-          "unit": "kg",
-          "activity_name": "market for anode, graphite, for Li-ion battery",
-          "reference_product": "anode, graphite, for Li-ion battery",
-          "location": "CN",
-          "ecoinvent_version": "3.11",
-          "traci_scores_per_unit": {
-            "acidification": 0.2926545182404077,
-            "climate_change": 24.518948848565877,
-            "ecotoxicity_freshwater": 4862.8266683633265,
-            "eutrophication": 0.21727254974201216,
-            "human_toxicity_carcinogenic": 9.829708910703405e-06,
-            "human_toxicity_non_carcinogenic": 5.691488171906064e-05,
-            "ozone_depletion": 2.0732295246290713e-07,
-            "particulate_matter": 0.03586085991244256,
-            "photochemical_oxidant": 2.121824417573007
-          },
-          "cost_per_unit": 0.0,
-          "cost_unit": "USD/kg"
-        },
-        {
-          "name": "Electrolyte",
-          "quantity": 0.1683,
-          "unit": "kg",
-          "activity_name": "market for electrolyte, for Li-ion battery",
-          "reference_product": "electrolyte, for Li-ion battery",
-          "location": "GLO",
-          "ecoinvent_version": "3.11",
-          "traci_scores_per_unit": {
-            "acidification": 0.025204098682831057,
-            "climate_change": 3.6017395601337028,
-            "ecotoxicity_freshwater": 84.52558062802768,
-            "eutrophication": 0.05445910002847672,
-            "human_toxicity_carcinogenic": 1.000350275102425e-06,
-            "human_toxicity_non_carcinogenic": 1.5042542798894657e-06,
-            "ozone_depletion": 7.904505239030286e-08,
-            "particulate_matter": 0.003227856411188485,
-            "photochemical_oxidant": 0.33412918083550136
-          },
-          "cost_per_unit": 0.0,
-          "cost_unit": "USD/kg"
-        },
-        {
-          "name": "Separator",
-          "quantity": 0.0182,
-          "unit": "kg",
-          "activity_name": "market for battery separator",
-          "reference_product": "battery separator",
-          "location": "GLO",
-          "ecoinvent_version": "3.11",
-          "traci_scores_per_unit": {
-            "acidification": 0.14252057847178373,
-            "climate_change": 32.31083470783848,
-            "ecotoxicity_freshwater": 336.71320154519174,
-            "eutrophication": 0.14664170341557345,
-            "human_toxicity_carcinogenic": 6.513937193885908e-06,
-            "human_toxicity_non_carcinogenic": 9.195912797328446e-06,
-            "ozone_depletion": 1.6360989418684419e-06,
-            "particulate_matter": 0.0349770470106577,
-            "photochemical_oxidant": 2.1134523840455985
-          },
-          "cost_per_unit": 0.0,
-          "cost_unit": "USD/kg",
-          "cost_source": "EverBatt 2023"
-        },
         {
           "name": "Copper",
           "quantity": 0.033,
@@ -1069,19 +958,413 @@
     }
   },
   "total_impacts_per_functional_unit": {
-    "acidification": 0.95807038,
-    "climate_change": 106.08649424,
-    "ecotoxicity_freshwater": 9641.27821451,
-    "eutrophication": 0.80960322,
-    "human_toxicity_carcinogenic": 3.635e-05,
-    "human_toxicity_non_carcinogenic": 0.00014273,
-    "ozone_depletion": 3.08e-06,
-    "particulate_matter": 0.15428171,
-    "photochemical_oxidant": 7.50629529
+    "acidification": 0.1984572625,
+    "climate_change": 18.43550183,
+    "ecotoxicity_freshwater": 2423.039286,
+    "eutrophication": 0.1552000684,
+    "human_toxicity_carcinogenic": 7.347105221e-06,
+    "human_toxicity_non_carcinogenic": 3.376386916e-05,
+    "ozone_depletion": 3.350827711e-07,
+    "particulate_matter": 0.02891730377,
+    "photochemical_oxidant": 1.381580389
   },
   "total_cost_per_functional_unit": {
-    "value": 55.628,
+    "value": 17.0064,
     "unit": "USD",
-    "note": "Material/energy costs per 1 kg cell (excludes labor, overhead, capital). Double-counted NMC811 oxide purchase price and Separator purchase price removed — those costs are captured in their respective upstream processes."
+    "note": "Material/energy costs per 1 kg cell (excludes labor, overhead, capital). Components are costed once, in the process that makes them; the cell step carries only tabs, pouch and assembly energy."
+  },
+  "design_parameters": {
+    "enabled": true,
+    "title": "Electrode design — BatPaC-style (NMC811)",
+    "description": "Set the electrode design; material and process quantities for 1 kg of cell, and the cell's Wh/kg, follow from it.",
+    "basis": "per kg of cell",
+    "params": {
+      "cathode_thickness_um": {
+        "label": "Cathode coating thickness",
+        "unit": "µm/side",
+        "min": 30,
+        "max": 150,
+        "step": 5,
+        "default": 80
+      },
+      "porosity": {
+        "label": "Electrode porosity",
+        "unit": "",
+        "min": 0.2,
+        "max": 0.5,
+        "step": 0.01,
+        "default": 0.35
+      },
+      "cathode_active_wt_pct": {
+        "label": "Cathode active material",
+        "unit": "wt%",
+        "min": 85,
+        "max": 98,
+        "step": 0.5,
+        "default": 96
+      },
+      "np_ratio": {
+        "label": "N/P capacity ratio",
+        "unit": "",
+        "min": 1.0,
+        "max": 1.3,
+        "step": 0.01,
+        "default": 1.1
+      },
+      "al_foil_um": {
+        "label": "Al foil thickness",
+        "unit": "µm",
+        "min": 8,
+        "max": 25,
+        "step": 1,
+        "default": 15
+      },
+      "cu_foil_um": {
+        "label": "Cu foil thickness",
+        "unit": "µm",
+        "min": 4,
+        "max": 20,
+        "step": 1,
+        "default": 10
+      },
+      "separator_um": {
+        "label": "Separator thickness",
+        "unit": "µm",
+        "min": 8,
+        "max": 30,
+        "step": 1,
+        "default": 15
+      }
+    },
+    "constants": {
+      "q_neg_mah_g": 350,
+      "rho_graphite": 2.24,
+      "rho_carbon_black": 1.8,
+      "rho_pvdf": 1.78,
+      "rho_aqueous_binder": 1.3,
+      "rho_al": 2.7,
+      "rho_cu": 8.96,
+      "rho_electrolyte": 1.2,
+      "rho_separator_polymer": 0.92,
+      "separator_porosity": 0.44,
+      "w_am_neg": 0.98,
+      "w_cb_neg": 0.0,
+      "w_binder_neg": 0.02,
+      "cell_mass_kg": 1.0,
+      "q_pos_mah_g": 195,
+      "rho_am_pos": 4.7,
+      "ocv_v": 3.65,
+      "hardware_kg": 0.0654,
+      "k_C001_nmc811_hydroxide": 0.949001,
+      "k_C001_lithium_hydroxide": 0.246,
+      "k_C001_electricity": 7.25999,
+      "k_C002_nmp_solvent": 0.00560001,
+      "k_C002_electricity": 0.47368,
+      "k_C002_heat_natural_gas": 13.7324,
+      "k_A001_synthetic_graphite_share": 0.65,
+      "k_A001_natural_graphite_coated_share": 0.35,
+      "k_A001_water_deionised": 1.0,
+      "k_A001_cmc_binder_share": 0.6,
+      "k_A001_sbr_binder_latex_share": 0.4,
+      "k_A001_electricity": 0.645891,
+      "k_A001_heat_natural_gas": 18.7057,
+      "k_E001_ethylene_carbonate": 0.48002,
+      "k_E001_dimethyl_carbonate": 0.38728,
+      "k_E001_lipf6": 0.1127,
+      "k_E001_vinyl_carbonate": 0.02,
+      "k_S001_pe_granulate": 1.09,
+      "k_S001_extrusion": 1.09,
+      "k_S001_dichloromethane": 0.0203,
+      "k_S001_paraffin": 0.00293,
+      "k_S001_electricity": 36.2,
+      "k_S001_heat_natural_gas": 40.703
+    },
+    "derived": {
+      "t_pos_cm": "cathode_thickness_um * 1e-4",
+      "w_am_pos": "cathode_active_wt_pct / 100",
+      "w_cb_pos": "(1 - w_am_pos) / 2",
+      "w_binder_pos": "(1 - w_am_pos) / 2",
+      "rho_solid_pos": "1 / (w_am_pos / rho_am_pos + w_cb_pos / rho_carbon_black + w_binder_pos / rho_pvdf)",
+      "coat_pos_g_cm2": "t_pos_cm * (1 - porosity) * rho_solid_pos",
+      "am_pos_g_cm2": "coat_pos_g_cm2 * w_am_pos",
+      "cap_pos_mah_cm2": "am_pos_g_cm2 * q_pos_mah_g",
+      "am_neg_g_cm2": "cap_pos_mah_cm2 * np_ratio / q_neg_mah_g",
+      "coat_neg_g_cm2": "am_neg_g_cm2 / w_am_neg",
+      "rho_solid_neg": "1 / (w_am_neg / rho_graphite + w_cb_neg / rho_carbon_black + w_binder_neg / rho_aqueous_binder)",
+      "t_neg_cm": "coat_neg_g_cm2 / ((1 - porosity) * rho_solid_neg)",
+      "anode_thickness_um": "t_neg_cm * 1e4",
+      "al_g_cm2": "al_foil_um * 1e-4 / 2 * rho_al",
+      "cu_g_cm2": "cu_foil_um * 1e-4 / 2 * rho_cu",
+      "sep_g_cm2": "separator_um * 1e-4 * (1 - separator_porosity) * rho_separator_polymer",
+      "electrolyte_g_cm2": "(t_pos_cm * porosity + t_neg_cm * porosity + separator_um * 1e-4 * separator_porosity) * rho_electrolyte",
+      "unit_g_cm2": "coat_pos_g_cm2 + coat_neg_g_cm2 + al_g_cm2 + cu_g_cm2 + sep_g_cm2 + electrolyte_g_cm2",
+      "area_cm2": "1000 * (cell_mass_kg - hardware_kg) / unit_g_cm2",
+      "am_pos_kg": "area_cm2 * am_pos_g_cm2 / 1000",
+      "cb_pos_kg": "area_cm2 * coat_pos_g_cm2 * w_cb_pos / 1000",
+      "binder_pos_kg": "area_cm2 * coat_pos_g_cm2 * w_binder_pos / 1000",
+      "coat_pos_kg": "area_cm2 * coat_pos_g_cm2 / 1000",
+      "al_foil_kg": "area_cm2 * al_g_cm2 / 1000",
+      "cathode_kg": "coat_pos_kg + al_foil_kg",
+      "am_neg_kg": "area_cm2 * am_neg_g_cm2 / 1000",
+      "cb_neg_kg": "area_cm2 * coat_neg_g_cm2 * w_cb_neg / 1000",
+      "binder_neg_kg": "area_cm2 * coat_neg_g_cm2 * w_binder_neg / 1000",
+      "coat_neg_kg": "area_cm2 * coat_neg_g_cm2 / 1000",
+      "cu_foil_kg": "area_cm2 * cu_g_cm2 / 1000",
+      "anode_kg": "coat_neg_kg + cu_foil_kg",
+      "electrolyte_kg": "area_cm2 * electrolyte_g_cm2 / 1000",
+      "separator_kg": "area_cm2 * sep_g_cm2 / 1000",
+      "specific_energy_wh_kg": "area_cm2 * cap_pos_mah_cm2 / 1000 * ocv_v / cell_mass_kg",
+      "q_C001_nmc811_hydroxide": "am_pos_kg * k_C001_nmc811_hydroxide",
+      "q_C001_lithium_hydroxide": "am_pos_kg * k_C001_lithium_hydroxide",
+      "q_C001_electricity": "am_pos_kg * k_C001_electricity",
+      "q_C002_al_collector_foil": "al_foil_kg",
+      "q_C002_carbon_black": "cb_pos_kg",
+      "q_C002_pvdf_binder": "binder_pos_kg",
+      "q_C002_nmp_solvent": "coat_pos_kg * k_C002_nmp_solvent",
+      "q_C002_electricity": "cathode_kg * k_C002_electricity",
+      "q_C002_heat_natural_gas": "cathode_kg * k_C002_heat_natural_gas",
+      "q_A001_synthetic_graphite": "am_neg_kg * k_A001_synthetic_graphite_share",
+      "q_A001_natural_graphite_coated": "am_neg_kg * k_A001_natural_graphite_coated_share",
+      "q_A001_copper_collector_foil": "cu_foil_kg",
+      "q_A001_water_deionised": "coat_neg_kg * k_A001_water_deionised",
+      "q_A001_cmc_binder": "binder_neg_kg * k_A001_cmc_binder_share",
+      "q_A001_sbr_binder_latex": "binder_neg_kg * k_A001_sbr_binder_latex_share",
+      "q_A001_carbon_black": "cb_neg_kg",
+      "q_A001_electricity": "anode_kg * k_A001_electricity",
+      "q_A001_heat_natural_gas": "anode_kg * k_A001_heat_natural_gas",
+      "q_E001_ethylene_carbonate": "electrolyte_kg * k_E001_ethylene_carbonate",
+      "q_E001_dimethyl_carbonate": "electrolyte_kg * k_E001_dimethyl_carbonate",
+      "q_E001_lipf6": "electrolyte_kg * k_E001_lipf6",
+      "q_E001_vinyl_carbonate": "electrolyte_kg * k_E001_vinyl_carbonate",
+      "q_S001_pe_granulate": "separator_kg * k_S001_pe_granulate",
+      "q_S001_extrusion": "separator_kg * k_S001_extrusion",
+      "q_S001_dichloromethane": "separator_kg * k_S001_dichloromethane",
+      "q_S001_paraffin": "separator_kg * k_S001_paraffin",
+      "q_S001_electricity": "separator_kg * k_S001_electricity",
+      "q_S001_heat_natural_gas": "separator_kg * k_S001_heat_natural_gas"
+    },
+    "display": [
+      {
+        "key": "specific_energy_wh_kg",
+        "label": "Cell specific energy",
+        "unit": "Wh/kg",
+        "emphasis": true
+      },
+      {
+        "key": "cap_pos_mah_cm2",
+        "label": "Areal capacity",
+        "unit": "mAh/cm²"
+      },
+      {
+        "key": "anode_thickness_um",
+        "label": "Anode thickness (from N/P)",
+        "unit": "µm/side"
+      },
+      {
+        "key": "cathode_kg",
+        "label": "Cathode (coating + Al foil)",
+        "unit": "kg"
+      },
+      {
+        "key": "anode_kg",
+        "label": "Anode (coating + Cu foil)",
+        "unit": "kg"
+      },
+      {
+        "key": "electrolyte_kg",
+        "label": "Electrolyte",
+        "unit": "kg"
+      },
+      {
+        "key": "separator_kg",
+        "label": "Separator",
+        "unit": "kg"
+      },
+      {
+        "key": "cu_foil_kg",
+        "label": "…of which Cu foil",
+        "unit": "kg"
+      }
+    ],
+    "quantity_map": [
+      {
+        "process_id": "C001",
+        "input_name": "NMC811 hydroxide",
+        "derived_key": "q_C001_nmc811_hydroxide"
+      },
+      {
+        "process_id": "C001",
+        "input_name": "Lithium Hydroxide",
+        "derived_key": "q_C001_lithium_hydroxide"
+      },
+      {
+        "process_id": "C001",
+        "input_name": "Electricity",
+        "derived_key": "q_C001_electricity"
+      },
+      {
+        "process_id": "C001",
+        "product": "NMC811 oxide",
+        "derived_key": "am_pos_kg"
+      },
+      {
+        "process_id": "C002",
+        "input_name": "Al collector foil",
+        "derived_key": "q_C002_al_collector_foil"
+      },
+      {
+        "process_id": "C002",
+        "input_name": "Carbon black",
+        "derived_key": "q_C002_carbon_black"
+      },
+      {
+        "process_id": "C002",
+        "input_name": "PVDF binder",
+        "derived_key": "q_C002_pvdf_binder"
+      },
+      {
+        "process_id": "C002",
+        "input_name": "NMP solvent",
+        "derived_key": "q_C002_nmp_solvent"
+      },
+      {
+        "process_id": "C002",
+        "input_name": "Electricity",
+        "derived_key": "q_C002_electricity"
+      },
+      {
+        "process_id": "C002",
+        "input_name": "Heat, natural gas",
+        "derived_key": "q_C002_heat_natural_gas"
+      },
+      {
+        "process_id": "C002",
+        "product": "NMC811 cathode",
+        "derived_key": "cathode_kg"
+      },
+      {
+        "process_id": "A001",
+        "input_name": "Synthetic graphite",
+        "derived_key": "q_A001_synthetic_graphite"
+      },
+      {
+        "process_id": "A001",
+        "input_name": "Natural graphite, coated",
+        "derived_key": "q_A001_natural_graphite_coated"
+      },
+      {
+        "process_id": "A001",
+        "input_name": "Copper collector foil",
+        "derived_key": "q_A001_copper_collector_foil"
+      },
+      {
+        "process_id": "A001",
+        "input_name": "Water, deionised",
+        "derived_key": "q_A001_water_deionised"
+      },
+      {
+        "process_id": "A001",
+        "input_name": "CMC binder",
+        "derived_key": "q_A001_cmc_binder"
+      },
+      {
+        "process_id": "A001",
+        "input_name": "SBR binder (latex)",
+        "derived_key": "q_A001_sbr_binder_latex"
+      },
+      {
+        "process_id": "A001",
+        "input_name": "Carbon black",
+        "derived_key": "q_A001_carbon_black"
+      },
+      {
+        "process_id": "A001",
+        "input_name": "Electricity",
+        "derived_key": "q_A001_electricity"
+      },
+      {
+        "process_id": "A001",
+        "input_name": "Heat, natural gas",
+        "derived_key": "q_A001_heat_natural_gas"
+      },
+      {
+        "process_id": "A001",
+        "product": "Graphite anode",
+        "derived_key": "anode_kg"
+      },
+      {
+        "process_id": "E001",
+        "input_name": "Ethylene carbonate",
+        "derived_key": "q_E001_ethylene_carbonate"
+      },
+      {
+        "process_id": "E001",
+        "input_name": "Dimethyl carbonate",
+        "derived_key": "q_E001_dimethyl_carbonate"
+      },
+      {
+        "process_id": "E001",
+        "input_name": "LiPF6",
+        "derived_key": "q_E001_lipf6"
+      },
+      {
+        "process_id": "E001",
+        "input_name": "Vinyl carbonate",
+        "derived_key": "q_E001_vinyl_carbonate"
+      },
+      {
+        "process_id": "E001",
+        "product": "Li-ion electrolyte",
+        "derived_key": "electrolyte_kg"
+      },
+      {
+        "process_id": "S001",
+        "input_name": "PE granulate",
+        "derived_key": "q_S001_pe_granulate"
+      },
+      {
+        "process_id": "S001",
+        "input_name": "Extrusion",
+        "derived_key": "q_S001_extrusion"
+      },
+      {
+        "process_id": "S001",
+        "input_name": "Dichloromethane",
+        "derived_key": "q_S001_dichloromethane"
+      },
+      {
+        "process_id": "S001",
+        "input_name": "Paraffin",
+        "derived_key": "q_S001_paraffin"
+      },
+      {
+        "process_id": "S001",
+        "input_name": "Electricity",
+        "derived_key": "q_S001_electricity"
+      },
+      {
+        "process_id": "S001",
+        "input_name": "Heat, natural gas",
+        "derived_key": "q_S001_heat_natural_gas"
+      },
+      {
+        "process_id": "S001",
+        "product": "Battery separator",
+        "derived_key": "separator_kg"
+      }
+    ],
+    "project_map": [
+      {
+        "field": "energy_density_wh_per_kg",
+        "derived_key": "specific_energy_wh_kg"
+      }
+    ],
+    "notes": [
+      "Equations: BatPaC v5.0 manual (Knehr et al., Argonne ANL/CSE-22/1, 2022), §5.2 — capacity = Q·ρ·ε·A·δ (Eq. 5.2), negative sized from the N/P ratio (§5.2.3), bi-cell layer of foils, coatings and separators (Eq. 5.33).",
+      "Slider defaults from the manual (Table 3.1, energy couple): porosity 0.35, Al 15 µm, Cu 10 µm, cathode 96:2:2, graphite 98:0:2, N/P 1.1.",
+      "Not in the manual (BatPaC keeps these in its Chem sheet): specific capacities, material densities, average voltage, separator porosity and density, electrolyte density, separator and cathode thickness defaults. Literature-typical values; replace with BatPaC's.",
+      "Simplified: thickness is an input, so BatPaC's power/impedance solver is not run. Electrode overhang, uncoated foil tabs and the C/3 voltage loss are ignored; tabs and pouch stay at the template's ecoinvent masses. The Wh/kg is therefore an upper bound for a finished cell.",
+      "Process energy and solvent use scale per kg of component, as in the ecoinvent data. Before Apply, the inventory holds ecoinvent's own cell composition."
+    ]
   }
 }

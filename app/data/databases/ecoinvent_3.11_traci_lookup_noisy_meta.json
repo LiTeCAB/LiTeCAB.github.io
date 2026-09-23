@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T15:53:46.692Z",
+  "generated_at": "2026-09-16T00:56:58.017Z",
   "seed": 42,
   "noise_range": [
     0.5,
@@ -22,5 +22,15 @@
     "traci_particulate_matter_formation",
     "traci_photochemical_oxidant_formation"
   ],
-  "note": "Each TRACI score cell is independently multiplied by a uniform random factor in [0.50, 1.50] (i.e. ±50%). Non-numeric and zero values are left unchanged. This is a synthetic demo dataset and must not be used as a substitute for licensed Ecoinvent values."
+  "columns_passed_through": [
+    "filename",
+    "activity_name",
+    "location",
+    "reference_product",
+    "reference_product_unit",
+    "traci_units",
+    "cost_per_unit",
+    "cost_source"
+  ],
+  "note": "Each TRACI score cell is independently multiplied by a uniform random factor in [0.50, 1.50] (i.e. ±50%). Non-numeric and zero values are left unchanged. TRACI scores in this file are synthetic and must not be used as a substitute for licensed Ecoinvent values. Every other column — including cost_per_unit and cost_source — is copied through unchanged and carries its real, publicly sourced value."
 }

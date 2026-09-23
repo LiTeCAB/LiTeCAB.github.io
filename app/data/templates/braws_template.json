@@ -9,6 +9,165 @@
     "battery_modules": 1,
     "feedstock_type": "End-of-life Li-NMC battery cells"
   },
+  "process_data": {
+    "note": "Facility and feedstock parameters for the BRAWS process. Moved out of data/databases/cost_database.csv, which mixed these with market prices; prices now live in data/costs/cost_master.csv. Nothing computes from this block yet -- it records the values the template was built from.",
+    "source": "data/databases/cost_database.csv (retired 2026-09-15)",
+    "labor": {
+      "operators_required": {
+        "value": 2.72,
+        "unit": "count",
+        "description": "Number of operators required"
+      },
+      "working_hours_per_year": {
+        "value": 8000,
+        "unit": "hour",
+        "description": "Working hours per year"
+      }
+    },
+    "operations": {
+      "annual_capacity": {
+        "value": 100000,
+        "unit": "kg",
+        "description": "Annual processing capacity of facility"
+      },
+      "cycle_time": {
+        "value": 16,
+        "unit": "hour",
+        "description": "Processing cycle time per batch"
+      },
+      "equipment_depreciation": {
+        "value": 115000,
+        "unit": "usd_per_year",
+        "description": "Equipment depreciation per year (facility-level)"
+      },
+      "utility_base_cost": {
+        "value": 5,
+        "unit": "usd_per_year",
+        "description": "Base utility cost per year (facility-level)"
+      }
+    },
+    "material_composition": {
+      "graphite": {
+        "value": 0.281,
+        "unit": "fraction",
+        "description": "Graphite fraction in feedstock"
+      },
+      "aluminum": {
+        "value": 0.19,
+        "unit": "fraction",
+        "description": "Aluminum fraction in feedstock"
+      },
+      "nickel": {
+        "value": 0.16,
+        "unit": "fraction",
+        "description": "Nickel fraction in feedstock"
+      },
+      "copper": {
+        "value": 0.11,
+        "unit": "fraction",
+        "description": "Copper fraction in feedstock"
+      },
+      "steel": {
+        "value": 0.11,
+        "unit": "fraction",
+        "description": "Steel fraction in feedstock"
+      },
+      "manganese": {
+        "value": 0.05,
+        "unit": "fraction",
+        "description": "Manganese fraction in feedstock"
+      },
+      "cobalt": {
+        "value": 0.04,
+        "unit": "fraction",
+        "description": "Cobalt fraction in feedstock"
+      },
+      "lithium": {
+        "value": 0.03,
+        "unit": "fraction",
+        "description": "Lithium fraction in feedstock"
+      }
+    },
+    "recovery_rates": {
+      "graphite": {
+        "value": 0.95,
+        "unit": "fraction",
+        "description": "Graphite recovery rate"
+      },
+      "aluminum": {
+        "value": 0.95,
+        "unit": "fraction",
+        "description": "Aluminum recovery rate"
+      },
+      "nickel": {
+        "value": 0.95,
+        "unit": "fraction",
+        "description": "Nickel recovery rate"
+      },
+      "copper": {
+        "value": 0.95,
+        "unit": "fraction",
+        "description": "Copper recovery rate"
+      },
+      "steel": {
+        "value": 0.95,
+        "unit": "fraction",
+        "description": "Steel recovery rate"
+      },
+      "manganese": {
+        "value": 0.95,
+        "unit": "fraction",
+        "description": "Manganese recovery rate"
+      },
+      "cobalt": {
+        "value": 0.95,
+        "unit": "fraction",
+        "description": "Cobalt recovery rate"
+      },
+      "lithium": {
+        "value": 0.95,
+        "unit": "fraction",
+        "description": "Lithium recovery rate"
+      }
+    },
+    "process_costs": {
+      "li_solution_batches_per_facility_year": {
+        "value": 500,
+        "unit": "count",
+        "description": "Number of lithium solution batches per facility per year"
+      },
+      "li_solution_kg_per_batch": {
+        "value": 2,
+        "unit": "kg",
+        "description": "Lithium solution kg per batch"
+      },
+      "na2co3_batches_per_facility_year": {
+        "value": 500,
+        "unit": "count",
+        "description": "Number of Na2CO3 batches per facility per year"
+      },
+      "na2co3_kg_per_batch": {
+        "value": 5,
+        "unit": "kg",
+        "description": "Na2CO3 kg per batch"
+      },
+      "feedstock_kg_per_module": {
+        "value": 181.4,
+        "unit": "kg",
+        "description": "EOL battery feedstock kg per module (400 lbs)"
+      },
+      "water_kg_per_feedstock_batch": {
+        "value": 10,
+        "unit": "kg",
+        "description": "Water kg per feedstock batch"
+      },
+      "feedstock_batches_per_facility_year": {
+        "value": 500,
+        "unit": "count",
+        "description": "Number of feedstock batches per facility per year"
+      }
+    }
+  },
   "processes": {
     "P001": {
       "id": "P001",

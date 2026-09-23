@@ -1,0 +1,67 @@
+cost_id,filename,activity_name,location,reference_product
+ammonium_sulfate,d89c83ec-63e0-55b3-afc6-abd0d0f9ca46_6f4bede8-f885-499c-8ac9-6832e35d9d16.spold,primary zinc production from concentrate,RoW,ammonium sulfate
+battery_separator,4c3636ed-5226-5310-bf61-21b6e0f777b4_3de8d0de-2003-45a2-849d-faceb195e561.spold,battery separator production,RoW,battery separator
+battery_separator,50f7cb83-ffee-574d-9d97-4fc17a245c3c_3de8d0de-2003-45a2-849d-faceb195e561.spold,battery separator production,CN,battery separator
+battery_separator,8e515110-3719-5fec-b743-12342788be23_3de8d0de-2003-45a2-849d-faceb195e561.spold,market for battery separator,GLO,battery separator
+cobalt,2f79706b-8db3-5e9b-8d5a-0a2b4cce2d90_50c430bb-e392-4242-bd8e-b372d85b2cf9.spold,"treatment of used Li-ion battery, hydrometallurgical treatment",GLO,cobalt
+cobalt,d89c83ec-63e0-55b3-afc6-abd0d0f9ca46_50c430bb-e392-4242-bd8e-b372d85b2cf9.spold,primary zinc production from concentrate,RoW,cobalt
+cobalt,fd627ae5-24f0-565d-a8ed-c139f1cd7fa8_50c430bb-e392-4242-bd8e-b372d85b2cf9.spold,"treatment of used Li-ion battery, pyrometallurgical treatment",GLO,cobalt
+cobalt_sulfate,242839a2-c1c1-52c9-b7db-9dc574ae8777_08182e61-7e1a-4e55-8aad-aaf8de6fa678.spold,market for cobalt sulfate,CN,cobalt sulfate
+cobalt_sulfate,315c6ca1-f316-5216-82cd-3d084c3d235c_08182e61-7e1a-4e55-8aad-aaf8de6fa678.spold,cobalt sulfate production,RoW,cobalt sulfate
+cobalt_sulfate,43cf7b10-5a3d-568d-bc72-1667ccd9eb45_08182e61-7e1a-4e55-8aad-aaf8de6fa678.spold,cobalt sulfate production,CN,cobalt sulfate
+copper_cake,d89c83ec-63e0-55b3-afc6-abd0d0f9ca46_3a07b27c-f6fb-429a-b8b8-04c9e2fcddd7.spold,primary zinc production from concentrate,RoW,copper cake
+copper_cathode,11650540-e706-5664-93db-45d0780d739b_fbb039f7-f9cc-46d2-b631-313ddb125c1a.spold,treatment of copper cake,GLO,"copper, cathode"
+copper_cathode,401053a6-e8d4-5285-b8b1-783d6e7f45d4_fbb039f7-f9cc-46d2-b631-313ddb125c1a.spold,"treatment of non-Fe-Co-metals, from used Li-ion battery, pyrometallurgical processing",GLO,"copper, cathode"
+copper_cathode,a9e4ec91-6890-52cc-ba7a-ad65a616f249_fbb039f7-f9cc-46d2-b631-313ddb125c1a.spold,"treatment of non-Fe-Co-metals, from used Li-ion battery, hydrometallurgical processing",GLO,"copper, cathode"
+copper_cathode,d89c83ec-63e0-55b3-afc6-abd0d0f9ca46_fbb039f7-f9cc-46d2-b631-313ddb125c1a.spold,primary zinc production from concentrate,RoW,"copper, cathode"
+copper_sulfate,d89c83ec-63e0-55b3-afc6-abd0d0f9ca46_38646d90-4680-4034-b60a-ccb48a2f6853.spold,primary zinc production from concentrate,RoW,copper sulfate
+graphite_block,196f28fd-4f6e-5d01-8eae-dbf067d0df7f_e231bf8b-5910-4b28-9659-558bdf63bc8c.spold,"graphite block production, via Acheson block route",CN,graphite block
+graphite_chips,cf3b9527-cf77-5bc1-af22-e494626e4bd7_11ed5810-01d6-4877-b27a-338f3fdf1e67.spold,"synthetic graphite production, battery grade, via Acheson powder route",CN,graphite chips
+graphite_fines,2781cc1d-013c-5f79-b12c-26ed4083b1cb_383526a8-183c-4b0a-8869-9c9e1a0b1100.spold,purified natural graphite production,CN,graphite fines
+graphite_fines,cf3b9527-cf77-5bc1-af22-e494626e4bd7_383526a8-183c-4b0a-8869-9c9e1a0b1100.spold,"synthetic graphite production, battery grade, via Acheson powder route",CN,graphite fines
+heat_district_or_industrial_other_than_natural_gas,98dd571f-65c1-51d3-b028-e989fe8630ce_71e2f1db-a2c5-44d0-8337-dfff15be974d.spold,"steel production, electric, low-alloyed",AT,"heat, district or industrial, other than natural gas"
+heat_district_or_industrial_other_than_natural_gas,d624ffd8-1b2c-547f-9d23-e851ee446714_71e2f1db-a2c5-44d0-8337-dfff15be974d.spold,"steel production, electric, low-alloyed",RoW,"heat, district or industrial, other than natural gas"
+lithium_carbonate,2f79706b-8db3-5e9b-8d5a-0a2b4cce2d90_2ffc27c3-c08c-4d6e-a91d-98cf4765e065.spold,"treatment of used Li-ion battery, hydrometallurgical treatment",GLO,lithium carbonate
+lithium_iron_phosphate,001624e5-89b7-5bd2-8399-892837eed38a_fb423247-ca26-4a05-a380-d2bb2b5a77d4.spold,market for lithium iron phosphate,RoW,lithium iron phosphate
+lithium_iron_phosphate,01564c33-3c13-595a-a0ed-40bc66fb95f4_fb423247-ca26-4a05-a380-d2bb2b5a77d4.spold,"lithium iron phosphate production, hydrothermal process",RoW,lithium iron phosphate
+lithium_iron_phosphate,29f3502e-bcfc-58d2-8e84-a9119e29a1b9_fb423247-ca26-4a05-a380-d2bb2b5a77d4.spold,market for lithium iron phosphate,CN,lithium iron phosphate
+lithium_iron_phosphate,523272ca-680e-5639-8f07-c500a3c705bb_fb423247-ca26-4a05-a380-d2bb2b5a77d4.spold,"lithium iron phosphate production, solid state process",CN,lithium iron phosphate
+lithium_iron_phosphate,9f6f27f1-7435-5926-a7a2-28a478d4975e_fb423247-ca26-4a05-a380-d2bb2b5a77d4.spold,"lithium iron phosphate production, solid state process",RoW,lithium iron phosphate
+lithium_iron_phosphate,dae8ce7b-c035-574f-b25a-44710ee2ceac_fb423247-ca26-4a05-a380-d2bb2b5a77d4.spold,"lithium iron phosphate production, hydrothermal process",CN,lithium iron phosphate
+lithium_sulfate,01564c33-3c13-595a-a0ed-40bc66fb95f4_08893305-5670-46d8-9b4c-b0ffb3790f50.spold,"lithium iron phosphate production, hydrothermal process",RoW,lithium sulfate
+lithium_sulfate,63965f2b-d46f-529e-9c75-169c908bc58d_08893305-5670-46d8-9b4c-b0ffb3790f50.spold,lithium sulfate production,GLO,lithium sulfate
+lithium_sulfate,968c50ab-1c0e-5278-8b07-8d3134e5b8b9_08893305-5670-46d8-9b4c-b0ffb3790f50.spold,market for lithium sulfate,GLO,lithium sulfate
+lithium_sulfate,dae8ce7b-c035-574f-b25a-44710ee2ceac_08893305-5670-46d8-9b4c-b0ffb3790f50.spold,"lithium iron phosphate production, hydrothermal process",CN,lithium sulfate
+manganese,a9e4ec91-6890-52cc-ba7a-ad65a616f249_f42f6024-a63f-4cf7-9f70-4f40380a062e.spold,"treatment of non-Fe-Co-metals, from used Li-ion battery, hydrometallurgical processing",GLO,manganese
+manganese_dioxide,fd627ae5-24f0-565d-a8ed-c139f1cd7fa8_d446ae6b-d959-46d3-9aed-d49975de7750.spold,"treatment of used Li-ion battery, pyrometallurgical treatment",GLO,manganese dioxide
+nca_oxide,0e67f5a3-0102-5087-8364-6a97d9c2dd21_89e28693-8517-48b2-b6bd-e5dbda067dfc.spold,"NCA oxide production, for Li-ion battery",RoW,NCA oxide
+nca_oxide,25a866a4-652e-5cd4-8e0f-6133ca0b2452_89e28693-8517-48b2-b6bd-e5dbda067dfc.spold,market for NCA oxide,RoW,NCA oxide
+nca_oxide,7f9e0e22-8720-568d-be05-50ac96a38f69_89e28693-8517-48b2-b6bd-e5dbda067dfc.spold,"NCA oxide production, for Li-ion battery",CN,NCA oxide
+nca_oxide,a709febc-1754-5fcc-af43-2828ecab1721_89e28693-8517-48b2-b6bd-e5dbda067dfc.spold,market for NCA oxide,CN,NCA oxide
+pig_iron,7a89e88b-6199-5be6-844c-d150e9c26c70_a636ed9e-f90a-48cb-a180-c75b1fc92cf1.spold,vanadium-titanomagnetite mine operation and beneficiation,CN,pig iron
+polyethylene_high_density_granulate,0e72c852-6f7b-5603-8e2c-31432e9b5976_b685192a-e033-421e-9074-8fe7cb176046.spold,"polyethylene production, high density, granulate",RER,"polyethylene, high density, granulate"
+polyethylene_high_density_granulate,1daf1793-64b9-53b7-abf5-97c57f3d2558_b685192a-e033-421e-9074-8fe7cb176046.spold,"polyethylene production, high density, granulate",RoW,"polyethylene, high density, granulate"
+polypropylene_granulate,39e42a8b-3a61-55c7-bd3f-a3abcd4d30bf_66ca2f38-5e51-4546-83c0-d7cef0c55c7c.spold,"polypropylene production, granulate",RER,"polypropylene, granulate"
+polypropylene_granulate,f639917a-03cd-59fa-bf64-0e5a00064ae8_66ca2f38-5e51-4546-83c0-d7cef0c55c7c.spold,"polypropylene production, granulate",RoW,"polypropylene, granulate"
+steam_in_chemical_industry,20572375-a241-5a7e-817a-20398c3b6d46_bd20be8e-9b7a-4391-980f-4ecf8f2867be.spold,sulfuric acid production,RER,"steam, in chemical industry"
+steam_in_chemical_industry,6107a361-e07f-531e-966e-edb9178757e6_bd20be8e-9b7a-4391-980f-4ecf8f2867be.spold,sulfuric acid production,RoW,"steam, in chemical industry"
+steam_in_chemical_industry,d1a16504-202d-5af1-8382-3fbcbaa0c374_bd20be8e-9b7a-4391-980f-4ecf8f2867be.spold,"polyethylene production, low density, granulate",RER,"steam, in chemical industry"
+steam_in_chemical_industry,dadde982-e245-57fc-9ae5-a8d0f57578e9_bd20be8e-9b7a-4391-980f-4ecf8f2867be.spold,"polyethylene production, low density, granulate",RoW,"steam, in chemical industry"
+steel_low_alloyed,6d269e14-050b-5c71-9200-1e3f2326f019_817c3650-4fed-4ef2-b9b6-404a198834e6.spold,"steel production, electric, low-alloyed",CA-QC,"steel, low-alloyed"
+steel_low_alloyed,86feb174-2403-52f8-978d-8505ea0f1adc_817c3650-4fed-4ef2-b9b6-404a198834e6.spold,"steel production, electric, low-alloyed",CH,"steel, low-alloyed"
+steel_low_alloyed,98dd571f-65c1-51d3-b028-e989fe8630ce_817c3650-4fed-4ef2-b9b6-404a198834e6.spold,"steel production, electric, low-alloyed",AT,"steel, low-alloyed"
+steel_low_alloyed,ab8a9edf-01f4-5019-9860-7408a08621dc_817c3650-4fed-4ef2-b9b6-404a198834e6.spold,"steel production, electric, low-alloyed",Europe without Switzerland and Austria,"steel, low-alloyed"
+steel_low_alloyed,d624ffd8-1b2c-547f-9d23-e851ee446714_817c3650-4fed-4ef2-b9b6-404a198834e6.spold,"steel production, electric, low-alloyed",RoW,"steel, low-alloyed"
+sulfuric_acid,20572375-a241-5a7e-817a-20398c3b6d46_9d63da75-8289-4b96-a900-67ec3bd40a16.spold,sulfuric acid production,RER,sulfuric acid
+sulfuric_acid,6107a361-e07f-531e-966e-edb9178757e6_9d63da75-8289-4b96-a900-67ec3bd40a16.spold,sulfuric acid production,RoW,sulfuric acid
+sulfuric_acid,74e9a4c2-da9f-51af-9acf-b908a35e81ff_9d63da75-8289-4b96-a900-67ec3bd40a16.spold,sulfuric acid production,TN,sulfuric acid
+sulfuric_acid,a9e4ec91-6890-52cc-ba7a-ad65a616f249_9d63da75-8289-4b96-a900-67ec3bd40a16.spold,"treatment of non-Fe-Co-metals, from used Li-ion battery, hydrometallurgical processing",GLO,sulfuric acid
+sulfuric_acid,adba1bcc-cb51-5b62-a2e4-631ded02a403_9d63da75-8289-4b96-a900-67ec3bd40a16.spold,"smelting of copper concentrate, sulfide ore",CL,sulfuric acid
+sulfuric_acid,baa90cf7-6151-57be-8a8c-a0603a46e87a_9d63da75-8289-4b96-a900-67ec3bd40a16.spold,"smelting of copper concentrate, sulfide ore",JP,sulfuric acid
+sulfuric_acid,c5d6b557-0544-50f8-b373-651cb0bdefbb_9d63da75-8289-4b96-a900-67ec3bd40a16.spold,"smelting of copper concentrate, sulfide ore",RU,sulfuric acid
+sulfuric_acid,d89c83ec-63e0-55b3-afc6-abd0d0f9ca46_9d63da75-8289-4b96-a900-67ec3bd40a16.spold,primary zinc production from concentrate,RoW,sulfuric acid
+sulfuric_acid,d8cf1d63-c1f9-5de0-a407-dad70f772058_9d63da75-8289-4b96-a900-67ec3bd40a16.spold,"smelting of copper concentrate, sulfide ore",RoW,sulfuric acid
+sulfuric_acid,df97af56-8b13-5056-90d1-7fc82e584463_9d63da75-8289-4b96-a900-67ec3bd40a16.spold,"smelting of copper concentrate, sulfide ore",CN,sulfuric acid
+sulfuric_acid,f27857a8-1dd2-58fa-998c-6b94b79645c9_9d63da75-8289-4b96-a900-67ec3bd40a16.spold,"smelting of copper concentrate, sulfide ore",IN,sulfuric acid
+vinyl_carbonate,269a162f-c6fb-510e-881f-99863c2ab1dd_bbd262fd-3c4a-474a-afbb-f77c84c67c10.spold,vinyl carbonate production,GLO,vinyl carbonate
+zinc_monosulfate,d89c83ec-63e0-55b3-afc6-abd0d0f9ca46_9a7b015b-d091-4408-bbc1-6df501d550c9.spold,primary zinc production from concentrate,RoW,zinc monosulfate
