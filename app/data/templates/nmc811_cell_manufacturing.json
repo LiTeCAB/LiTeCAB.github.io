@@ -433,7 +433,27 @@
             "photochemical_oxidant": 0.0010477825153777038
           },
           "cost_per_unit": 0.03,
-          "cost_unit": "USD/MJ"
+          "cost_unit": "USD/MJ",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 7.81529e-05,
+                "climate_change": 0.0803828,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 4.93989e-06,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 5.47951e-06,
+                "photochemical_oxidant": 0.00285461
+              },
+              "activity_name": "heat, from natural gas in an industrial boiler, US",
+              "reference_product": "heat",
+              "location": "US",
+              "database": "greet_2025",
+              "note": "Proxy: GREET1 US natural gas burned in an industrial boiler at GREET's default 80% efficiency, full fuel cycle. GREET has no other region and no district heat or CHP"
+            }
+          }
         }
       ]
     },
@@ -754,7 +774,27 @@
             "photochemical_oxidant": 0.0010477825153777038
           },
           "cost_per_unit": 0.03,
-          "cost_unit": "USD/MJ"
+          "cost_unit": "USD/MJ",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 7.81529e-05,
+                "climate_change": 0.0803828,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 4.93989e-06,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 5.47951e-06,
+                "photochemical_oxidant": 0.00285461
+              },
+              "activity_name": "heat, from natural gas in an industrial boiler, US",
+              "reference_product": "heat",
+              "location": "US",
+              "database": "greet_2025",
+              "note": "Proxy: GREET1 US natural gas burned in an industrial boiler at GREET's default 80% efficiency, full fuel cycle. GREET has no other region and no district heat or CHP"
+            }
+          }
         }
       ]
     },
@@ -1140,7 +1180,27 @@
             "photochemical_oxidant": 0.0010477825153777038
           },
           "cost_per_unit": 0.03,
-          "cost_unit": "USD/MJ"
+          "cost_unit": "USD/MJ",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 7.81529e-05,
+                "climate_change": 0.0803828,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 4.93989e-06,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 5.47951e-06,
+                "photochemical_oxidant": 0.00285461
+              },
+              "activity_name": "heat, from natural gas in an industrial boiler, US",
+              "reference_product": "heat",
+              "location": "US",
+              "database": "greet_2025",
+              "note": "Proxy: GREET1 US natural gas burned in an industrial boiler at GREET's default 80% efficiency, full fuel cycle. GREET has no other region and no district heat or CHP"
+            }
+          }
         }
       ]
     },
@@ -1391,7 +1451,27 @@
             "photochemical_oxidant": 0.0010477825153777038
           },
           "cost_per_unit": 0.03,
-          "cost_unit": "USD/MJ"
+          "cost_unit": "USD/MJ",
+          "impact_sources": {
+            "greet_2025": {
+              "traci_scores_per_unit": {
+                "acidification": 7.81529e-05,
+                "climate_change": 0.0803828,
+                "ecotoxicity_freshwater": 0.0,
+                "eutrophication": 4.93989e-06,
+                "human_toxicity_carcinogenic": 0.0,
+                "human_toxicity_non_carcinogenic": 0.0,
+                "ozone_depletion": 0.0,
+                "particulate_matter": 5.47951e-06,
+                "photochemical_oxidant": 0.00285461
+              },
+              "activity_name": "heat, from natural gas in an industrial boiler, US",
+              "reference_product": "heat",
+              "location": "US",
+              "database": "greet_2025",
+              "note": "Proxy: GREET1 US natural gas burned in an industrial boiler at GREET's default 80% efficiency, full fuel cycle. GREET has no other region and no district heat or CHP"
+            }
+          }
         }
       ]
     }
@@ -1415,7 +1495,7 @@
   "design_parameters": {
     "enabled": true,
     "title": "Electrode design — BatPaC-style (NMC811)",
-    "description": "Set the electrode design; material and process quantities for 1 kg of cell, and the cell's Wh/kg, follow from it.",
+    "description": "Material amounts for 1 kg of cell follow from these settings.",
     "basis": "per kg of cell",
     "params": {
       "cathode_thickness_um": {
@@ -1424,15 +1504,17 @@
         "min": 30,
         "max": 150,
         "step": 5,
-        "default": 80
+        "default": 80,
+        "primary": true
       },
       "porosity": {
-        "label": "Electrode porosity",
+        "label": "Cathode porosity",
         "unit": "",
         "min": 0.2,
         "max": 0.5,
         "step": 0.01,
-        "default": 0.35
+        "default": 0.27,
+        "primary": true
       },
       "cathode_active_wt_pct": {
         "label": "Cathode active material",
@@ -1440,7 +1522,8 @@
         "min": 85,
         "max": 98,
         "step": 0.5,
-        "default": 96
+        "default": 96,
+        "primary": true
       },
       "np_ratio": {
         "label": "N/P capacity ratio",
@@ -1473,27 +1556,85 @@
         "max": 30,
         "step": 1,
         "default": 15
+      },
+      "cell_capacity_ah": {
+        "label": "Cell capacity",
+        "unit": "Ah",
+        "min": 20,
+        "max": 150,
+        "step": 1,
+        "default": 30,
+        "group": "cell"
+      },
+      "q_pos_mah_g": {
+        "label": "Cathode capacity",
+        "unit": "mAh/g",
+        "min": 80,
+        "max": 320,
+        "step": 0.1,
+        "default": 213.6,
+        "group": "material"
+      },
+      "ocv_v": {
+        "label": "Average voltage",
+        "unit": "V",
+        "min": 2.5,
+        "max": 5.0,
+        "step": 0.001,
+        "default": 3.7634,
+        "group": "material"
+      },
+      "rho_am_pos": {
+        "label": "Cathode crystal density",
+        "unit": "g/cm³",
+        "min": 2.0,
+        "max": 6.0,
+        "step": 0.01,
+        "default": 4.65,
+        "group": "material"
       }
     },
     "constants": {
-      "q_neg_mah_g": 350,
+      "q_neg_mah_g": 360.4,
+      "porosity_neg": 0.25,
       "rho_graphite": 2.24,
-      "rho_carbon_black": 1.8,
-      "rho_pvdf": 1.78,
-      "rho_aqueous_binder": 1.3,
+      "rho_carbon_black": 1.825,
+      "rho_carbon_black_neg": 1.95,
+      "cb_share_pos": 0.5,
+      "rho_pvdf": 1.77,
+      "rho_aqueous_binder": 1.1,
       "rho_al": 2.7,
       "rho_cu": 8.96,
       "rho_electrolyte": 1.2,
-      "rho_separator_polymer": 0.92,
-      "separator_porosity": 0.44,
+      "rho_separator": 0.473,
+      "separator_porosity": 0.5,
       "w_am_neg": 0.98,
       "w_cb_neg": 0.0,
       "w_binder_neg": 0.02,
       "cell_mass_kg": 1.0,
-      "q_pos_mah_g": 195,
-      "rho_am_pos": 4.7,
-      "ocv_v": 3.65,
-      "hardware_kg": 0.0654,
+      "cell_thickness_mm": 20,
+      "electrode_lw_ratio": 3,
+      "packing_density": 0.97,
+      "container_um": 150,
+      "rho_container": 2.20213,
+      "container_al_share": 0.817389,
+      "seal_width_mm": 6,
+      "fold_edge_mm": 1,
+      "neg_excess_mm": 2,
+      "sep_excess_width_mm": 2,
+      "sep_excess_length_mm": 4,
+      "term_ext_length_mm": 8,
+      "term_ft_length_mm": 5,
+      "term_buffer_mm": 2,
+      "pos_terminal_mm": 1.2,
+      "neg_terminal_mm": 0.8,
+      "hw_ref_copper_kg": 0.033,
+      "hw_cu_frac_ref": 0.02702158772868465,
+      "hw_ref_aluminium_kg": 0.0284,
+      "hw_al_frac_ref": 0.0343417896639862,
+      "hw_ref_pet_kg": 0.0028,
+      "hw_polymer_frac_ref": 0.004943518931621287,
+      "hw_ref_pp_kg": 0.0012,
       "k_C001_nmc811_hydroxide": 0.949001,
       "k_C001_lithium_hydroxide": 0.246,
       "k_C001_electricity": 7.25999,
@@ -1521,37 +1662,66 @@
     "derived": {
       "t_pos_cm": "cathode_thickness_um * 1e-4",
       "w_am_pos": "cathode_active_wt_pct / 100",
-      "w_cb_pos": "(1 - w_am_pos) / 2",
-      "w_binder_pos": "(1 - w_am_pos) / 2",
+      "w_cb_pos": "(1 - w_am_pos) * cb_share_pos",
+      "w_binder_pos": "(1 - w_am_pos) * (1 - cb_share_pos)",
       "rho_solid_pos": "1 / (w_am_pos / rho_am_pos + w_cb_pos / rho_carbon_black + w_binder_pos / rho_pvdf)",
       "coat_pos_g_cm2": "t_pos_cm * (1 - porosity) * rho_solid_pos",
       "am_pos_g_cm2": "coat_pos_g_cm2 * w_am_pos",
       "cap_pos_mah_cm2": "am_pos_g_cm2 * q_pos_mah_g",
       "am_neg_g_cm2": "cap_pos_mah_cm2 * np_ratio / q_neg_mah_g",
       "coat_neg_g_cm2": "am_neg_g_cm2 / w_am_neg",
-      "rho_solid_neg": "1 / (w_am_neg / rho_graphite + w_cb_neg / rho_carbon_black + w_binder_neg / rho_aqueous_binder)",
-      "t_neg_cm": "coat_neg_g_cm2 / ((1 - porosity) * rho_solid_neg)",
+      "rho_solid_neg": "1 / (w_am_neg / rho_graphite + w_cb_neg / rho_carbon_black_neg + w_binder_neg / rho_aqueous_binder)",
+      "t_neg_cm": "coat_neg_g_cm2 / ((1 - porosity_neg) * rho_solid_neg)",
       "anode_thickness_um": "t_neg_cm * 1e4",
       "al_g_cm2": "al_foil_um * 1e-4 / 2 * rho_al",
       "cu_g_cm2": "cu_foil_um * 1e-4 / 2 * rho_cu",
-      "sep_g_cm2": "separator_um * 1e-4 * (1 - separator_porosity) * rho_separator_polymer",
-      "electrolyte_g_cm2": "(t_pos_cm * porosity + t_neg_cm * porosity + separator_um * 1e-4 * separator_porosity) * rho_electrolyte",
-      "unit_g_cm2": "coat_pos_g_cm2 + coat_neg_g_cm2 + al_g_cm2 + cu_g_cm2 + sep_g_cm2 + electrolyte_g_cm2",
+      "sep_g_cm2": "separator_um * 1e-4 * rho_separator",
+      "electrode_area_cm2": "cell_capacity_ah * 1000 / cap_pos_mah_cm2",
+      "n_bicells": "packing_density * (cell_thickness_mm * 1000 - 2 * container_um - cu_foil_um) / (al_foil_um + cu_foil_um + 2 * (separator_um + cathode_thickness_um + anode_thickness_um))",
+      "electrode_width_mm": "sqrt(electrode_area_cm2 / (2 * n_bicells * electrode_lw_ratio)) * 10",
+      "electrode_length_mm": "electrode_width_mm * electrode_lw_ratio",
+      "p2t_gap_mm": "0.1 * cell_thickness_mm + sep_excess_length_mm / 2",
+      "pos_tab_mm": "1.2 * cell_thickness_mm",
+      "term_int_length_mm": "pos_tab_mm - p2t_gap_mm",
+      "term_ext_width_mm": "40 + 10 * min(1, floor(electrode_width_mm / 84))",
+      "term_area_mm2": "(term_ext_length_mm + term_ft_length_mm) * term_ext_width_mm + term_int_length_mm * (electrode_width_mm - 2 * term_buffer_mm)",
+      "pos_terminal_g": "term_area_mm2 * pos_terminal_mm / 1000 * rho_al",
+      "neg_terminal_g": "term_area_mm2 * neg_terminal_mm / 1000 * rho_cu",
+      "cell_width_mm": "electrode_width_mm + 2 * fold_edge_mm + sep_excess_width_mm",
+      "cell_length_mm": "electrode_length_mm + 2 * (term_int_length_mm + term_ft_length_mm + term_ext_length_mm + p2t_gap_mm)",
+      "container_g": "(2 * cell_width_mm + 2 * cell_thickness_mm + 2 * seal_width_mm) * (cell_length_mm - 2 * term_ext_length_mm) * container_um / 1000 * rho_container / 1000",
+      "neg_tab_mm": "pos_tab_mm - neg_excess_mm / 2",
+      "neg_area_factor": "(electrode_width_mm + neg_excess_mm) * (electrode_length_mm + neg_excess_mm) / (electrode_width_mm * electrode_length_mm)",
+      "al_area_factor": "(electrode_length_mm + pos_tab_mm) / electrode_length_mm",
+      "cu_area_factor": "(n_bicells + 1) / n_bicells * (electrode_width_mm + neg_excess_mm) * (electrode_length_mm + neg_tab_mm + neg_excess_mm) / (electrode_width_mm * electrode_length_mm)",
+      "sep_area_factor": "(electrode_width_mm + sep_excess_width_mm) * (electrode_length_mm + sep_excess_length_mm) / (electrode_width_mm * electrode_length_mm)",
+      "excess_neg_area_pct": "(neg_area_factor - 1) * 100",
+      "electrolyte_g_cm2": "(t_pos_cm * porosity + t_neg_cm * porosity_neg * neg_area_factor + separator_um * 1e-4 * separator_porosity * sep_area_factor) * rho_electrolyte",
+      "unit_g_cm2": "coat_pos_g_cm2 + coat_neg_g_cm2 * neg_area_factor + al_g_cm2 * al_area_factor + cu_g_cm2 * cu_area_factor + sep_g_cm2 * sep_area_factor + electrolyte_g_cm2",
+      "cell_g": "electrode_area_cm2 * unit_g_cm2 + pos_terminal_g + neg_terminal_g + container_g",
+      "hw_cu_frac": "neg_terminal_g / cell_g",
+      "hw_al_frac": "(pos_terminal_g + container_g * container_al_share) / cell_g",
+      "hw_polymer_frac": "container_g * (1 - container_al_share) / cell_g",
+      "q_CELL_copper": "hw_ref_copper_kg * (hw_cu_frac / hw_cu_frac_ref)",
+      "q_CELL_aluminium": "hw_ref_aluminium_kg * (hw_al_frac / hw_al_frac_ref)",
+      "q_CELL_pet": "hw_ref_pet_kg * (hw_polymer_frac / hw_polymer_frac_ref)",
+      "q_CELL_pp": "hw_ref_pp_kg * (hw_polymer_frac / hw_polymer_frac_ref)",
+      "hardware_kg": "q_CELL_copper + q_CELL_aluminium + q_CELL_pet + q_CELL_pp",
       "area_cm2": "1000 * (cell_mass_kg - hardware_kg) / unit_g_cm2",
       "am_pos_kg": "area_cm2 * am_pos_g_cm2 / 1000",
       "cb_pos_kg": "area_cm2 * coat_pos_g_cm2 * w_cb_pos / 1000",
       "binder_pos_kg": "area_cm2 * coat_pos_g_cm2 * w_binder_pos / 1000",
       "coat_pos_kg": "area_cm2 * coat_pos_g_cm2 / 1000",
-      "al_foil_kg": "area_cm2 * al_g_cm2 / 1000",
+      "al_foil_kg": "area_cm2 * al_g_cm2 * al_area_factor / 1000",
       "cathode_kg": "coat_pos_kg + al_foil_kg",
-      "am_neg_kg": "area_cm2 * am_neg_g_cm2 / 1000",
-      "cb_neg_kg": "area_cm2 * coat_neg_g_cm2 * w_cb_neg / 1000",
-      "binder_neg_kg": "area_cm2 * coat_neg_g_cm2 * w_binder_neg / 1000",
-      "coat_neg_kg": "area_cm2 * coat_neg_g_cm2 / 1000",
-      "cu_foil_kg": "area_cm2 * cu_g_cm2 / 1000",
+      "am_neg_kg": "area_cm2 * am_neg_g_cm2 * neg_area_factor / 1000",
+      "cb_neg_kg": "area_cm2 * coat_neg_g_cm2 * neg_area_factor * w_cb_neg / 1000",
+      "binder_neg_kg": "area_cm2 * coat_neg_g_cm2 * neg_area_factor * w_binder_neg / 1000",
+      "coat_neg_kg": "area_cm2 * coat_neg_g_cm2 * neg_area_factor / 1000",
+      "cu_foil_kg": "area_cm2 * cu_g_cm2 * cu_area_factor / 1000",
       "anode_kg": "coat_neg_kg + cu_foil_kg",
       "electrolyte_kg": "area_cm2 * electrolyte_g_cm2 / 1000",
-      "separator_kg": "area_cm2 * sep_g_cm2 / 1000",
+      "separator_kg": "area_cm2 * sep_g_cm2 * sep_area_factor / 1000",
       "cell_hardware_kg": "hardware_kg",
       "specific_energy_wh_kg": "area_cm2 * cap_pos_mah_cm2 / 1000 * ocv_v / cell_mass_kg",
       "q_C001_nmc811_hydroxide": "am_pos_kg * k_C001_nmc811_hydroxide",
@@ -1634,11 +1804,46 @@
       },
       {
         "key": "cell_hardware_kg",
-        "label": "Cell hardware (can, tabs; fixed)",
+        "label": "Cell hardware (tabs, pouch)",
         "unit": "kg"
+      },
+      {
+        "key": "electrode_width_mm",
+        "label": "Electrode width (from capacity)",
+        "unit": "mm"
+      },
+      {
+        "key": "electrode_length_mm",
+        "label": "Electrode length",
+        "unit": "mm"
+      },
+      {
+        "key": "excess_neg_area_pct",
+        "label": "Anode overhang (extra area)",
+        "unit": "%"
       }
     ],
     "quantity_map": [
+      {
+        "process_id": "CELL",
+        "input_name": "Copper",
+        "derived_key": "q_CELL_copper"
+      },
+      {
+        "process_id": "CELL",
+        "input_name": "Aluminium",
+        "derived_key": "q_CELL_aluminium"
+      },
+      {
+        "process_id": "CELL",
+        "input_name": "PET",
+        "derived_key": "q_CELL_pet"
+      },
+      {
+        "process_id": "CELL",
+        "input_name": "PP",
+        "derived_key": "q_CELL_pp"
+      },
       {
         "process_id": "C001",
         "input_name": "NMC811 hydroxide",
@@ -1811,12 +2016,26 @@
         "derived_key": "specific_energy_wh_kg"
       }
     ],
+    "sources": [
+      {
+        "cite": "Knehr, K. W., Kubal, J. J., Nelson, P. A., & Ahmed, S. (2022). Battery performance and cost modeling for electric-drive vehicles: A manual for BatPaC v5.0 (ANL/CSE-22/1). Argonne National Laboratory.",
+        "url": "https://doi.org/10.2172/1877590",
+        "used_for": "Electrode and cell equations"
+      },
+      {
+        "cite": "Argonne National Laboratory. (2024). BatPaC 5.2, version 2024-11-1 [Spreadsheet model].",
+        "url": "https://www.anl.gov/cse/electrochemical-chemical-TEA",
+        "used_for": "Material data, design defaults, cell hardware"
+      },
+      {
+        "cite": "ecoinvent. (2024). ecoinvent database, version 3.11.",
+        "url": "https://support.ecoinvent.org/ecoinvent-version-3.11",
+        "used_for": "Process energy and solvents"
+      }
+    ],
     "notes": [
-      "Equations: BatPaC v5.0 manual (Knehr et al., Argonne ANL/CSE-22/1, 2022), §5.2 — capacity = Q·ρ·ε·A·δ (Eq. 5.2), negative sized from the N/P ratio (§5.2.3), bi-cell layer of foils, coatings and separators (Eq. 5.33).",
-      "Slider defaults from the manual (Table 3.1, energy couple): porosity 0.35, Al 15 µm, Cu 10 µm, cathode 96:2:2, graphite 98:0:2, N/P 1.1.",
-      "Not in the manual (BatPaC keeps these in its Chem sheet): specific capacities, material densities, average voltage, separator porosity and density, electrolyte density, separator and cathode thickness defaults. Literature-typical values; replace with BatPaC's.",
-      "Simplified: thickness is an input, so BatPaC's power/impedance solver is not run. Electrode overhang, uncoated foil tabs and the C/3 voltage loss are ignored; tabs and pouch stay at the template's ecoinvent masses. The Wh/kg is therefore an upper bound for a finished cell.",
-      "Process energy and solvent use scale per kg of component, as in the ecoinvent data. Before Apply, the inventory holds ecoinvent's own cell composition."
+      "The 80 µm default cathode thickness is LiTeCAB's choice.",
+      "Wh/kg reads slightly high: no C/3 voltage loss or extra electrolyte."
     ]
   }
 }

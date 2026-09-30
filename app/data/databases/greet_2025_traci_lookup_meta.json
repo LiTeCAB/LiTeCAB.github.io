@@ -1,8 +1,8 @@
 {
-  "version": "6700eb56cec2",
-  "source": "GREET 2025 (Argonne National Laboratory): GREET2 material sheets, converted to ecospold2; grid electricity from GREET1 Electric sheet (full fuel cycle, at user site)",
+  "version": "1de702e1b61e",
+  "source": "GREET 2025 (Argonne National Laboratory): GREET2 material sheets, converted to ecospold2; grid electricity from GREET1 Electric sheet (full fuel cycle, at user site); natural-gas heat from GREET1 NG and EF sheets (full fuel cycle, 80% boiler efficiency)",
   "method": "TRACI 2.1, applied to GREET air emissions (CO2, CH4, N2O, CO, NOx, SO2, NMVOC, PM2.5, PM10)",
-  "row_count": 194,
+  "row_count": 195,
   "noised": false,
   "not_covered": [
     "traci_ecotoxicity_freshwater",

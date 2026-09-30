@@ -1,18 +1,18 @@
 {
-  "template_name": "NMC622 Cell Manufacturing",
-  "template_id": "nmc622_cell_manufacturing",
-  "description": "Li-ion NMC622 (LiNi0.6Mn0.2Co0.2O2) battery cell manufacturing. Quantities from ecoinvent 3.11 cutoff.",
+  "template_name": "NMC532 Cell, BatPaC design",
+  "template_id": "batpac_nmc532",
+  "description": "Li-ion NMC532 pouch cell with a graphite anode. BatPaC 5.2 sets the material amounts; GREET 2025 scores them.",
   "version": "1.0",
-  "created_date": "2025-02-11",
-  "data_source": "ecoinvent 3.11 cutoff",
+  "created_date": "2026-09-30",
+  "data_source": "BatPaC 5.2 cell design; GREET 2025 scores; ecoinvent 3.11 process energy",
   "impact_method": "TRACI v2.1",
+  "impact_dataset": "greet_2025",
   "functional_unit": {
-    "description": "1 kg of NMC622 Li-ion battery cell",
+    "description": "1 kg of NMC532 Li-ion battery cell",
     "scale": "cell",
     "weight_kg": 1.0,
-    "energy_density_wh_per_kg": 200,
-    "chemistry": "NMC622",
-    "cathode_composition": "LiNi0.6Mn0.2Co0.2O2",
+    "energy_density_wh_per_kg": 289.8,
+    "chemistry": "NMC532",
     "anode_material": "Graphite"
   },
   "traci_categories": {
@@ -53,150 +53,115 @@
       "method": "TRACI v2.1"
     }
   },
+  "batpac": {
+    "chemistry_id": "nmc532",
+    "label": "NMC532",
+    "family": "NMC",
+    "couple": "NMC532-G (Energy)",
+    "stand_in": null,
+    "powder": {
+      "greet_activity": "NMC532 cathode powder (GREET label LiNi0.5Co0.3Mn0.2O2), co-precipitation",
+      "ecoinvent_activity": "NMC532 oxide production, for Li-ion battery",
+      "note": null
+    },
+    "configurations": [
+      {
+        "id": "energy",
+        "label": "Energy cell",
+        "description": "Standard EV cell, 80 µm cathode.",
+        "params": {},
+        "constants": {}
+      },
+      {
+        "id": "thick",
+        "label": "Thick electrodes",
+        "description": "Most energy, 120 µm cathode (BatPaC's max).",
+        "params": {
+          "cathode_thickness_um": 120
+        },
+        "constants": {}
+      },
+      {
+        "id": "power",
+        "label": "Power cell",
+        "description": "High power, 40 µm cathode.",
+        "params": {
+          "cathode_thickness_um": 40,
+          "porosity": 0.35,
+          "al_foil_um": 20.0,
+          "cu_foil_um": 15.0,
+          "cathode_active_wt_pct": 94.0
+        },
+        "constants": {
+          "porosity_neg": 0.35,
+          "w_am_neg": 0.96,
+          "w_cb_neg": 0.02,
+          "cb_share_pos": 0.666667
+        }
+      }
+    ]
+  },
   "processes": {
     "C001": {
       "id": "C001",
-      "name": "NMC622_Oxide_Production",
+      "name": "NMC532_Cathode_Material",
       "process_type": "Intermediate_Product",
       "manufacturing_category": "cathode",
       "hierarchy_level": 0,
       "is_side_input": false,
-      "equipment": "Calcination furnace",
-      "parameters": {
-        "temperature_c": 900,
-        "duration_hours": 12
-      },
+      "equipment": "",
+      "parameters": {},
       "next_process_ids": [
         "C002"
       ],
-      "description": "NMC622 oxide from hydroxide + lithium carbonate. ecoinvent: NMC622 oxide production [CN]. Quantities are per kg of cell: this process supplies the cell directly.",
+      "description": "NMC532 cathode active material, bought as powder: one line, scored per kg by GREET 2025, priced at BatPaC's $/kg. Quantities are per kg of cell.",
       "products": [
         {
-          "material": "NMC622 oxide",
-          "quantity": 0.370725,
+          "material": "NMC532 cathode active material",
+          "quantity": 0.411432,
           "unit": "kg"
         }
       ],
       "lci_inputs": [
         {
-          "name": "NMC622 hydroxide",
-          "quantity": 0.351818,
+          "name": "NMC532 cathode powder",
+          "quantity": 0.411432,
           "unit": "kg",
-          "activity_name": "NMC622 hydroxide production, for Li-ion battery",
-          "reference_product": "NMC622 hydroxide",
+          "activity_name": "NMC532 oxide production, for Li-ion battery",
+          "reference_product": "NMC532 oxide",
           "location": "CN",
           "ecoinvent_version": "3.11",
           "traci_scores_per_unit": {
-            "acidification": 0.1684170525550804,
-            "climate_change": 17.269186723412087,
-            "ecotoxicity_freshwater": 1073.3596682678688,
-            "eutrophication": 0.1013184548282469,
-            "human_toxicity_carcinogenic": 6.185074445788836e-06,
-            "human_toxicity_non_carcinogenic": 2.555578073618452e-05,
-            "ozone_depletion": 5.16351378177159e-07,
-            "particulate_matter": 0.019707840443859852,
-            "photochemical_oxidant": 1.0650106631672451
+            "acidification": 0.205144185213277,
+            "climate_change": 24.588686578737224,
+            "ecotoxicity_freshwater": 1136.971517038161,
+            "eutrophication": 0.15165984300760157,
+            "human_toxicity_carcinogenic": 8.05684245351971e-06,
+            "human_toxicity_non_carcinogenic": 2.6863291725960666e-05,
+            "ozone_depletion": 5.511779661966402e-07,
+            "particulate_matter": 0.026875419807073107,
+            "photochemical_oxidant": 1.6747266345766225
           },
-          "cost_per_unit": 24.0,
+          "cost_per_unit": 22.25,
           "cost_unit": "USD/kg",
+          "cost_source": "Argonne BatPaC 5.2 (2024), NMC532 positive active material price",
+          "cost_confidence": "sourced",
           "impact_sources": {
             "greet_2025": {
               "traci_scores_per_unit": {
-                "acidification": 0.271538,
-                "climate_change": 13.5418,
+                "acidification": 0.235378,
+                "climate_change": 18.9662,
                 "ecotoxicity_freshwater": 0.0,
-                "eutrophication": 0.00108937,
+                "eutrophication": 0.00130861,
                 "human_toxicity_carcinogenic": 0.0,
                 "human_toxicity_non_carcinogenic": 0.0,
                 "ozone_depletion": 0.0,
-                "particulate_matter": 0.0204133,
-                "photochemical_oxidant": 0.625905
+                "particulate_matter": 0.0191091,
+                "photochemical_oxidant": 0.751179
               },
-              "activity_name": "NMC622 precursor hydroxide (Ni0.6Co0.2Mn0.2(OH)2)",
-              "reference_product": "NMC622 hydroxide precursor",
+              "activity_name": "NMC532 cathode powder (GREET label LiNi0.5Co0.3Mn0.2O2), co-precipitation",
+              "reference_product": "NMC532 cathode active material",
               "location": "US",
-              "database": "greet_2025"
-            }
-          }
-        },
-        {
-          "name": "Lithium Carbonate",
-          "quantity": 0.141246,
-          "unit": "kg",
-          "activity_name": "market for lithium carbonate",
-          "reference_product": "lithium carbonate",
-          "location": "GLO",
-          "ecoinvent_version": "3.11",
-          "traci_scores_per_unit": {
-            "acidification": 0.05892255520623557,
-            "climate_change": 7.603511058875798,
-            "ecotoxicity_freshwater": 231.19155517737659,
-            "eutrophication": 0.09954958328455152,
-            "human_toxicity_carcinogenic": 2.4631845921929977e-06,
-            "human_toxicity_non_carcinogenic": 4.4645565211426985e-06,
-            "ozone_depletion": 1.4287719165511828e-07,
-            "particulate_matter": 0.009973946359564561,
-            "photochemical_oxidant": 0.6982543787598162
-          },
-          "cost_per_unit": 16.0,
-          "cost_unit": "USD/kg",
-          "impact_sources": {
-            "greet_2025": {
-              "traci_scores_per_unit": {
-                "acidification": 0.0243369,
-                "climate_change": 11.0685,
-                "ecotoxicity_freshwater": 0.0,
-                "eutrophication": 0.000691662,
-                "human_toxicity_carcinogenic": 0.0,
-                "human_toxicity_non_carcinogenic": 0.0,
-                "ozone_depletion": 0.0,
-                "particulate_matter": 0.00361331,
-                "photochemical_oxidant": 0.394366
-              },
-              "activity_name": "lithium carbonate (Li2CO3), GREET average supply mix",
-              "reference_product": "lithium carbonate",
-              "location": "GLO",
-              "database": "greet_2025"
-            }
-          }
-        },
-        {
-          "name": "Electricity",
-          "quantity": 2.31097,
-          "unit": "kWh",
-          "activity_name": "market group for electricity, medium voltage",
-          "reference_product": "electricity, medium voltage",
-          "location": "CN",
-          "ecoinvent_version": "3.11",
-          "traci_scores_per_unit": {
-            "acidification": 0.004364564757923443,
-            "climate_change": 0.8417479449382136,
-            "ecotoxicity_freshwater": 8.41475778897201,
-            "eutrophication": 0.0031432085275863286,
-            "human_toxicity_carcinogenic": 1.8431340601476072e-07,
-            "human_toxicity_non_carcinogenic": 2.625006671353922e-07,
-            "ozone_depletion": 2.222431375066357e-09,
-            "particulate_matter": 0.0007529078367254139,
-            "photochemical_oxidant": 0.06512073803851437
-          },
-          "cost_per_unit": 0.08,
-          "cost_unit": "USD/kWh",
-          "impact_sources": {
-            "greet_2025": {
-              "traci_scores_per_unit": {
-                "acidification": 0.00102736,
-                "climate_change": 0.693274,
-                "ecotoxicity_freshwater": 0.0,
-                "eutrophication": 2.31184e-05,
-                "human_toxicity_carcinogenic": 0.0,
-                "human_toxicity_non_carcinogenic": 0.0,
-                "ozone_depletion": 0.0,
-                "particulate_matter": 0.000105472,
-                "photochemical_oxidant": 0.0131875
-              },
-              "activity_name": "electricity, grid mix at user site, China",
-              "reference_product": "electricity",
-              "location": "CN",
               "database": "greet_2025"
             }
           }
@@ -205,7 +170,7 @@
     },
     "C002": {
       "id": "C002",
-      "name": "NMC622_Cathode_Production",
+      "name": "NMC532_Cathode_Production",
       "process_type": "Electrode_Manufacturing",
       "manufacturing_category": "cathode",
       "hierarchy_level": 1,
@@ -218,18 +183,18 @@
       "next_process_ids": [
         "CELL"
       ],
-      "description": "NMC622 cathode: slurry mixing, coating, drying. ecoinvent: cathode production, NMC622 [CN]. Quantities are per kg of cell: this process supplies the cell directly.",
+      "description": "NMC532 cathode: slurry mixing, coating on Al foil, drying. Energy and solvent per kg from ecoinvent's cathode production [CN]. Quantities are per kg of cell: this process supplies the cell directly.",
       "products": [
         {
-          "material": "NMC622 cathode",
-          "quantity": 0.41961,
+          "material": "NMC532 cathode",
+          "quantity": 0.468337,
           "unit": "kg"
         }
       ],
       "lci_inputs": [
         {
           "name": "Al collector foil",
-          "quantity": 0.0293727,
+          "quantity": 0.0397614,
           "unit": "kg",
           "activity_name": "market for aluminium collector foil, for Li-ion battery",
           "reference_product": "aluminium collector foil, for Li-ion battery",
@@ -246,7 +211,7 @@
             "particulate_matter": 0.01574324790352424,
             "photochemical_oxidant": 1.0171390028584224
           },
-          "cost_per_unit": 8.0,
+          "cost_per_unit": 4.938,
           "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
@@ -266,11 +231,14 @@
               "location": "US",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, positive current collector foil, $0.20/m² (Cost Input!F36)",
+          "cost_confidence": "sourced",
+          "cost_note": "Priced per m², so $/kg follows the foil thickness."
         },
         {
           "name": "Carbon black",
-          "quantity": 0.00975593,
+          "quantity": 0.00857151,
           "unit": "kg",
           "activity_name": "market for carbon black",
           "reference_product": "carbon black",
@@ -287,12 +255,14 @@
             "particulate_matter": 0.001679106102202784,
             "photochemical_oxidant": 0.10668009492149824
           },
-          "cost_per_unit": 1.5,
-          "cost_unit": "USD/kg"
+          "cost_per_unit": 7.0,
+          "cost_unit": "USD/kg",
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, positive conductive additive, $7.00/kg (Cost Input!F25)",
+          "cost_confidence": "sourced"
         },
         {
           "name": "PVDF binder",
-          "quantity": 0.00975593,
+          "quantity": 0.00857151,
           "unit": "kg",
           "activity_name": "market for polyvinylfluoride",
           "reference_product": "polyvinylfluoride",
@@ -329,11 +299,13 @@
               "location": "US",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, positive binder, $15.00/kg (Cost Input!F26)",
+          "cost_confidence": "sourced"
         },
         {
           "name": "NMP solvent",
-          "quantity": 0.00218533,
+          "quantity": 0.00240003,
           "unit": "kg",
           "activity_name": "market for N-methyl-2-pyrrolidone",
           "reference_product": "N-methyl-2-pyrrolidone",
@@ -350,7 +322,7 @@
             "particulate_matter": 0.005663509635185328,
             "photochemical_oxidant": 0.41449632657980606
           },
-          "cost_per_unit": 3.0,
+          "cost_per_unit": 2.7,
           "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
@@ -370,11 +342,13 @@
               "location": "US",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, positive binder solvent, $2.70/kg (Cost Input!F27)",
+          "cost_confidence": "sourced"
         },
         {
           "name": "Electricity",
-          "quantity": 0.200355,
+          "quantity": 0.221842,
           "unit": "kWh",
           "activity_name": "market group for electricity, medium voltage",
           "reference_product": "electricity, medium voltage",
@@ -391,7 +365,7 @@
             "particulate_matter": 0.0007529078367254139,
             "photochemical_oxidant": 0.06512073803851437
           },
-          "cost_per_unit": 0.08,
+          "cost_per_unit": 0.04,
           "cost_unit": "USD/kWh",
           "impact_sources": {
             "greet_2025": {
@@ -411,11 +385,13 @@
               "location": "CN",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, price of energy, $0.04/kWh (Cost Input!F94)",
+          "cost_confidence": "sourced"
         },
         {
           "name": "Heat, natural gas",
-          "quantity": 5.76225,
+          "quantity": 6.43139,
           "unit": "MJ",
           "activity_name": "market for heat, district or industrial, natural gas",
           "reference_product": "heat, district or industrial, natural gas",
@@ -432,7 +408,7 @@
             "particulate_matter": 3.384822645158938e-06,
             "photochemical_oxidant": 0.0010477825153777038
           },
-          "cost_per_unit": 0.03,
+          "cost_per_unit": 0.01111,
           "cost_unit": "USD/MJ",
           "impact_sources": {
             "greet_2025": {
@@ -453,7 +429,10 @@
               "database": "greet_2025",
               "note": "Proxy: GREET1 US natural gas burned in an industrial boiler at GREET's default 80% efficiency, full fuel cycle. GREET has no other region and no district heat or CHP"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, price of energy, $0.04/kWh (Cost Input!F94)",
+          "cost_confidence": "sourced",
+          "cost_note": "BatPaC's one energy price, $0.04/kWh, per MJ."
         }
       ]
     },
@@ -476,14 +455,14 @@
       "products": [
         {
           "material": "Graphite anode",
-          "quantity": 0.34697,
+          "quantity": 0.3476,
           "unit": "kg"
         }
       ],
       "lci_inputs": [
         {
           "name": "Synthetic graphite",
-          "quantity": 0.131439,
+          "quantity": 0.161458,
           "unit": "kg",
           "activity_name": "market for synthetic graphite, battery grade",
           "reference_product": "synthetic graphite, battery grade",
@@ -500,7 +479,7 @@
             "particulate_matter": 0.041394850598619165,
             "photochemical_oxidant": 3.2128412247065525
           },
-          "cost_per_unit": 12.0,
+          "cost_per_unit": 9.0,
           "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
@@ -520,11 +499,14 @@
               "location": "US",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Lists, NMC532-G negative active material, $9.00/kg",
+          "cost_confidence": "sourced",
+          "cost_note": "One BatPaC price for both graphites."
         },
         {
           "name": "Natural graphite, coated",
-          "quantity": 0.0707749,
+          "quantity": 0.0869391,
           "unit": "kg",
           "activity_name": "market for natural graphite, coated",
           "reference_product": "natural graphite, coated",
@@ -541,7 +523,7 @@
             "particulate_matter": 0.007563713889630589,
             "photochemical_oxidant": 0.7501172918293363
           },
-          "cost_per_unit": 8.0,
+          "cost_per_unit": 9.0,
           "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
@@ -561,11 +543,14 @@
               "location": "US",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Lists, NMC532-G negative active material, $9.00/kg",
+          "cost_confidence": "sourced",
+          "cost_note": "One BatPaC price for both graphites."
         },
         {
           "name": "Copper collector foil",
-          "quantity": 0.131849,
+          "quantity": 0.0941333,
           "unit": "kg",
           "activity_name": "market for copper collector foil, for Li-ion battery",
           "reference_product": "copper collector foil, for Li-ion battery",
@@ -582,7 +567,7 @@
             "particulate_matter": 0.047042440567916684,
             "photochemical_oxidant": 1.7748560262392044
           },
-          "cost_per_unit": 12.0,
+          "cost_per_unit": 13.39,
           "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
@@ -603,11 +588,14 @@
               "database": "greet_2025",
               "note": "Proxy: Copper product incl. wire drawing stands in for foil rolling, which GREET does not model"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, negative current collector foil, $1.20/m² (Cost Input!F37)",
+          "cost_confidence": "sourced",
+          "cost_note": "Priced per m², so $/kg follows the foil thickness."
         },
         {
           "name": "Water, deionised",
-          "quantity": 0.215121,
+          "quantity": 0.253467,
           "unit": "kg",
           "activity_name": "market for water, deionised",
           "reference_product": "water, deionised",
@@ -624,12 +612,14 @@
             "particulate_matter": 5.808229985038537e-07,
             "photochemical_oxidant": 2.8749733339938622e-05
           },
-          "cost_per_unit": 0.005,
-          "cost_unit": "USD/kg"
+          "cost_per_unit": 0.0,
+          "cost_unit": "USD/kg",
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, negative binder solvent, $0.00/kg (Cost Input!F33)",
+          "cost_confidence": "sourced"
         },
         {
           "name": "CMC binder",
-          "quantity": 0.00645364,
+          "quantity": 0.0030416,
           "unit": "kg",
           "activity_name": "market for carboxymethyl cellulose, powder",
           "reference_product": "carboxymethyl cellulose, powder",
@@ -646,12 +636,15 @@
             "particulate_matter": 0.0038315749499739835,
             "photochemical_oxidant": 0.24998884761850665
           },
-          "cost_per_unit": 3.0,
-          "cost_unit": "USD/kg"
+          "cost_per_unit": 10.0,
+          "cost_unit": "USD/kg",
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, negative binder, $10.00/kg (Cost Input!F32)",
+          "cost_confidence": "sourced",
+          "cost_note": "One BatPaC price for CMC and SBR."
         },
         {
           "name": "SBR binder (latex)",
-          "quantity": 0.00430243,
+          "quantity": 0.00202773,
           "unit": "kg",
           "activity_name": "market for latex",
           "reference_product": "latex",
@@ -668,7 +661,7 @@
             "particulate_matter": 0.0013230763439230344,
             "photochemical_oxidant": 0.2733933479002067
           },
-          "cost_per_unit": 2.0,
+          "cost_per_unit": 10.0,
           "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
@@ -689,11 +682,14 @@
               "database": "greet_2025",
               "note": "Proxy: SBR stands in for latex binder"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, negative binder, $10.00/kg (Cost Input!F32)",
+          "cost_confidence": "sourced",
+          "cost_note": "One BatPaC price for CMC and SBR."
         },
         {
           "name": "Carbon black",
-          "quantity": 0.00215121,
+          "quantity": 0.0,
           "unit": "kg",
           "activity_name": "market for carbon black",
           "reference_product": "carbon black",
@@ -710,12 +706,14 @@
             "particulate_matter": 0.001679106102202784,
             "photochemical_oxidant": 0.10668009492149824
           },
-          "cost_per_unit": 1.5,
-          "cost_unit": "USD/kg"
+          "cost_per_unit": 7.0,
+          "cost_unit": "USD/kg",
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, negative conductive additive, $7.00/kg (Cost Input!F31)",
+          "cost_confidence": "sourced"
         },
         {
           "name": "Electricity",
-          "quantity": 0.224104,
+          "quantity": 0.224512,
           "unit": "kWh",
           "activity_name": "market group for electricity, medium voltage",
           "reference_product": "electricity, medium voltage",
@@ -732,7 +730,7 @@
             "particulate_matter": 0.0007529078367254139,
             "photochemical_oxidant": 0.06512073803851437
           },
-          "cost_per_unit": 0.08,
+          "cost_per_unit": 0.04,
           "cost_unit": "USD/kWh",
           "impact_sources": {
             "greet_2025": {
@@ -752,11 +750,13 @@
               "location": "CN",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, price of energy, $0.04/kWh (Cost Input!F94)",
+          "cost_confidence": "sourced"
         },
         {
           "name": "Heat, natural gas",
-          "quantity": 6.49032,
+          "quantity": 6.5021,
           "unit": "MJ",
           "activity_name": "market for heat, district or industrial, natural gas",
           "reference_product": "heat, district or industrial, natural gas",
@@ -773,7 +773,7 @@
             "particulate_matter": 3.384822645158938e-06,
             "photochemical_oxidant": 0.0010477825153777038
           },
-          "cost_per_unit": 0.03,
+          "cost_per_unit": 0.01111,
           "cost_unit": "USD/MJ",
           "impact_sources": {
             "greet_2025": {
@@ -794,7 +794,10 @@
               "database": "greet_2025",
               "note": "Proxy: GREET1 US natural gas burned in an industrial boiler at GREET's default 80% efficiency, full fuel cycle. GREET has no other region and no district heat or CHP"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, price of energy, $0.04/kWh (Cost Input!F94)",
+          "cost_confidence": "sourced",
+          "cost_note": "BatPaC's one energy price, $0.04/kWh, per MJ."
         }
       ]
     },
@@ -817,14 +820,14 @@
       "products": [
         {
           "material": "Li-ion electrolyte",
-          "quantity": 0.1482,
+          "quantity": 0.105898,
           "unit": "kg"
         }
       ],
       "lci_inputs": [
         {
           "name": "Ethylene carbonate",
-          "quantity": 0.071139,
+          "quantity": 0.050833,
           "unit": "kg",
           "activity_name": "market for ethylene carbonate",
           "reference_product": "ethylene carbonate",
@@ -841,8 +844,6 @@
             "particulate_matter": 0.0015010158318927488,
             "photochemical_oxidant": 0.14815813017632956
           },
-          "cost_per_unit": 5.0,
-          "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
               "traci_scores_per_unit": {
@@ -861,11 +862,12 @@
               "location": "US",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_in": "Electrolyte, bought"
         },
         {
           "name": "Dimethyl carbonate",
-          "quantity": 0.0573949,
+          "quantity": 0.041012,
           "unit": "kg",
           "activity_name": "market for dimethyl carbonate",
           "reference_product": "dimethyl carbonate",
@@ -882,8 +884,6 @@
             "particulate_matter": 0.002125937790301558,
             "photochemical_oxidant": 0.19553340296729835
           },
-          "cost_per_unit": 3.0,
-          "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
               "traci_scores_per_unit": {
@@ -902,11 +902,12 @@
               "location": "US",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_in": "Electrolyte, bought"
         },
         {
           "name": "LiPF6",
-          "quantity": 0.0167021,
+          "quantity": 0.0119347,
           "unit": "kg",
           "activity_name": "market for lithium hexafluorophosphate",
           "reference_product": "lithium hexafluorophosphate",
@@ -923,8 +924,6 @@
             "particulate_matter": 0.013956401045288735,
             "photochemical_oxidant": 1.5554756571047568
           },
-          "cost_per_unit": 25.0,
-          "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
               "traci_scores_per_unit": {
@@ -943,11 +942,12 @@
               "location": "US",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_in": "Electrolyte, bought"
         },
         {
           "name": "Vinyl carbonate",
-          "quantity": 0.002964,
+          "quantity": 0.00211795,
           "unit": "kg",
           "activity_name": "market for vinyl carbonate",
           "reference_product": "vinyl carbonate",
@@ -964,8 +964,18 @@
             "particulate_matter": 0.005626185884651014,
             "photochemical_oxidant": 0.5480096570567542
           },
-          "cost_per_unit": 15.0,
-          "cost_unit": "USD/kg"
+          "cost_in": "Electrolyte, bought"
+        },
+        {
+          "name": "Electrolyte, bought",
+          "quantity": 0.105898,
+          "unit": "kg",
+          "cost_type": "material",
+          "cost_unit": "USD/kg",
+          "cost_per_unit": 7.5,
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, electrolyte, $9.00/L (Cost Input!F39)",
+          "cost_confidence": "sourced",
+          "cost_note": "$7.50/kg at 1.2 kg/L. Carbon is on the ingredients."
         }
       ]
     },
@@ -988,14 +998,14 @@
       "products": [
         {
           "material": "Battery separator",
-          "quantity": 0.01759,
+          "quantity": 0.0127655,
           "unit": "kg"
         }
       ],
       "lci_inputs": [
         {
           "name": "PE granulate",
-          "quantity": 0.0191731,
+          "quantity": 0.0139144,
           "unit": "kg",
           "activity_name": "market for polyethylene, high density, granulate",
           "reference_product": "polyethylene, high density, granulate",
@@ -1012,8 +1022,6 @@
             "particulate_matter": 0.0014680847457551756,
             "photochemical_oxidant": 0.14901827136381784
           },
-          "cost_per_unit": 1.5,
-          "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
               "traci_scores_per_unit": {
@@ -1032,11 +1040,12 @@
               "location": "US",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_in": "Separator, bought"
         },
         {
           "name": "Extrusion",
-          "quantity": 0.0191731,
+          "quantity": 0.0139144,
           "unit": "kg",
           "activity_name": "market for extrusion, plastic film",
           "reference_product": "extrusion, plastic film",
@@ -1053,12 +1062,11 @@
             "particulate_matter": 0.0006484067038811463,
             "photochemical_oxidant": 0.030029346114593215
           },
-          "cost_per_unit": 0.0,
-          "cost_unit": "USD/kg"
+          "cost_in": "Separator, bought"
         },
         {
           "name": "Dichloromethane",
-          "quantity": 0.000357077,
+          "quantity": 0.00025914,
           "unit": "kg",
           "activity_name": "market for dichloromethane",
           "reference_product": "dichloromethane",
@@ -1075,8 +1083,6 @@
             "particulate_matter": 0.002652701455709485,
             "photochemical_oxidant": 0.3541134554295634
           },
-          "cost_per_unit": 0.5,
-          "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
               "traci_scores_per_unit": {
@@ -1095,11 +1101,12 @@
               "location": "US",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_in": "Separator, bought"
         },
         {
           "name": "Paraffin",
-          "quantity": 5.15387e-05,
+          "quantity": 3.7403e-05,
           "unit": "kg",
           "activity_name": "market for paraffin",
           "reference_product": "paraffin",
@@ -1116,12 +1123,11 @@
             "particulate_matter": 0.0004941228826979612,
             "photochemical_oxidant": 0.07073353931129224
           },
-          "cost_per_unit": 1.0,
-          "cost_unit": "USD/kg"
+          "cost_in": "Separator, bought"
         },
         {
           "name": "Electricity",
-          "quantity": 0.636758,
+          "quantity": 0.462112,
           "unit": "kWh",
           "activity_name": "market group for electricity, medium voltage",
           "reference_product": "electricity, medium voltage",
@@ -1138,8 +1144,6 @@
             "particulate_matter": 0.0007529078367254139,
             "photochemical_oxidant": 0.06512073803851437
           },
-          "cost_per_unit": 0.08,
-          "cost_unit": "USD/kWh",
           "impact_sources": {
             "greet_2025": {
               "traci_scores_per_unit": {
@@ -1158,11 +1162,12 @@
               "location": "CN",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_in": "Separator, bought"
         },
         {
           "name": "Heat, natural gas",
-          "quantity": 0.715966,
+          "quantity": 0.519595,
           "unit": "MJ",
           "activity_name": "market for heat, district or industrial, natural gas",
           "reference_product": "heat, district or industrial, natural gas",
@@ -1179,8 +1184,6 @@
             "particulate_matter": 3.384822645158938e-06,
             "photochemical_oxidant": 0.0010477825153777038
           },
-          "cost_per_unit": 0.03,
-          "cost_unit": "USD/MJ",
           "impact_sources": {
             "greet_2025": {
               "traci_scores_per_unit": {
@@ -1200,13 +1203,25 @@
               "database": "greet_2025",
               "note": "Proxy: GREET1 US natural gas burned in an industrial boiler at GREET's default 80% efficiency, full fuel cycle. GREET has no other region and no district heat or CHP"
             }
-          }
+          },
+          "cost_in": "Separator, bought"
+        },
+        {
+          "name": "Separator, bought",
+          "quantity": 0.0127655,
+          "unit": "kg",
+          "cost_type": "material",
+          "cost_unit": "USD/kg",
+          "cost_per_unit": 126.8,
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, separator, $0.90/m² (Cost Input!F38)",
+          "cost_confidence": "sourced",
+          "cost_note": "Priced per m², so $/kg follows the thickness. Carbon is on the ingredients."
         }
       ]
     },
     "CELL": {
       "id": "CELL",
-      "name": "NMC622_Cell_Assembly",
+      "name": "NMC532_Cell_Assembly",
       "process_type": "Cell_Assembly",
       "manufacturing_category": "assembly",
       "hierarchy_level": 2,
@@ -1217,10 +1232,10 @@
         "duration_hours": 30
       },
       "next_process_ids": [],
-      "description": "Cell assembly. ecoinvent: battery cell production, Li-ion, NMC622 [CN]",
+      "description": "Cell assembly: stacking, welding, filling and formation. Energy per kg, tabs and pouch from ecoinvent's NMC811 cell production [CN], the tabs and pouch scaled to BatPaC's hardware mass.",
       "products": [
         {
-          "material": "NMC622 battery cell",
+          "material": "NMC532 battery cell",
           "quantity": 1.0,
           "unit": "kg"
         }
@@ -1228,7 +1243,7 @@
       "lci_inputs": [
         {
           "name": "Copper",
-          "quantity": 0.03422,
+          "quantity": 0.033,
           "unit": "kg",
           "activity_name": "market for copper, anode",
           "reference_product": "copper, anode",
@@ -1245,7 +1260,7 @@
             "particulate_matter": 0.0595335692473051,
             "photochemical_oxidant": 1.556158939274462
           },
-          "cost_per_unit": 9.0,
+          "cost_per_unit": 8.64,
           "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
@@ -1265,11 +1280,14 @@
               "location": "US",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, negative terminal (Cu), $8.64/kg (Cost Input!F46)",
+          "cost_confidence": "sourced",
+          "cost_note": "Per-cell adder not included."
         },
         {
           "name": "Aluminium",
-          "quantity": 0.0283,
+          "quantity": 0.0284,
           "unit": "kg",
           "activity_name": "market for aluminium, wrought alloy",
           "reference_product": "aluminium, wrought alloy",
@@ -1286,7 +1304,7 @@
             "particulate_matter": 0.014145494101199946,
             "photochemical_oxidant": 0.9200709671019907
           },
-          "cost_per_unit": 3.0,
+          "cost_per_unit": 2.791,
           "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
@@ -1306,11 +1324,14 @@
               "location": "US",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, positive terminal (Al) and cell container (Cost Input!F45, Cost Input!F47)",
+          "cost_confidence": "sourced",
+          "cost_note": "Terminal $2.40/kg and container $3.00/kg, mass-weighted. Per-cell adders not included."
         },
         {
           "name": "PET",
-          "quantity": 0.00296,
+          "quantity": 0.0028,
           "unit": "kg",
           "activity_name": "market for polyethylene terephthalate, granulate, amorphous",
           "reference_product": "polyethylene terephthalate, granulate, amorphous",
@@ -1327,7 +1348,7 @@
             "particulate_matter": 0.0023651457392187243,
             "photochemical_oxidant": 0.19894142810364218
           },
-          "cost_per_unit": 1.2,
+          "cost_per_unit": 3.0,
           "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
@@ -1347,11 +1368,14 @@
               "location": "US",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, cell container, $3.00/kg (Cost Input!F47)",
+          "cost_confidence": "sourced",
+          "cost_note": "Per-cell adder not included."
         },
         {
           "name": "PP",
-          "quantity": 0.00127,
+          "quantity": 0.0012,
           "unit": "kg",
           "activity_name": "market for polypropylene, granulate",
           "reference_product": "polypropylene, granulate",
@@ -1368,7 +1392,7 @@
             "particulate_matter": 0.0015362173231867743,
             "photochemical_oxidant": 0.15368158841805896
           },
-          "cost_per_unit": 1.3,
+          "cost_per_unit": 3.0,
           "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
@@ -1388,11 +1412,14 @@
               "location": "US",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, cell container, $3.00/kg (Cost Input!F47)",
+          "cost_confidence": "sourced",
+          "cost_note": "Per-cell adder not included."
         },
         {
           "name": "Electricity",
-          "quantity": 3.16265,
+          "quantity": 3.07327,
           "unit": "kWh",
           "activity_name": "market group for electricity, medium voltage",
           "reference_product": "electricity, medium voltage",
@@ -1409,7 +1436,7 @@
             "particulate_matter": 0.0007529078367254139,
             "photochemical_oxidant": 0.06512073803851437
           },
-          "cost_per_unit": 0.08,
+          "cost_per_unit": 0.04,
           "cost_unit": "USD/kWh",
           "impact_sources": {
             "greet_2025": {
@@ -1429,11 +1456,13 @@
               "location": "CN",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, price of energy, $0.04/kWh (Cost Input!F94)",
+          "cost_confidence": "sourced"
         },
         {
           "name": "Heat",
-          "quantity": 0.5125,
+          "quantity": 0.49964,
           "unit": "MJ",
           "activity_name": "market for heat, district or industrial, natural gas",
           "reference_product": "heat, district or industrial, natural gas",
@@ -1450,7 +1479,7 @@
             "particulate_matter": 3.384822645158938e-06,
             "photochemical_oxidant": 0.0010477825153777038
           },
-          "cost_per_unit": 0.03,
+          "cost_per_unit": 0.01111,
           "cost_unit": "USD/MJ",
           "impact_sources": {
             "greet_2025": {
@@ -1471,31 +1500,34 @@
               "database": "greet_2025",
               "note": "Proxy: GREET1 US natural gas burned in an industrial boiler at GREET's default 80% efficiency, full fuel cycle. GREET has no other region and no district heat or CHP"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, price of energy, $0.04/kWh (Cost Input!F94)",
+          "cost_confidence": "sourced",
+          "cost_note": "BatPaC's one energy price, $0.04/kWh, per MJ."
         }
       ]
     }
   },
   "total_impacts_per_functional_unit": {
-    "acidification": 0.2260963017,
-    "climate_change": 23.02783287,
-    "ecotoxicity_freshwater": 2535.823398,
-    "eutrophication": 0.1678241754,
-    "human_toxicity_carcinogenic": 8.554058192e-06,
-    "human_toxicity_non_carcinogenic": 3.685997668e-05,
-    "ozone_depletion": 3.80851549e-07,
-    "particulate_matter": 0.0291055246,
-    "photochemical_oxidant": 1.796083803
+    "acidification": 0.1092234758,
+    "climate_change": 15.40103287,
+    "ecotoxicity_freshwater": 0.0,
+    "eutrophication": 0.000859103685,
+    "human_toxicity_carcinogenic": 0.0,
+    "human_toxicity_non_carcinogenic": 0.0,
+    "ozone_depletion": 0.0,
+    "particulate_matter": 0.009236709501,
+    "photochemical_oxidant": 0.4934683571
   },
   "total_cost_per_functional_unit": {
-    "value": 17.2082,
+    "value": 16.1718,
     "unit": "USD",
-    "note": "Material/energy costs per 1 kg cell (excludes labor, overhead, capital). Components are costed once, in the process that makes them; the cell step carries only tabs, pouch and assembly energy."
+    "note": "Material/energy costs per 1 kg cell (excludes labor, overhead, capital), at the default design."
   },
   "design_parameters": {
     "enabled": true,
-    "title": "Electrode design — BatPaC-style (NMC622)",
-    "description": "Material amounts for 1 kg of cell follow from these settings.",
+    "title": "Cell design — BatPaC (NMC532)",
+    "description": "BatPaC sets every material amount for 1 kg of cell from these settings.",
     "basis": "per kg of cell",
     "params": {
       "cathode_thickness_um": {
@@ -1522,7 +1554,7 @@
         "min": 85,
         "max": 98,
         "step": 0.5,
-        "default": 96,
+        "default": 96.0,
         "primary": true
       },
       "np_ratio": {
@@ -1539,7 +1571,7 @@
         "min": 8,
         "max": 25,
         "step": 1,
-        "default": 15
+        "default": 15.0
       },
       "cu_foil_um": {
         "label": "Cu foil thickness",
@@ -1547,7 +1579,7 @@
         "min": 4,
         "max": 20,
         "step": 1,
-        "default": 10
+        "default": 10.0
       },
       "separator_um": {
         "label": "Separator thickness",
@@ -1555,7 +1587,7 @@
         "min": 8,
         "max": 30,
         "step": 1,
-        "default": 15
+        "default": 15.0
       },
       "cell_capacity_ah": {
         "label": "Cell capacity",
@@ -1572,7 +1604,7 @@
         "min": 80,
         "max": 320,
         "step": 0.1,
-        "default": 190.9,
+        "default": 187.1,
         "group": "material"
       },
       "ocv_v": {
@@ -1581,7 +1613,7 @@
         "min": 2.5,
         "max": 5.0,
         "step": 0.001,
-        "default": 3.7582,
+        "default": 3.765,
         "group": "material"
       },
       "rho_am_pos": {
@@ -1628,36 +1660,39 @@
       "term_buffer_mm": 2,
       "pos_terminal_mm": 1.2,
       "neg_terminal_mm": 0.8,
-      "hw_ref_copper_kg": 0.03422,
-      "hw_cu_frac_ref": 0.025711497393726603,
-      "hw_ref_aluminium_kg": 0.0283,
-      "hw_al_frac_ref": 0.033081074060780764,
-      "hw_ref_pet_kg": 0.00296,
-      "hw_polymer_frac_ref": 0.004794161258114344,
-      "hw_ref_pp_kg": 0.00127,
-      "k_C001_nmc622_hydroxide": 0.949,
-      "k_C001_lithium_carbonate": 0.380999,
-      "k_C001_electricity": 6.23365,
-      "k_C002_nmp_solvent": 0.0056,
-      "k_C002_electricity": 0.477479,
+      "hw_ref_copper_kg": 0.033,
+      "hw_cu_frac_ref": 0.025479563719258785,
+      "hw_ref_aluminium_kg": 0.0284,
+      "hw_al_frac_ref": 0.03285787848430254,
+      "hw_ref_pet_kg": 0.0028,
+      "hw_polymer_frac_ref": 0.004767718837338435,
+      "hw_ref_pp_kg": 0.0012,
+      "k_C001_nmc532_cathode_powder": 1.0,
+      "k_C002_nmp_solvent": 0.00560001,
+      "k_C002_electricity": 0.47368,
       "k_C002_heat_natural_gas": 13.7324,
       "k_A001_synthetic_graphite_share": 0.65,
       "k_A001_natural_graphite_coated_share": 0.35,
       "k_A001_water_deionised": 1.0,
       "k_A001_cmc_binder_share": 0.6,
       "k_A001_sbr_binder_latex_share": 0.4,
-      "k_A001_electricity": 0.645889,
+      "k_A001_electricity": 0.645891,
       "k_A001_heat_natural_gas": 18.7057,
       "k_E001_ethylene_carbonate": 0.48002,
       "k_E001_dimethyl_carbonate": 0.38728,
       "k_E001_lipf6": 0.1127,
       "k_E001_vinyl_carbonate": 0.02,
+      "k_E001_electrolyte_bought": 1.0,
       "k_S001_pe_granulate": 1.09,
       "k_S001_extrusion": 1.09,
       "k_S001_dichloromethane": 0.0203,
       "k_S001_paraffin": 0.00293,
       "k_S001_electricity": 36.2,
-      "k_S001_heat_natural_gas": 40.703
+      "k_S001_heat_natural_gas": 40.703,
+      "k_S001_separator_bought": 1.0,
+      "al_foil_usd_m2": 0.2,
+      "cu_foil_usd_m2": 1.2,
+      "separator_usd_m2": 0.9
     },
     "derived": {
       "t_pos_cm": "cathode_thickness_um * 1e-4",
@@ -1724,9 +1759,7 @@
       "separator_kg": "area_cm2 * sep_g_cm2 * sep_area_factor / 1000",
       "cell_hardware_kg": "hardware_kg",
       "specific_energy_wh_kg": "area_cm2 * cap_pos_mah_cm2 / 1000 * ocv_v / cell_mass_kg",
-      "q_C001_nmc622_hydroxide": "am_pos_kg * k_C001_nmc622_hydroxide",
-      "q_C001_lithium_carbonate": "am_pos_kg * k_C001_lithium_carbonate",
-      "q_C001_electricity": "am_pos_kg * k_C001_electricity",
+      "q_C001_nmc532_cathode_powder": "am_pos_kg * k_C001_nmc532_cathode_powder",
       "q_C002_al_collector_foil": "al_foil_kg",
       "q_C002_carbon_black": "cb_pos_kg",
       "q_C002_pvdf_binder": "binder_pos_kg",
@@ -1746,12 +1779,17 @@
       "q_E001_dimethyl_carbonate": "electrolyte_kg * k_E001_dimethyl_carbonate",
       "q_E001_lipf6": "electrolyte_kg * k_E001_lipf6",
       "q_E001_vinyl_carbonate": "electrolyte_kg * k_E001_vinyl_carbonate",
+      "q_E001_electrolyte_bought": "electrolyte_kg * k_E001_electrolyte_bought",
       "q_S001_pe_granulate": "separator_kg * k_S001_pe_granulate",
       "q_S001_extrusion": "separator_kg * k_S001_extrusion",
       "q_S001_dichloromethane": "separator_kg * k_S001_dichloromethane",
       "q_S001_paraffin": "separator_kg * k_S001_paraffin",
       "q_S001_electricity": "separator_kg * k_S001_electricity",
-      "q_S001_heat_natural_gas": "separator_kg * k_S001_heat_natural_gas"
+      "q_S001_heat_natural_gas": "separator_kg * k_S001_heat_natural_gas",
+      "q_S001_separator_bought": "separator_kg * k_S001_separator_bought",
+      "usd_kg_al_foil": "al_foil_usd_m2 / (al_foil_um * rho_al / 1000)",
+      "usd_kg_cu_foil": "cu_foil_usd_m2 / (cu_foil_um * rho_cu / 1000)",
+      "usd_kg_separator": "separator_usd_m2 / (separator_um * rho_separator / 1000)"
     },
     "display": [
       {
@@ -1846,22 +1884,12 @@
       },
       {
         "process_id": "C001",
-        "input_name": "NMC622 hydroxide",
-        "derived_key": "q_C001_nmc622_hydroxide"
+        "input_name": "NMC532 cathode powder",
+        "derived_key": "q_C001_nmc532_cathode_powder"
       },
       {
         "process_id": "C001",
-        "input_name": "Lithium Carbonate",
-        "derived_key": "q_C001_lithium_carbonate"
-      },
-      {
-        "process_id": "C001",
-        "input_name": "Electricity",
-        "derived_key": "q_C001_electricity"
-      },
-      {
-        "process_id": "C001",
-        "product": "NMC622 oxide",
+        "product": "NMC532 cathode active material",
         "derived_key": "am_pos_kg"
       },
       {
@@ -1896,7 +1924,7 @@
       },
       {
         "process_id": "C002",
-        "product": "NMC622 cathode",
+        "product": "NMC532 cathode",
         "derived_key": "cathode_kg"
       },
       {
@@ -1971,6 +1999,11 @@
       },
       {
         "process_id": "E001",
+        "input_name": "Electrolyte, bought",
+        "derived_key": "q_E001_electrolyte_bought"
+      },
+      {
+        "process_id": "E001",
         "product": "Li-ion electrolyte",
         "derived_key": "electrolyte_kg"
       },
@@ -2006,6 +2039,11 @@
       },
       {
         "process_id": "S001",
+        "input_name": "Separator, bought",
+        "derived_key": "q_S001_separator_bought"
+      },
+      {
+        "process_id": "S001",
         "product": "Battery separator",
         "derived_key": "separator_kg"
       }
@@ -2025,7 +2063,12 @@
       {
         "cite": "Argonne National Laboratory. (2024). BatPaC 5.2, version 2024-11-1 [Spreadsheet model].",
         "url": "https://www.anl.gov/cse/electrochemical-chemical-TEA",
-        "used_for": "Material data, design defaults, cell hardware"
+        "used_for": "Material data, design defaults, prices, cell hardware"
+      },
+      {
+        "cite": "Argonne National Laboratory. (2025). R&D GREET 2025 [Model].",
+        "url": "https://greet.anl.gov/",
+        "used_for": "Carbon and other impacts"
       },
       {
         "cite": "ecoinvent. (2024). ecoinvent database, version 3.11.",
@@ -2035,7 +2078,29 @@
     ],
     "notes": [
       "The 80 µm default cathode thickness is LiTeCAB's choice.",
-      "Wh/kg reads slightly high: no C/3 voltage loss or extra electrolyte."
+      "Wh/kg reads about 2% high: no C/3 voltage loss or extra electrolyte.",
+      "Tabs, pouch and assembly energy follow ecoinvent's NMC811 cell.",
+      "Cost is materials and energy only."
+    ],
+    "cost_map": [
+      {
+        "process_id": "C002",
+        "input_name": "Al collector foil",
+        "derived_key": "usd_kg_al_foil",
+        "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, positive current collector foil, $0.20/m² (Cost Input!F36)"
+      },
+      {
+        "process_id": "A001",
+        "input_name": "Copper collector foil",
+        "derived_key": "usd_kg_cu_foil",
+        "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, negative current collector foil, $1.20/m² (Cost Input!F37)"
+      },
+      {
+        "process_id": "S001",
+        "input_name": "Separator, bought",
+        "derived_key": "usd_kg_separator",
+        "cost_source": "Argonne BatPaC 5.2 (2024), Cost Input, separator, $0.90/m² (Cost Input!F38)"
+      }
     ]
   }
 }
