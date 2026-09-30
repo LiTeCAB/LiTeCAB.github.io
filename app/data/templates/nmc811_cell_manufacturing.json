@@ -120,7 +120,7 @@
           }
         },
         {
-          "name": "Lithium Hydroxide",
+          "name": "Lithium hydroxide (anhydrous)",
           "quantity": 0.0881752,
           "unit": "kg",
           "activity_name": "market for lithium hydroxide",
@@ -138,7 +138,7 @@
             "particulate_matter": 0.017376656013820907,
             "photochemical_oxidant": 1.221558282121195
           },
-          "cost_per_unit": 18.0,
+          "cost_per_unit": 19.82,
           "cost_unit": "USD/kg",
           "impact_sources": {
             "greet_2025": {
@@ -158,7 +158,10 @@
               "location": "US",
               "database": "greet_2025"
             }
-          }
+          },
+          "cost_source": "Argonne BatPaC 5.2 (2024), Lists, LiOH·H2O battery grade, $11.30/kg (Lists!BL8)",
+          "cost_confidence": "sourced",
+          "cost_note": "Per kg LiOH: $11.30/kg LiOH·H2O ÷ 0.570 LiOH (Lists!BK8)."
         },
         {
           "name": "Electricity",
@@ -1488,7 +1491,7 @@
     "photochemical_oxidant": 1.736828
   },
   "total_cost_per_functional_unit": {
-    "value": 17.0064,
+    "value": 17.1669,
     "unit": "USD",
     "note": "Material/energy costs per 1 kg cell (excludes labor, overhead, capital). Components are costed once, in the process that makes them; the cell step carries only tabs, pouch and assembly energy."
   },
@@ -1636,7 +1639,7 @@
       "hw_polymer_frac_ref": 0.004943518931621287,
       "hw_ref_pp_kg": 0.0012,
       "k_C001_nmc811_hydroxide": 0.949001,
-      "k_C001_lithium_hydroxide": 0.246,
+      "k_C001_lithium_hydroxide_anhydrous": 0.246,
       "k_C001_electricity": 7.25999,
       "k_C002_nmp_solvent": 0.00560001,
       "k_C002_electricity": 0.47368,
@@ -1725,7 +1728,7 @@
       "cell_hardware_kg": "hardware_kg",
       "specific_energy_wh_kg": "area_cm2 * cap_pos_mah_cm2 / 1000 * ocv_v / cell_mass_kg",
       "q_C001_nmc811_hydroxide": "am_pos_kg * k_C001_nmc811_hydroxide",
-      "q_C001_lithium_hydroxide": "am_pos_kg * k_C001_lithium_hydroxide",
+      "q_C001_lithium_hydroxide_anhydrous": "am_pos_kg * k_C001_lithium_hydroxide_anhydrous",
       "q_C001_electricity": "am_pos_kg * k_C001_electricity",
       "q_C002_al_collector_foil": "al_foil_kg",
       "q_C002_carbon_black": "cb_pos_kg",
@@ -1851,8 +1854,8 @@
       },
       {
         "process_id": "C001",
-        "input_name": "Lithium Hydroxide",
-        "derived_key": "q_C001_lithium_hydroxide"
+        "input_name": "Lithium hydroxide (anhydrous)",
+        "derived_key": "q_C001_lithium_hydroxide_anhydrous"
       },
       {
         "process_id": "C001",
